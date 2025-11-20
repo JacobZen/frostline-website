@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@assets/Color logo - no background_1763624644274.png';
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -23,9 +24,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" data-testid="link-home">
-            <div className="flex items-center gap-2 hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-all cursor-pointer">
-              <div className="text-2xl font-semibold text-primary">Frostline</div>
-              <div className="text-sm text-muted-foreground hidden sm:block">AS</div>
+            <div className="flex items-center hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-all cursor-pointer">
+              <img 
+                src={logo} 
+                alt="Frostline AS" 
+                className="h-10 w-auto"
+              />
             </div>
           </Link>
 
