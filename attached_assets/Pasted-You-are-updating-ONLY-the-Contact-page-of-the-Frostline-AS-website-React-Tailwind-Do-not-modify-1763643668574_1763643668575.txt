@@ -1,0 +1,168 @@
+You are updating ONLY the Contact page of the Frostline AS website (React + Tailwind).
+Do not modify any other page or layout.
+Follow all instructions below precisely.
+
+⭐ 1. REPLACE THE CURRENT CONTACT PAGE DESIGN
+
+Keep the current text content, but rebuild the layout into a premium Arctic-style contact page with these sections:
+
+SECTION 1 — TOP BANNER
+
+Create a minimal banner at the top:
+
+Height: 220–260px
+
+Background: subtle arctic mountain or aurora image with a soft dark gradient
+
+Title centered:
+
+Contact Frostline AS
+
+
+Subtitle centered:
+
+We respond quickly — every day.
+
+
+Tailwind suggestion:
+
+h-[240px] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-white text-center 
+backdrop-brightness-75
+
+
+Use existing website image style (do NOT fetch new images unless needed — can reuse hero image with heavy blur).
+
+SECTION 2 — CONTACT CARDS (3 CARDS)
+
+Add a 3-column card layout (1-column on mobile):
+
+Card 1 — Address
+
+Icon: location pin
+Title: Address
+Text:
+
+Kompaniveien 4
+1639 Gamle Fredrikstad
+Norway
+
+Card 2 — Email
+
+Icon: envelope
+Title: Email
+Clickable mailto link:
+
+mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry
+
+Card 3 — Organization
+
+Icon: building
+Title: Company Details
+Text:
+
+Org.nr: 936 520 553
+Transport company (passenger transport on demand)
+
+
+Card style:
+
+bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl p-6 text-white
+transition hover:scale-[1.02]
+
+SECTION 3 — DIRECT CONTACT CTA BLOCK
+
+Under the cards, add a centered block:
+
+Title:
+
+Need transport or want to discuss a partnership?
+
+
+Subtitle:
+
+Contact us today — we’ll get back to you quickly.
+
+
+Buttons:
+
+Send Email →
+
+mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry
+
+
+Partner Inquiries → link to /partners
+
+Buttons style:
+
+bg-white text-black px-6 py-3 rounded-xl font-medium shadow hover:bg-gray-200 transition
+
+
+And secondary button:
+
+border border-white/40 text-white px-6 py-3 rounded-xl hover:bg-white/10 transition
+
+SECTION 4 — OPTIONAL MAP BLOCK
+
+Add a simple placeholder card that looks like a map (no embedding required unless simple):
+
+Title: Find Us
+
+Block style:
+
+w-full h-64 bg-gray-800/40 border border-white/20 rounded-2xl backdrop-blur-xl shadow-inner
+flex items-center justify-center text-white/70
+
+
+Text inside:
+
+Google Maps preview will be added here.
+
+⭐ 2. PRESERVE EXISTING TEXT CONTENT
+
+Keep all original contact page content textually, but place it inside the new sections where appropriate.
+
+⭐ 3. FIX CONTACT LINK BEHAVIOR
+
+Ensure that:
+
+Contact (navbar) → /contact
+Contact Us button (on homepage CTA) → /contact
+Email links → mailto:post@frostline.as
+
+DO NOT apply mailto to any other buttons.
+
+⭐ 4. DO NOT MODIFY ANYTHING ELSE
+
+Do NOT change:
+
+Fonts
+
+Colors
+
+Navigation
+
+Footer layout
+
+Any other pages
+
+Any services or hero content
+
+Any OG-tags
+
+Only redesign the Contact page visually + update link behavior as described.
+
+⭐ 5. OUTPUT REQUIREMENTS
+
+Return:
+
+Updated React component for the Contact page
+
+Any required Tailwind class updates
+
+Updated link behavior
+
+Fully integrated premium layout
+
+No console logs, no placeholder lorem ipsum.
+
+END OF PROMPT
