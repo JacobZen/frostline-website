@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Award, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import aboutImage from '@assets/generated_images/tromsø_region_landscape.png';
+import arcticMountains from '@assets/generated_images/norwegian_arctic_mountain_peaks.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
@@ -15,8 +15,8 @@ export default function About() {
       <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={aboutImage}
-            alt="Tromsø region landscape"
+            src={arcticMountains}
+            alt="Norwegian Arctic mountain peaks in Northern Norway"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />

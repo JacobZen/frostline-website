@@ -33,14 +33,15 @@ Preferred communication style: Simple, everyday language.
 
 **Internationalization:**
 - Language context supporting English and Norwegian (Bokmål)
-- Language switcher component with flag-based UI
+- Language switcher component with Globe icons from lucide-react (NO/EN language codes)
 - Centralized translation management in `language-context.tsx`
+- localStorage persistence for language preference
 
 **Page Structure:**
-- Home: Hero section with CTA buttons, service previews, benefits showcase
-- Services: Detailed service offerings with feature cards
-- About: Company story, team information, certifications
-- Partners: B2B partnership benefits and collaboration details
+- Home: Hero section with CTA buttons, service previews, benefits showcase, Arctic nature showcase with Northern Lights and tundra images
+- Services: Detailed service offerings with feature cards, header showcasing Arctic coastal transport route
+- About: Company story, team information, certifications, header featuring Norwegian Arctic mountain peaks
+- Partners: B2B partnership benefits and collaboration details, header displaying Arctic fjord landscape
 - Contact: Contact form with validation and company information
 - 404: Custom not-found page
 
@@ -139,6 +140,8 @@ Preferred communication style: Simple, everyday language.
 **Image Assets:**
 - Hero backgrounds: Northern lights, fjords, Arctic landscapes
 - Service icons: Transfer, partner logistics, tours, minibus rental
+- Page headers: Arctic coastal transport route (Services), Norwegian Arctic mountain peaks (About), Arctic fjord (Partners)
+- Nature showcase: Northern Lights over Arctic mountains, Arctic tundra with autumn colors
 - Partnership and about page visuals
 
 ### Design Philosophy

@@ -32,6 +32,12 @@ interface TranslationContent {
     privateTravelers: string;
     privateTravelersText: string;
     bookNow: string;
+    experienceArctic: string;
+    experienceArcticText: string;
+    northernLights: string;
+    northernLightsText: string;
+    arcticWilderness: string;
+    arcticWildernessText: string;
     ctaTitle: string;
     ctaSubtitle: string;
     contactUs: string;
@@ -207,6 +213,12 @@ const translations: Translations = {
       privateTravelers: 'Private Travelers',
       privateTravelersText: 'Enjoy personalized transfers and tours tailored to your schedule and preferences.',
       bookNow: 'Book Now',
+      experienceArctic: 'Experience the Arctic',
+      experienceArcticText: 'Discover the breathtaking beauty of Northern Norway through our transport services',
+      northernLights: 'Nordlys - Northern Lights',
+      northernLightsText: 'Witness the magical aurora borealis dancing across Arctic skies',
+      arcticWilderness: 'Arctic Wilderness',
+      arcticWildernessText: 'Explore vast tundra landscapes with stunning seasonal colors',
       ctaTitle: 'Ready to Experience Arctic Transport Excellence?',
       ctaSubtitle: 'Contact us today to discuss your transport needs or establish a partnership.',
       contactUs: 'Contact Us',
@@ -456,6 +468,12 @@ const translations: Translations = {
       privateTravelers: 'Private reisende',
       privateTravelersText: 'Nyt personlig tilpassede turer og transporter skreddersydd til din timeplan og preferanser.',
       bookNow: 'Bestill nå',
+      experienceArctic: 'Opplev Arktis',
+      experienceArcticText: 'Oppdag den fantastiske naturen i Nord-Norge gjennom våre transporttjenester',
+      northernLights: 'Nordlys',
+      northernLightsText: 'Opplev det magiske nordlyset som danser over den arktiske himmelen',
+      arcticWilderness: 'Arktisk villmark',
+      arcticWildernessText: 'Utforsk vidstrakte tundralandskap med fantastiske sesongfarger',
       ctaTitle: 'Klar til å oppleve arktisk transport av ypperste kvalitet?',
       ctaSubtitle: 'Kontakt oss i dag for å diskutere dine transportbehov eller etablere et partnerskap.',
       contactUs: 'Kontakt oss',

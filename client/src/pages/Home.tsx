@@ -5,6 +5,8 @@ import { CheckCircle } from 'lucide-react';
 import transferIcon from '@assets/generated_images/transfer_service_icon.png';
 import partnerIcon from '@assets/generated_images/partner_logistics_icon.png';
 import toursIcon from '@assets/generated_images/northern_lights_tours_icon.png';
+import northernLights from '@assets/generated_images/northern_lights_arctic_mountains.png';
+import arcticTundra from '@assets/generated_images/arctic_tundra_autumn_colors.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
@@ -105,6 +107,58 @@ export default function Home() {
                 >
                   {t.home.bookNow}
                 </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Northern Nature Showcase */}
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
+              {t.home.experienceArctic || 'Experience the Arctic'}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t.home.experienceArcticText || 'Discover the breathtaking beauty of Northern Norway through our transport services'}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-md group">
+              <img
+                src={northernLights}
+                alt="Northern Lights over Arctic mountains"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-2xl font-semibold mb-2">
+                    {t.home.northernLights || 'Nordlys - Northern Lights'}
+                  </h3>
+                  <p className="text-white/90">
+                    {t.home.northernLightsText || 'Witness the magical aurora borealis dancing across Arctic skies'}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-md group">
+              <img
+                src={arcticTundra}
+                alt="Arctic tundra with autumn colors"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-2xl font-semibold mb-2">
+                    {t.home.arcticWilderness || 'Arctic Wilderness'}
+                  </h3>
+                  <p className="text-white/90">
+                    {t.home.arcticWildernessText || 'Explore vast tundra landscapes with stunning seasonal colors'}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

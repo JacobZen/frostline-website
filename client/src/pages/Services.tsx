@@ -4,7 +4,7 @@ import transferIcon from '@assets/generated_images/transfer_service_icon.png';
 import partnerIcon from '@assets/generated_images/partner_logistics_icon.png';
 import toursIcon from '@assets/generated_images/northern_lights_tours_icon.png';
 import rentalIcon from '@assets/generated_images/minibus_rental_icon.png';
-import minibusImage from '@assets/generated_images/minibus_on_arctic_road.png';
+import arcticCoastalRoute from '@assets/generated_images/arctic_coastal_transport_route.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
@@ -19,8 +19,8 @@ export default function Services() {
       <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={minibusImage}
-            alt="Modern minibus on Arctic road"
+            src={arcticCoastalRoute}
+            alt="Arctic coastal transport route in Northern Norway"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />

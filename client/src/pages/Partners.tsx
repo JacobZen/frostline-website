@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Clock, MessageCircle, ShieldCheck, Users, Calendar, Car } from 'lucide-react';
-import partnerImage from '@assets/generated_images/partnership_collaboration_visual.png';
+import arcticFjord from '@assets/generated_images/arctic_fjord_northern_norway.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
@@ -17,8 +17,8 @@ export default function Partners() {
       <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={partnerImage}
-            alt="Partnership collaboration"
+            src={arcticFjord}
+            alt="Arctic fjord in Northern Norway"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
