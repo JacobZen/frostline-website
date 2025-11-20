@@ -80,7 +80,7 @@ export default function Contact() {
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t.contact.emailLabel}</h3>
-              <p className="text-sm text-muted-foreground" data-testid="text-email-quick">info@frostline.as</p>
+              <p className="text-sm text-muted-foreground" data-testid="text-email-quick">post@frostline.as</p>
             </Card>
 
             <Card className="p-6 text-center hover-elevate transition-all" data-testid="card-quick-phone">
@@ -261,7 +261,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div className="flex flex-col gap-1">
                       <span className="text-xs text-muted-foreground uppercase tracking-wide">{t.contact.emailLabel}</span>
-                      <span className="text-sm text-foreground font-medium" data-testid="text-email">info@frostline.as</span>
+                      <span className="text-sm text-foreground font-medium" data-testid="text-email">post@frostline.as</span>
                     </div>
                   </div>
 
