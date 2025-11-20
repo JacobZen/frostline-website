@@ -43,7 +43,8 @@
   --chart-3: 220 70% 40%;
   --chart-4: 195 65% 35%;
   --chart-5: 215 80% 32%;
-  --font-sans: Inter, sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
@@ -172,6 +173,26 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  h1 {
+    @apply font-semibold;
+  }
+
+  h2, h3 {
+    @apply font-semibold;
+  }
+
+  h4, h5, h6 {
+    @apply font-medium;
+  }
+
+  button {
+    @apply font-medium;
   }
 }
 
