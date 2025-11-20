@@ -1,0 +1,92 @@
+You are updating the existing Frostline AS website built in React + Tailwind.
+Do not modify layout, content, or design. Only add Open Graph metadata so that the correct logo appears when sharing the website on social media, messaging apps and iMessage.
+Follow the instructions below exactly:
+
+1. Add logo file to public folder
+
+Copy the file:
+
+/mnt/data/Frostline AS – Private Transfers & Tours in Northern Norway.png
+
+
+into the project’s public/ directory and rename it:
+
+public/frostline-share.png
+
+
+This will produce a public URL:
+
+https://frostline.as/frostline-share.png
+
+2. Modify the main HTML head (index.html or React Helmet)
+
+In public/index.html
+(or in the <Helmet> section of the main layout if using React Helmet):
+
+Add the following tags inside <head>:
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Frostline AS – Arctic Private Transfers & Tours" />
+<meta property="og:description" content="Premium Arctic transport, private transfers and partner logistics in Northern Norway." />
+<meta property="og:image" content="https://frostline.as/frostline-share.png" />
+<meta property="og:url" content="https://frostline.as" />
+<meta property="og:type" content="website" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Frostline AS – Arctic Private Transfers" />
+<meta name="twitter:description" content="Premium private transfers in Northern Norway." />
+<meta name="twitter:image" content="https://frostline.as/frostline-share.png" />
+
+
+These ensure the logo displays when shared on:
+
+Facebook
+
+Messenger
+
+WhatsApp
+
+iMessage
+
+Twitter
+
+LinkedIn
+
+Slack
+
+3. Do NOT modify anything else
+
+Do not change:
+
+Existing design
+
+Fonts
+
+Navigation
+
+Page content
+
+Buttons
+
+Layout
+
+Only add:
+
+The logo file
+
+The Open Graph metadata
+
+4. Output
+
+Return:
+
+The updated public/index.html (or Helmet component) with OG tags inserted
+
+Confirmation that the logo has been moved to public/frostline-share.png
+
+No other changes
+
+END OF PROMPT
