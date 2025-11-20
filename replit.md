@@ -26,10 +26,11 @@ Preferred communication style: Simple, everyday language.
 
 **Design System:**
 - Custom color palette based on Nordic minimalism: Arctic Blue (#0e2a47), White (#ffffff), Dark Grey (#111111), Light Grey (#f4f4f4)
-- Typography using Inter/Roboto sans-serif fonts
+- Typography: Montserrat for headings (weights 300-700), Inter for body text and buttons (weights 300-600)
 - Responsive mobile-first approach with Tailwind breakpoints
 - Consistent spacing units (4, 6, 8, 12, 16, 20, 24) for rhythm
 - Custom hover and elevation effects for interactive elements
+- Premium frosted glass effects for overlays and floating elements
 
 **Internationalization:**
 - Language context supporting English and Norwegian (Bokmål)
@@ -46,10 +47,20 @@ Preferred communication style: Simple, everyday language.
 - 404: Custom not-found page
 
 **Component Architecture:**
-- Reusable components: Navbar, Footer, Hero, ServiceCard, LanguageSwitcher
+- Reusable components: Navbar, Footer, Hero, ServiceCard, LanguageSwitcher, PremiumCookiePopup
 - UI components from shadcn/ui in `components/ui/`
 - Page components in `pages/` directory
 - Example components for development/testing in `components/examples/`
+
+**GDPR Cookie Consent:**
+- Premium floating cookie popup with Arctic design aesthetic
+- Frosted glass effect (backdrop-blur-xl) with semi-transparent dark background
+- localStorage-based persistence ("cookiesAccepted" key)
+- Slide-up fade-in animation on first visit (500ms delay)
+- Fade-out animation on accept/close (300ms transition)
+- Responsive positioning (bottom-right corner, adjusts for mobile)
+- Privacy Policy link integration
+- Three interaction methods: Accept button, Close (X) button, Privacy Policy link
 
 ### Backend Architecture
 
