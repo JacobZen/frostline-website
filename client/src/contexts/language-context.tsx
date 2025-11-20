@@ -446,7 +446,7 @@ const translations: Translations = {
     },
     hero: {
       title: 'Frostline AS',
-      subtitle: 'Arktiske private transporter',
+      subtitle: 'Transport og turer',
     },
     home: {
       servicesTitle: 'Våre tjenester',
