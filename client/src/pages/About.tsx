@@ -44,7 +44,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Frostline AS is a transport company operating in Northern Norway.
+                  Frostline AS er et transportselskap organisert som et aksjeselskap, med virksomhet innen passasjertransport på forespørsel. Selskapet tilbyr trygge og fleksible transporttjenester, og kan også delta i samarbeid med andre selskaper og relaterte investeringer.
                 </p>
                 <p>
                   With a focus on reliability, service and flexibility, we work closely with partners who need a trustworthy transport provider year-round. Our commitment to excellence has made us a preferred choice for DMCs, hotels, and tour operators throughout the Tromsø region.
@@ -61,13 +61,25 @@ export default function About() {
               </h3>
               <div className="space-y-4">
                 <div>
-                  <div className="text-sm text-muted-foreground mb-1">Organization Number</div>
-                  <div className="text-foreground font-medium" data-testid="text-org-number">IFHKVVT08ND</div>
+                  <div className="text-sm text-muted-foreground mb-1">Legal Name</div>
+                  <div className="text-foreground font-medium">FROSTLINE AS</div>
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground mb-1">Location</div>
+                  <div className="text-sm text-muted-foreground mb-1">Organization Number</div>
+                  <div className="text-foreground font-medium" data-testid="text-org-number">936 520 553</div>
+                </div>
+                <div>
+                  <div className="text-sm text-muted-foreground mb-1">Address</div>
                   <div className="text-foreground font-medium">
-                    Operating in Northern Norway (Tromsø region)
+                    Kompaniveien 4<br />
+                    1639 Gamle Fredrikstad<br />
+                    Norway
+                  </div>
+                </div>
+                <div>
+                  <div className="text-sm text-muted-foreground mb-1">NACE Industry</div>
+                  <div className="text-foreground font-medium">
+                    Passasjertransport på forespørsel (49.330)
                   </div>
                 </div>
               </div>

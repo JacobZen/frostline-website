@@ -8,13 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Frostline AS</h3>
+            <h3 className="text-lg font-semibold text-foreground">FROSTLINE AS</h3>
             <p className="text-sm text-muted-foreground">
-              Reliable transport, private transfers and partner-based logistics in the Tromsø region.
+              Frostline AS er et transportselskap organisert som et aksjeselskap, med virksomhet innen passasjertransport på forespørsel.
             </p>
-            <p className="text-sm text-muted-foreground">
-              Org.nr: IFHKVVT08ND
-            </p>
+            <div className="text-sm text-muted-foreground space-y-1">
+              <p>Org.nr: 936 520 553</p>
+              <p>Kompaniveien 4</p>
+              <p>1639 Gamle Fredrikstad, Norway</p>
+            </div>
           </div>
 
           {/* Quick Links */}
