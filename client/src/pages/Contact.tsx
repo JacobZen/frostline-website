@@ -80,7 +80,9 @@ export default function Contact() {
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{t.contact.emailLabel}</h3>
-              <p className="text-sm text-muted-foreground" data-testid="text-email-quick">post@frostline.as</p>
+              <a href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry" className="text-sm text-primary hover:underline transition-colors" data-testid="link-email-quick">
+                post@frostline.as
+              </a>
             </Card>
 
             <Card className="p-6 text-center hover-elevate transition-all" data-testid="card-quick-phone">
@@ -111,7 +113,7 @@ export default function Contact() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-16 sm:py-20">
+      <section className="py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form - Takes 2 columns */}

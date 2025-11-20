@@ -86,7 +86,7 @@ export default function Privacy() {
       </div>
 
       {/* Content Section */}
-      <section className="py-16 sm:py-20">
+      <section className="py-20 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Introduction */}
           <Card className="p-8 mb-8">

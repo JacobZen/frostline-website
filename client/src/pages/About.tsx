@@ -32,7 +32,7 @@ export default function About() {
       </div>
 
       {/* Company Story */}
-      <section className="py-16 sm:py-20 bg-background">
+      <section className="py-20 sm:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -80,7 +80,7 @@ export default function About() {
       </section>
 
       {/* Driver & Competence */}
-      <section className="py-16 sm:py-20 bg-muted/30">
+      <section className="py-20 sm:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
@@ -143,7 +143,7 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 sm:py-20 bg-background">
+      <section className="py-20 sm:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
@@ -183,7 +183,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
+      <section className="py-20 sm:py-24 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
             {t.about.ctaTitle}
@@ -204,8 +204,8 @@ export default function About() {
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-              onClick={() => setLocation('/contact')}
+              className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+              onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry'}
               data-testid="button-contact-about"
             >
               {t.about.contactUs}

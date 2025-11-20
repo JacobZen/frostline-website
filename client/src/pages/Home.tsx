@@ -21,7 +21,7 @@ export default function Home() {
       <Hero />
 
       {/* About Frostline AS Teaser */}
-      <section className="py-16 sm:py-20 bg-muted/20 border-b">
+      <section className="py-20 sm:py-24 bg-muted/20 border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-6" data-testid="text-about-teaser-title">
             {t.home.aboutTeaserTitle}
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-16 sm:py-20 bg-background">
+      <section className="py-20 sm:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
@@ -58,6 +58,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Button
               size="lg"
+              className="shadow-lg hover:shadow-xl border-2 border-transparent hover:border-white transition-all"
               onClick={() => setLocation('/services')}
               data-testid="button-view-all-services"
             >
@@ -68,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 sm:py-20 bg-muted/30">
+      <section className="py-20 sm:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -98,6 +99,7 @@ export default function Home() {
                 </p>
                 <Button
                   variant="outline"
+                  className="shadow-md hover:shadow-lg border-2 hover:border-primary/50 transition-all"
                   onClick={() => setLocation('/partners')}
                   data-testid="button-partner-info"
                 >
@@ -114,7 +116,8 @@ export default function Home() {
                 </p>
                 <Button
                   variant="outline"
-                  onClick={() => setLocation('/contact')}
+                  className="shadow-md hover:shadow-lg border-2 hover:border-primary/50 transition-all"
+                  onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry'}
                   data-testid="button-book-now"
                 >
                   {t.home.bookNow}
@@ -126,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* Northern Nature Showcase */}
-      <section className="py-16 sm:py-20 bg-background">
+      <section className="py-20 sm:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
@@ -178,7 +181,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
+      <section className="py-20 sm:py-24 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
             {t.home.ctaTitle}
@@ -190,8 +193,8 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-              onClick={() => setLocation('/contact')}
+              className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+              onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry'}
               data-testid="button-contact-us"
             >
               {t.home.contactUs}
@@ -199,7 +202,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
+              className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
               onClick={() => setLocation('/partners')}
               data-testid="button-become-partner-cta"
             >

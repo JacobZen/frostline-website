@@ -1,0 +1,182 @@
+You are updating the existing Frostline AS website (React + Tailwind).
+Keep all existing structure, images, content, and layout.
+Implement ALL improvements described below exactly as written.
+
+⭐ 1. GLOBAL TYPOGRAPHY UPDATE
+Import Google Fonts
+
+Montserrat (300–700) → for all headings and logo
+
+Inter (300–600) → for all body text, menus, and buttons
+
+Apply globally
+
+Headings: font-montserrat font-semibold
+
+Logo text “Frostline AS”: font-montserrat font-semibold tracking-wide
+
+Body text & paragraphs: font-inter font-normal
+
+Buttons & menus: font-inter font-medium
+
+Do NOT change sizes unless necessary.
+
+⭐ 2. IMPROVE CTA BUTTONS
+
+Apply to all CTA-style buttons (“Book Now”, “Become a Partner”, “Contact Us”, etc.):
+
+Slightly darker background color for better contrast
+
+Soft white border on hover
+
+Subtle premium shadow
+
+Keep button shape untouched
+
+⭐ 3. IMPROVE LANGUAGE SELECTOR (NO/EN)
+
+Add more spacing between NO and EN buttons
+
+Add active-language highlight (underline OR soft glow)
+
+Keep existing button size and placement
+
+⭐ 4. SECTION SPACING IMPROVEMENT
+
+Increase vertical spacing between main content sections by 8–12%:
+
+Why Choose Us
+
+For Travel Partners
+
+Private Travelers
+
+Experience the Arctic
+
+Footer top spacing
+
+Do NOT change layout or order.
+
+⭐ 5. ADD PREMIUM FLOATING GDPR COOKIE POPUP
+
+Create a new component:
+
+PremiumCookiePopup.jsx
+
+Popup styling:
+
+Floating card, bottom-right
+
+fixed bottom-6 right-6 z-50 max-w-sm
+
+bg-black/50 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl p-4
+
+Smooth fade + slide-in animation
+
+Mobile version:
+
+bottom-4 right-4 max-w-xs
+
+Popup text:
+We use cookies to improve your experience, provide essential functions, and understand how our site is used. By continuing, you accept our cookie policy.
+
+Buttons:
+
+Accept
+
+bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition
+
+
+Privacy Policy
+
+text-white/80 underline hover:text-white transition
+
+Behavior:
+
+On load → check localStorage.getItem("cookiesAccepted")
+
+If missing → show popup
+
+On Accept → set
+localStorage.setItem("cookiesAccepted", "true")
+
+Then fade out
+
+Import into App.jsx so it appears on ALL pages.
+
+⭐ 6. CANCELLATION POLICY (NORWEGIAN + ENGLISH)
+
+Update the /terms page by adding this clause under “Cancellation Policy”:
+
+Norwegian
+Avbestilling må skje senest 5 dager før avreise. Det er ikke mulig å avbestille senere enn 5 dager før planlagt transport. Ved senere avbestilling belastes full pris.
+
+English
+Cancellations must be made no later than 5 days before the scheduled transport. It is not possible to cancel later than 5 days before. Later cancellations will be charged in full.
+
+
+Keep formatting consistent with current page style.
+
+⭐ 7. CONTACT BUTTONS MUST OPEN EMAIL CLIENT
+
+All Contact-related elements must open:
+
+mailto:post@frostline.as
+
+Update ALL:
+
+“Contact Us” buttons
+
+“Contact” navigation link
+
+Any footer email link
+
+Any email CTA on home or partner pages
+
+Contact page should ALSO include a visible mailto link/button
+
+Optional subject line (if simple):
+mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry
+
+
+Keep existing design, only update links.
+
+⭐ 8. DO NOT MODIFY
+
+Do NOT change:
+
+Page structure
+
+Images
+
+Existing text (except terms & email behavior)
+
+Colors
+
+Containers
+
+Navigation
+
+Footer content
+
+Only apply the enhancements described.
+
+⭐ 9. OUTPUT
+
+Deliver:
+
+Updated React components
+
+Updated Tailwind classes
+
+Updated Terms page
+
+New PremiumCookiePopup.jsx
+
+Updated Contact buttons
+
+Updated fonts system
+
+All changes integrated and working
+
+END OF FULL PROMPT

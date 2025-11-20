@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-muted/30 border-t mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
@@ -41,11 +41,13 @@ export default function Footer() {
                   {t.navbar.partners}
                 </span>
               </Link>
-              <Link href="/contact" data-testid="footer-link-contact">
-                <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                  {t.navbar.contact}
-                </span>
-              </Link>
+              <a 
+                href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                data-testid="footer-link-contact"
+              >
+                {t.navbar.contact}
+              </a>
               <Link href="/terms" data-testid="footer-link-terms">
                 <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
                   {t.footer.terms}
@@ -63,9 +65,11 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">{t.navbar.contact}</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="w-4 h-4" />
-                <span>post@frostline.as</span>
+              <div className="flex items-center gap-2 text-sm">
+                <Mail className="w-4 h-4 text-muted-foreground" />
+                <a href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-email">
+                  post@frostline.as
+                </a>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />

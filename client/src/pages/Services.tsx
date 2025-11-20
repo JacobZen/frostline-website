@@ -36,7 +36,7 @@ export default function Services() {
       </div>
 
       {/* Services Grid */}
-      <section className="py-16 sm:py-20 bg-background">
+      <section className="py-20 sm:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {t.services.serviceCards.map((service, index) => (
@@ -52,7 +52,7 @@ export default function Services() {
       </section>
 
       {/* Detailed Service Descriptions */}
-      <section className="py-16 sm:py-20 bg-muted/30">
+      <section className="py-20 sm:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {/* Private Transfers */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -74,7 +74,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.bookYourTransferText}
               </p>
-              <Button onClick={() => setLocation('/contact')} data-testid="button-book-transfer-service">
+              <Button onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Transfer%20Service%20Inquiry%20-%20Frostline%20AS'} data-testid="button-book-transfer-service">
                 {t.home.contactUs}
               </Button>
             </div>
@@ -126,7 +126,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.comingSoonText}
               </p>
-              <Button variant="outline" onClick={() => setLocation('/contact')} data-testid="button-tours-interest">
+              <Button variant="outline" onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Northern%20Lights%20Tours%20Interest%20-%20Frostline%20AS'} data-testid="button-tours-interest">
                 {t.services.expressInterest}
               </Button>
             </div>
@@ -139,7 +139,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.rentalInquiryText}
               </p>
-              <Button onClick={() => setLocation('/contact')} data-testid="button-rental-inquiry">
+              <Button onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Minibus%20Rental%20Inquiry%20-%20Frostline%20AS'} data-testid="button-rental-inquiry">
                 {t.home.contactUs}
               </Button>
             </div>
@@ -161,7 +161,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
+      <section className="py-20 sm:py-24 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
             {t.services.ctaTitle}
@@ -172,8 +172,8 @@ export default function Services() {
           <Button
             size="lg"
             variant="outline"
-            className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-            onClick={() => setLocation('/contact')}
+            className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+            onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Custom%20Solution%20Inquiry%20-%20Frostline%20AS'}
             data-testid="button-custom-solution"
           >
             {t.services.contactUsToday}
