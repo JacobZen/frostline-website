@@ -44,7 +44,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Frostline AS is a transport company based in Gamle Fredrikstad, operating in Northern Norway. The company is owned 50/50 by Morten Jacobsen and Jørgen Kobro.
+                  Frostline AS is a transport company operating in Northern Norway.
                 </p>
                 <p>
                   With a focus on reliability, service and flexibility, we work closely with partners who need a trustworthy transport provider year-round. Our commitment to excellence has made us a preferred choice for DMCs, hotels, and tour operators throughout the Tromsø region.
@@ -65,16 +65,8 @@ export default function About() {
                   <div className="text-foreground font-medium" data-testid="text-org-number">IFHKVVT08ND</div>
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground mb-1">Ownership</div>
-                  <div className="text-foreground font-medium">
-                    50% Morten Jacobsen<br />
-                    50% Jørgen Kobro
-                  </div>
-                </div>
-                <div>
                   <div className="text-sm text-muted-foreground mb-1">Location</div>
                   <div className="text-foreground font-medium">
-                    Based in Gamle Fredrikstad<br />
                     Operating in Northern Norway (Tromsø region)
                   </div>
                 </div>
