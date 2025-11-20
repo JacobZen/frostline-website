@@ -1,0 +1,71 @@
+Build a complete, modern, responsive website for Frostline AS, a transport company based in Northern Norway. The design must be clean, Nordic, minimalist, and professional, with elements inspired by Arctic nature (white, dark blue, grey, subtle gradients). Use HTML, CSS, and optionally lightweight JavaScript. No frameworks unless needed (Tailwind or simple React acceptable if beneficial).
+
+Overall Requirements
+	•	Mobile-first responsive design
+	•	Fast loading
+	•	Professional layout suitable for DMCs and travel partners
+	•	Hero section on the front page with large background image (mountains, fjord, northern lights)
+	•	Easy navigation
+	•	All text content included exactly as written below
+
+Pages to Create
+	1.	Home (index.html)
+	•	Large hero image with title: “Frostline AS – Private Transfers & Tours in Northern Norway”
+	•	Short description:
+“Frostline AS offers reliable transport, private transfers and partner-based logistics in the Tromsø region. We collaborate with DMCs, hotels, tour operators and private groups. Our focus is safe, flexible and comfortable transport — all year round.”
+	•	Buttons: Book Transfer / Become Partner
+	2.	Services
+Include sections for:
+	•	Private Transfers
+“Airport transfers, hotel pick-ups, sightseeing and custom routes in Tromsø and surrounding areas.”
+	•	Partner Transport
+“Reliable logistics for DMCs, tour operators and activity companies. We ensure your guests arrive on time — every time.”
+	•	Northern Lights & Seasonal Tours
+“Optional add-on product for the future. Small-group experiences with a certified driver.”
+	•	Minibus Rental
+“Rent our modern minibus with or without driver. Ideal for groups, events, and excursions.”
+	3.	About Us
+	•	“Frostline AS is a transport company based in Gamle Fredrikstad, operating in Northern Norway. The company is owned 50/50 by Morten Jacobsen and Jørgen Kobro.
+With a focus on reliability, service and flexibility, we work closely with partners who need a trustworthy transport provider year-round.”
+	•	Section for drivers & competence:
+“Our main driver Jørgen holds professional certifications, safety training and experience with Northern Norwegian road conditions.”
+	4.	Partner Page
+	•	“We work with DMCs, travel agencies and activity providers. Our goal is long-term cooperation where your guests receive top service.”
+	•	Benefits list:
+	•	Dedicated driver
+	•	Flexible scheduling
+	•	High reliability
+	•	Quick communication
+	•	Clean and comfortable vehicle
+	•	CTA button: Request Partnership
+	5.	Contact Page
+	•	Contact form (name, email, phone, message)
+	•	Contact details:
+Frostline AS
+Org.nr: IFHKVVT08ND
+Email placeholder: info@frostline.as
+“Available every day — we respond quickly.”
+
+Design Guidelines
+	•	Colors: White (#ffffff), Arctic Blue (#0e2a47), Dark Grey (#111111), Light Grey (#f4f4f4)
+	•	Fonts: Inter, Roboto or similar clean sans-serif
+	•	Use plenty of whitespace
+	•	Include simple fade/slide animations (optional)
+
+Images
+
+Use royalty-free placeholder images of:
+	•	Northern Lights
+	•	Fjords
+	•	Snowy landscapes
+	•	Minibus/transport visuals (or placeholder icon)
+
+Technical Notes
+	•	Create a clear folder structure:
+/assets/images
+/assets/css
+/assets/js
+	•	Make sure navigation links work between all pages
+	•	Add favicon (placeholder allowed)
+
+Deliver output as full project with all HTML/CSS/JS files ready to deploy.
