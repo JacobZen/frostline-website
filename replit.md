@@ -54,6 +54,7 @@ Preferred communication style: Simple, everyday language.
 
 **GDPR Cookie Consent:**
 - Premium floating cookie popup with Arctic design aesthetic
+- **Bilingual support**: Automatically displays in English or Norwegian based on language context
 - Frosted glass effect (backdrop-blur-xl) with semi-transparent dark background
 - localStorage-based persistence ("cookiesAccepted" key)
 - Slide-up fade-in animation on first visit (500ms delay)
@@ -61,6 +62,8 @@ Preferred communication style: Simple, everyday language.
 - Responsive positioning (bottom-right corner, adjusts for mobile)
 - Privacy Policy link integration
 - Three interaction methods: Accept button, Close (X) button, Privacy Policy link
+- All text (message, buttons, links) updates instantly when language changes
+- Cookie acceptance persists across language switches and page navigation
 
 ### Backend Architecture
 
