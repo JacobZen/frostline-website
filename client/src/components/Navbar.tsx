@@ -3,17 +3,20 @@ import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@assets/Color logo - no background_1763624644274.png';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function Navbar() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/services', label: 'Services' },
-    { path: '/about', label: 'About Us' },
-    { path: '/partners', label: 'Partners' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/', label: t.navbar.home },
+    { path: '/services', label: t.navbar.services },
+    { path: '/about', label: t.navbar.about },
+    { path: '/partners', label: t.navbar.partners },
+    { path: '/contact', label: t.navbar.contact },
   ];
 
   const isActive = (path: string) => location === path;
@@ -34,20 +37,23 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link key={link.path} href={link.path} data-testid={`link-${link.label.toLowerCase().replace(' ', '-')}`}>
-                <div
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover-elevate active-elevate-2 ${
-                    isActive(link.path)
-                      ? 'bg-primary/10 text-primary'
-                      : 'text-foreground'
-                  }`}
-                >
-                  {link.label}
-                </div>
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center gap-3">
+            <div className="flex items-center gap-1">
+              {navLinks.map((link) => (
+                <Link key={link.path} href={link.path} data-testid={`link-${link.label.toLowerCase().replace(' ', '-')}`}>
+                  <div
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover-elevate active-elevate-2 ${
+                      isActive(link.path)
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-foreground'
+                    }`}
+                  >
+                    {link.label}
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -66,22 +72,27 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-background">
-          <div className="px-4 py-4 space-y-2">
-            {navLinks.map((link) => (
-              <Link key={link.path} href={link.path}>
-                <div
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-3 rounded-md text-base font-medium hover-elevate active-elevate-2 cursor-pointer ${
-                    isActive(link.path)
-                      ? 'bg-primary/10 text-primary'
-                      : 'text-foreground'
-                  }`}
-                  data-testid={`mobile-link-${link.label.toLowerCase().replace(' ', '-')}`}
-                >
-                  {link.label}
-                </div>
-              </Link>
-            ))}
+          <div className="px-4 py-4 space-y-4">
+            <div className="space-y-2">
+              {navLinks.map((link) => (
+                <Link key={link.path} href={link.path}>
+                  <div
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-3 rounded-md text-base font-medium hover-elevate active-elevate-2 cursor-pointer ${
+                      isActive(link.path)
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-foreground'
+                    }`}
+                    data-testid={`mobile-link-${link.label.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {link.label}
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="flex justify-center pt-2 border-t">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       )}
