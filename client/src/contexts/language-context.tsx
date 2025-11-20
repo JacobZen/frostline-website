@@ -177,6 +177,46 @@ interface TranslationContent {
     companyDescription: string;
     quickLinks: string;
     copyright: string;
+    terms: string;
+    privacy: string;
+  };
+  terms: {
+    title: string;
+    intro: string;
+    scopeTitle: string;
+    scopeText: string;
+    bookingsTitle: string;
+    bookingsText: string;
+    pricesTitle: string;
+    pricesText: string;
+    cancellationsTitle: string;
+    cancellationsText: string;
+    liabilityTitle: string;
+    liabilityText: string;
+    lawTitle: string;
+    lawText: string;
+    disclaimer: string;
+  };
+  privacy: {
+    title: string;
+    intro: string;
+    controllerTitle: string;
+    controllerText: string;
+    dataTitle: string;
+    dataText: string;
+    purposeTitle: string;
+    purposeText: string;
+    basisTitle: string;
+    basisText: string;
+    storageTitle: string;
+    storageText: string;
+    sharingTitle: string;
+    sharingText: string;
+    rightsTitle: string;
+    rightsText: string;
+    contactTitle: string;
+    contactText: string;
+    disclaimer: string;
   };
 }
 
@@ -434,6 +474,46 @@ const translations: Translations = {
       companyDescription: 'Frostline AS is a transport company organized as a limited company, operating in passenger transport on demand.',
       quickLinks: 'Quick Links',
       copyright: '© 2025 Frostline AS. All rights reserved.',
+      terms: 'Terms & Conditions',
+      privacy: 'Privacy Policy',
+    },
+    terms: {
+      title: 'Terms & Conditions',
+      intro: 'These Terms & Conditions apply to the use of the website of Frostline AS and to enquiries and bookings made through our contact channels. By using this website, you accept these terms.',
+      scopeTitle: 'Scope of Services',
+      scopeText: 'Frostline AS offers passenger transport on request, including private transfers, partner transport for DMCs and tour operators, and related services in Northern Norway.',
+      bookingsTitle: 'Bookings and Enquiries',
+      bookingsText: 'Bookings are usually confirmed via email or written agreement. The contact form on this website is for enquiries only and does not constitute a binding booking.',
+      pricesTitle: 'Prices and Payment',
+      pricesText: 'Prices are provided on request and may depend on route, season, and availability. Payment terms are agreed separately for each booking.',
+      cancellationsTitle: 'Cancellations and Changes',
+      cancellationsText: 'Cancellation terms are agreed upon booking. As a general rule, free cancellation may be available up to 24 hours before scheduled departure. Cancellations made later may incur fees.',
+      liabilityTitle: 'Liability and Responsibility',
+      liabilityText: 'Frostline AS takes reasonable care for the safety and comfort of passengers. However, we are not liable for delays or disruptions caused by weather conditions, traffic, road closures, or other circumstances beyond our control, within the limits of applicable Norwegian law.',
+      lawTitle: 'Governing Law and Disputes',
+      lawText: 'These terms are governed by Norwegian law. Any disputes shall be handled by Norwegian courts.',
+      disclaimer: 'This page is a general template and does not replace legal advice. Frostline AS may update these terms without prior notice.',
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      intro: 'This Privacy Policy explains how Frostline AS collects and processes personal data when you use our website or contact us. We are committed to protecting your privacy and processing personal data in accordance with applicable data protection laws, including the GDPR.',
+      controllerTitle: 'Data Controller',
+      controllerText: 'Frostline AS (Org.no 936 520 553, Kompaniveien 4, 1639 Gamle Fredrikstad, Norway) is the data controller for the personal data we collect through this website.',
+      dataTitle: 'What Data We Collect',
+      dataText: 'We collect information you provide through our contact form, including: name, contact details (email, phone), organisation, and message content. We may also collect technical data such as IP address, browser type, and approximate location for security, logging, and statistical purposes.',
+      purposeTitle: 'Purpose of Processing',
+      purposeText: 'Your personal data is used to: handle enquiries and bookings, respond to messages, maintain security, and improve the website.',
+      basisTitle: 'Legal Basis',
+      basisText: 'We process personal data based on legitimate interest and/or as necessary to take steps before entering into a contract with you.',
+      storageTitle: 'Storage Period',
+      storageText: 'Personal data is stored as long as necessary to fulfil the purpose, and then deleted or anonymised, unless longer storage is required by law.',
+      sharingTitle: 'Sharing of Data',
+      sharingText: 'Personal data may be shared with IT providers or partners strictly as necessary to fulfil our services. Frostline AS will not sell your personal data to third parties.',
+      rightsTitle: 'Your Rights',
+      rightsText: 'You have the right to access, correct, delete, restrict, object to processing, and request portability of your personal data where applicable under GDPR. You also have the right to complain to Datatilsynet (the Norwegian Data Protection Authority).',
+      contactTitle: 'Contact',
+      contactText: 'If you have questions about this Privacy Policy or how we process your personal data, please contact us at: post@frostline.as',
+      disclaimer: 'This page is a general template and should be reviewed and adapted if needed to ensure full legal compliance.',
     },
   },
   no: {
@@ -689,6 +769,46 @@ const translations: Translations = {
       companyDescription: 'Frostline AS er et transportselskap organisert som et aksjeselskap, med virksomhet innen passasjertransport på forespørsel.',
       quickLinks: 'Hurtiglenker',
       copyright: '© 2025 Frostline AS. Alle rettigheter reservert.',
+      terms: 'Vilkår og betingelser',
+      privacy: 'Personvernerklæring',
+    },
+    terms: {
+      title: 'Vilkår og betingelser',
+      intro: 'Disse vilkårene og betingelsene gjelder for bruk av nettsiden til Frostline AS og for henvendelser og bestillinger gjort via våre kontaktkanaler. Ved å bruke dette nettstedet aksepterer du disse vilkårene.',
+      scopeTitle: 'Tjenestenes omfang',
+      scopeText: 'Frostline AS tilbyr passasjertransport på forespørsel, inkludert private transporter, partnertransport for DMC-er og turoperatører, og relaterte tjenester i Nord-Norge.',
+      bookingsTitle: 'Bestillinger og henvendelser',
+      bookingsText: 'Bestillinger bekreftes normalt via e-post eller skriftlig avtale. Kontaktskjemaet på denne nettsiden er kun for henvendelser og utgjør ikke en bindende bestilling.',
+      pricesTitle: 'Priser og betaling',
+      pricesText: 'Priser gis på forespørsel og kan avhenge av rute, sesong og kapasitet. Betalingsvilkår avtales særskilt for hver bestilling.',
+      cancellationsTitle: 'Avbestillinger og endringer',
+      cancellationsText: 'Avbestillingsregler avtales ved bestilling. Som en generell regel kan fri avbestilling være tilgjengelig inntil 24 timer før planlagt avreise. Avbestillinger gjort senere kan medføre gebyr.',
+      liabilityTitle: 'Ansvar',
+      liabilityText: 'Frostline AS utviser rimelig aktsomhet for passasjerers sikkerhet og komfort. Vi er imidlertid ikke ansvarlig for forsinkelser eller avbrudd forårsaket av værforhold, trafikk, veiavstengninger eller andre omstendigheter utenfor vår kontroll, innenfor rammene av gjeldende norsk lov.',
+      lawTitle: 'Gjeldende lov og tvister',
+      lawText: 'Disse vilkårene er underlagt norsk rett. Eventuelle tvister skal behandles av norske domstoler.',
+      disclaimer: 'Denne siden er en generell mal og erstatter ikke juridisk rådgivning. Frostline AS kan oppdatere disse vilkårene uten forhåndsvarsel.',
+    },
+    privacy: {
+      title: 'Personvernerklæring',
+      intro: 'Denne personvernerklæringen forklarer hvordan Frostline AS samler inn og behandler personopplysninger når du bruker vårt nettsted eller kontakter oss. Vi er opptatt av å beskytte ditt personvern og behandler personopplysninger i samsvar med gjeldende personvernlovgivning, inkludert GDPR.',
+      controllerTitle: 'Behandlingsansvarlig',
+      controllerText: 'Frostline AS (Org.nr 936 520 553, Kompaniveien 4, 1639 Gamle Fredrikstad) er behandlingsansvarlig for personopplysningene vi samler inn via dette nettstedet.',
+      dataTitle: 'Hvilke opplysninger vi samler inn',
+      dataText: 'Vi samler inn informasjon du oppgir gjennom vårt kontaktskjema, inkludert: navn, kontaktinformasjon (e-post, telefon), organisasjon og innhold i meldingen. Vi kan også samle inn tekniske data som IP-adresse, nettlesertype og omtrentlig plassering for sikkerhet, logging og statistiske formål.',
+      purposeTitle: 'Formål med behandlingen',
+      purposeText: 'Dine personopplysninger brukes til å: håndtere henvendelser og bestillinger, svare på meldinger, opprettholde sikkerhet og forbedre nettstedet.',
+      basisTitle: 'Behandlingsgrunnlag',
+      basisText: 'Vi behandler personopplysninger basert på berettiget interesse og/eller som nødvendig for å gjennomføre tiltak før inngåelse av avtale med deg.',
+      storageTitle: 'Lagringstid',
+      storageText: 'Personopplysninger lagres så lenge det er nødvendig for formålet, og slettes eller anonymiseres deretter, med mindre lengre lagring er påkrevd ved lov.',
+      sharingTitle: 'Utlevering av opplysninger',
+      sharingText: 'Personopplysninger kan deles med IT-leverandører eller samarbeidspartnere når det er nødvendig for å levere våre tjenester. Frostline AS vil ikke selge personopplysninger til tredjeparter.',
+      rightsTitle: 'Dine rettigheter',
+      rightsText: 'Du har rett til innsyn, retting, sletting, begrensning, innsigelse mot behandling og til dataportabilitet der dette er relevant i henhold til GDPR. Du har også rett til å klage til Datatilsynet.',
+      contactTitle: 'Kontakt',
+      contactText: 'Hvis du har spørsmål om denne personvernerklæringen eller hvordan vi behandler personopplysninger, kan du kontakte oss på: post@frostline.as',
+      disclaimer: 'Denne siden er en generell mal og bør vurderes og tilpasses ved behov for å sikre full juridisk etterlevelse.',
     },
   },
 };

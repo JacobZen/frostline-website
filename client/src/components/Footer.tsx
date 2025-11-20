@@ -46,6 +46,16 @@ export default function Footer() {
                   {t.navbar.contact}
                 </span>
               </Link>
+              <Link href="/terms" data-testid="footer-link-terms">
+                <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  {t.footer.terms}
+                </span>
+              </Link>
+              <Link href="/privacy" data-testid="footer-link-privacy">
+                <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  {t.footer.privacy}
+                </span>
+              </Link>
             </div>
           </div>
 
@@ -68,10 +78,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t text-center">
-          <p className="text-sm text-muted-foreground">
-            {t.footer.copyright.replace('2025', new Date().getFullYear().toString())}
-          </p>
+        <div className="mt-8 pt-8 border-t">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              {t.footer.copyright.replace('2025', new Date().getFullYear().toString())}
+            </p>
+            <div className="flex gap-6">
+              <Link href="/terms" data-testid="footer-bottom-link-terms">
+                <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  {t.footer.terms}
+                </span>
+              </Link>
+              <Link href="/privacy" data-testid="footer-bottom-link-privacy">
+                <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  {t.footer.privacy}
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

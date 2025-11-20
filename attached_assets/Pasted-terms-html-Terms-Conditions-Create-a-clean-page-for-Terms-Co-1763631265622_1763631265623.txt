@@ -1,0 +1,109 @@
+terms.html (Terms & Conditions)
+--------------------------------
+
+Create a clean page for Terms & Conditions with bilingual content. Make it clear this is a general template and should not be treated as legal advice.
+
+Main heading:
+- EN: “Terms & Conditions”
+- NO: “Vilkår og betingelser”
+
+Intro paragraph:
+- EN:
+“These Terms & Conditions apply to the use of the website of Frostline AS and to enquiries and bookings made through our contact channels. By using this website, you accept these terms.”
+- NO:
+“Disse vilkårene og betingelsene gjelder for bruk av nettsiden til Frostline AS og for henvendelser og bestillinger gjort via våre kontaktkanaler. Ved å bruke dette nettstedet aksepterer du disse vilkårene.”
+
+Suggested sections (with EN + NO headings and text):
+
+1) Scope of Services
+- EN: Describe that Frostline AS offers passenger transport on request, private transfers, partner transport and related services.
+- NO: Beskriv at Frostline AS tilbyr passasjertransport på forespørsel, private transporter, partnertransport og relaterte tjenester.
+
+2) Bookings and Enquiries
+- EN: Explain that bookings are usually confirmed via email or written agreement; website form is for enquiries only.
+- NO: Forklar at bestillinger normalt bekreftes via e-post eller skriftlig avtale; nettsidens skjema er kun for henvendelser.
+
+3) Prices and Payment
+- EN: Mention that prices are provided on request, may depend on route, season and availability; payment terms are agreed separately.
+- NO: Nevn at priser gis på forespørsel, kan avhenge av rute, sesong og kapasitet; betalingsvilkår avtales særskilt.
+
+4) Cancellations and Changes
+- EN: Add a simple template for cancellation rules (e.g. free cancellation up to X hours, after that fees may apply) as generic text.
+- NO: Legg inn en enkel mal for avbestillingsregler (f.eks. fri avbestilling inntil X timer før, deretter kan gebyr tilkomme) som generisk tekst.
+
+5) Liability and Responsibility
+- EN: State that Frostline AS will take reasonable care for safety but is not liable for delays caused by weather, traffic, etc., within reasonable legal limits.
+- NO: Angi at Frostline AS utviser rimelig aktsomhet for sikkerhet, men ikke er ansvarlig for forsinkelser pga. vær, trafikk osv., innenfor det som følger av gjeldende rett.
+
+6) Governing Law and Disputes
+- EN: State that the terms are governed by Norwegian law and disputes shall be handled by Norwegian courts.
+- NO: Angi at vilkårene er underlagt norsk rett og at tvister skal behandles av norske domstoler.
+
+Add a short note at the bottom:
+- EN: “This page is a general template and does not replace legal advice. Frostline AS may update these terms without prior notice.”
+- NO: “Denne siden er en generell mal og erstatter ikke juridisk rådgivning. Frostline AS kan oppdatere disse vilkårene uten forhåndsvarsel.”
+
+--------------------------------
+7) privacy.html (Privacy Policy / Personvernerklæring)
+--------------------------------
+
+Create a GDPR-aware, high-level Privacy Policy page with bilingual content. Make it clear that Frostline AS is the data controller for enquiries through the website.
+
+Main heading:
+- EN: “Privacy Policy”
+- NO: “Personvernerklæring”
+
+Intro:
+- EN:
+“This Privacy Policy explains how Frostline AS collects and processes personal data when you use our website or contact us. We are committed to protecting your privacy and processing personal data in accordance with applicable data protection laws, including the GDPR.”
+- NO:
+“Denne personvernerklæringen forklarer hvordan Frostline AS samler inn og behandler personopplysninger når du bruker vårt nettsted eller kontakter oss. Vi er opptatt av å beskytte ditt personvern og behandler personopplysninger i samsvar med gjeldende personvernlovgivning, inkludert GDPR.”
+
+Suggested sections EN + NO:
+
+1) Data Controller / Behandlingsansvarlig
+- EN:
+“Frostline AS (Org.no 936 520 553, Kompaniveien 4, 1639 Gamle Fredrikstad, Norway) is the data controller for the personal data we collect through this website.”
+- NO:
+“Frostline AS (Org.nr 936 520 553, Kompaniveien 4, 1639 Gamle Fredrikstad) er behandlingsansvarlig for personopplysningene vi samler inn via dette nettstedet.”
+
+2) What Data We Collect / Hvilke opplysninger vi samler inn
+Mention e.g.:
+- Name, contact details (email, phone), organisation, message content.
+- Technical data like IP address, browser type, and approximate location for security/log/statistics (if relevant).
+
+3) Purpose of Processing / Formål med behandlingen
+Explain that data is used to:
+- Handle enquiries and bookings.
+- Respond to messages.
+- Maintain security and improve the website.
+
+4) Legal Basis / Behandlingsgrunnlag
+- EN: Typically legitimate interest and/or necessary to take steps before entering into a contract.
+- NO: Vanligvis berettiget interesse og/eller nødvendig for å gjennomføre tiltak før inngåelse av avtale.
+
+5) Storage Period / Lagringstid
+- EN: Personal data is stored as long as necessary to fulfil the purpose, and then deleted or anonymised, unless longer storage is required by law.
+- NO: Personopplysninger lagres så lenge det er nødvendig for formålet, og slettes eller anonymiseres deretter, med mindre lengre lagring er påkrevd ved lov.
+
+6) Sharing of Data / Utlevering av opplysninger
+- EN: Explain that data may be shared with IT providers or partners strictly as necessary, and that Frostline AS will not sell personal data.
+- NO: Forklar at opplysninger kan deles med IT-leverandører eller samarbeidspartnere når det er nødvendig, og at Frostline AS ikke vil selge personopplysninger.
+
+7) Your Rights / Dine rettigheter
+List basic GDPR rights:
+- Access, correction, deletion, restriction, objection, and data portability where applicable.
+- Right to complain to Datatilsynet (the Norwegian Data Protection Authority).
+
+8) Contact / Kontakt
+Provide contact details:
+
+EN:
+“If you have questions about this Privacy Policy or how we process your personal data, please contact us at: info@frostline.as”
+
+NO:
+“Hvis du har spørsmål om denne personvernerklæringen eller hvordan vi behandler personopplysninger, kan du kontakte oss på: info@frostline.as”
+
+Add a short note:
+- EN: “This page is a general template and should be reviewed and adapted if needed to ensure full legal compliance.”
+- NO: “Denne siden er en generell mal og bør vurderes og tilpasses ved behov for å sikre full juridisk etterlevelse.”
