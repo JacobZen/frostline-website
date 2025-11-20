@@ -16,7 +16,7 @@ export default function Hero() {
           alt="Northern Lights over Norwegian fjord"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
       </div>
 
       {/* Content */}
@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             size="lg"
-            className="bg-primary/90 backdrop-blur-sm hover:bg-primary text-primary-foreground min-w-[200px] no-default-hover-elevate"
+            className="bg-primary backdrop-blur-sm border-2 border-transparent hover:bg-primary/90 hover:border-white text-primary-foreground min-w-[200px] no-default-hover-elevate transition-all"
             onClick={() => setLocation('/contact')}
             data-testid="button-book-transfer"
           >
@@ -41,7 +41,7 @@ export default function Hero() {
           <Button
             size="lg"
             variant="outline"
-            className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 min-w-[200px] no-default-hover-elevate"
+            className="bg-white/15 backdrop-blur-sm border-white/40 border-2 text-white hover:bg-white/25 hover:border-white min-w-[200px] no-default-hover-elevate transition-all"
             onClick={() => setLocation('/partners')}
             data-testid="button-become-partner"
           >

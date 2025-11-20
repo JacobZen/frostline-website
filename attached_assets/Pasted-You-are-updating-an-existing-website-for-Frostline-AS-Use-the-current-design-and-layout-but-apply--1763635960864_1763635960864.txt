@@ -1,0 +1,99 @@
+You are updating an existing website for Frostline AS.
+Use the current design and layout, but apply the following improvements exactly as described below.
+The site is built with React + TailwindCSS (or keep the current stack unchanged).
+Make the design modern, clean and premium.
+The site already exists at https://frostline.as
+ — modify it according to these instructions:
+
+1. Improve the CTA buttons
+
+Increase contrast on Book Now and Become a Partner buttons.
+
+Make them slightly darker or add a white border on hover.
+
+Keep size similar, just more visually clear.
+
+2. Improve the language selector
+
+Keep Norwegian (NO) and English (EN) flags/buttons.
+
+Add subtle spacing between them.
+
+Add a small active-language highlight (light underline or soft shadow).
+
+3. Improve navigation menu spacing
+
+Add 10–15px extra spacing between menu items (Home, Services, About Us, Partners, Contact).
+
+Keep it clean and premium-looking.
+
+4. Adjust the hero section
+
+Add a soft dark gradient at the bottom of the hero image to make title text slightly clearer.
+
+Do not change the image itself (northern lights over mountains).
+
+5. Improve service icons
+
+Ensure icons are equal size.
+
+Add a subtle hover-lift animation (1–2px upward).
+
+Optionally add a very soft shadow.
+
+6. Add a short “About Frostline AS” teaser on the front page (under hero, above Services)
+
+Insert this text block:
+
+About Frostline AS
+“Frostline AS is a certified passenger transport company operating in Tromsø and Eastern Norway. We provide reliable Arctic transfers for travelers and professional partners.”
+
+Keep it in the same style as other section headers.
+
+7. Footer improvement
+
+Inside the Contact section of the footer, make this line more visible:
+
+“We respond quickly.”
+
+Place it under Available every day, slightly larger or with softer spacing so it doesn’t blend in too much.
+
+8. Do NOT change existing content structure
+
+Keep:
+
+All links
+
+All existing images
+
+All service blocks
+
+All pages (Home, Services, About, Partners, Contact)
+
+Only apply the improvements listed above.
+
+9. Code quality
+
+Use responsive Tailwind classes.
+
+Avoid overly bright colors; keep the Arctic/Northern Norway feel.
+
+Keep design clean, minimalist and professional.
+
+10. Output
+
+Generate:
+
+Updated React components / files
+
+Updated Tailwind classes
+
+Any necessary CSS refinements
+
+Only code required to implement these improvements
+
+No placeholder text except where specified
+
+Preserve all existing texts unless specifically changed
+
+END OF PROMPT

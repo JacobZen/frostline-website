@@ -71,7 +71,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4" />
                 <span>{t.contact.availabilityText1}</span>
               </div>
-              <p className="text-sm text-muted-foreground italic">
+              <p className="text-base text-foreground font-medium mt-4" data-testid="text-quick-response">
                 {t.contact.phoneSubtext}
               </p>
             </div>

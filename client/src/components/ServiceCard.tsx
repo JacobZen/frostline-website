@@ -8,9 +8,9 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
-    <Card className="p-6 hover-elevate transition-all cursor-default">
+    <Card className="p-6 hover-elevate transition-all cursor-default group">
       <div className="flex flex-col items-start gap-4">
-        <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+        <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0 transition-transform duration-300 group-hover:-translate-y-1 shadow-sm">
           <img
             src={icon}
             alt={title}

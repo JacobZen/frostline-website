@@ -20,6 +20,8 @@ interface TranslationContent {
     subtitle: string;
   };
   home: {
+    aboutTeaserTitle: string;
+    aboutTeaserText: string;
     servicesTitle: string;
     servicesSubtitle: string;
     viewAllServices: string;
@@ -234,6 +236,8 @@ const translations: Translations = {
       subtitle: 'Arctic private transfers',
     },
     home: {
+      aboutTeaserTitle: 'About Frostline AS',
+      aboutTeaserText: 'Frostline AS is a certified passenger transport company operating in Tromsø and Eastern Norway. We provide reliable Arctic transfers for travelers and professional partners.',
       servicesTitle: 'Our Services',
       servicesSubtitle: 'Professional transport solutions for every need in Northern Norway',
       viewAllServices: 'View All Services',
@@ -529,6 +533,8 @@ const translations: Translations = {
       subtitle: 'Transport og turer',
     },
     home: {
+      aboutTeaserTitle: 'Om Frostline AS',
+      aboutTeaserText: 'Frostline AS er et sertifisert persontransportselskap som opererer i Tromsø og Østlandet. Vi tilbyr pålitelige arktiske transporter for reisende og profesjonelle partnere.',
       servicesTitle: 'Våre tjenester',
       servicesSubtitle: 'Profesjonelle transportløsninger for alle behov i Nord-Norge',
       viewAllServices: 'Se alle tjenester',

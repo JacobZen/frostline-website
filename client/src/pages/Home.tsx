@@ -20,6 +20,18 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Hero />
 
+      {/* About Frostline AS Teaser */}
+      <section className="py-16 sm:py-20 bg-muted/20 border-b">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-6" data-testid="text-about-teaser-title">
+            {t.home.aboutTeaserTitle}
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-about-teaser-description">
+            {t.home.aboutTeaserText}
+          </p>
+        </div>
+      </section>
+
       {/* Services Preview Section */}
       <section className="py-16 sm:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

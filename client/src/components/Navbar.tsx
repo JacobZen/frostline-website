@@ -38,7 +38,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-3">
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
               {navLinks.map((link) => (
                 <Link key={link.path} href={link.path} data-testid={`link-${link.label.toLowerCase().replace(' ', '-')}`}>
                   <div
