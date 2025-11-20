@@ -2,40 +2,12 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Clock, MessageCircle, ShieldCheck, Users, Calendar, Car } from 'lucide-react';
 import partnerImage from '@assets/generated_images/partnership_collaboration_visual.png';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function Partners() {
-  const benefits = [
-    {
-      icon: Users,
-      title: 'Dedicated Driver',
-      description: 'Your guests receive personalized attention from our experienced professional drivers.',
-    },
-    {
-      icon: Calendar,
-      title: 'Flexible Scheduling',
-      description: 'We adapt to your operational needs with customizable pickup and drop-off times.',
-    },
-    {
-      icon: ShieldCheck,
-      title: 'High Reliability',
-      description: 'Consistent, punctual service you can depend on for all your transport logistics.',
-    },
-    {
-      icon: MessageCircle,
-      title: 'Quick Communication',
-      description: 'Fast response times and clear communication channels for seamless coordination.',
-    },
-    {
-      icon: Car,
-      title: 'Clean & Comfortable Vehicle',
-      description: 'Modern, well-maintained vehicles that provide a premium experience for your guests.',
-    },
-    {
-      icon: Clock,
-      title: 'Year-Round Service',
-      description: 'Reliable transport in all seasons and weather conditions throughout Northern Norway.',
-    },
-  ];
+  const { t } = useLanguage();
+  
+  const benefitIcons = [Users, Calendar, ShieldCheck, MessageCircle, Car, Clock];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -51,10 +23,10 @@ export default function Partners() {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4" data-testid="text-partners-title">
-            Partner With Us
+            {t.partners.title}
           </h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Building long-term relationships with travel professionals
+            {t.partners.subtitle}
           </p>
         </div>
       </div>
@@ -63,10 +35,10 @@ export default function Partners() {
       <section className="py-16 sm:py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-6">
-            Your Trusted Transport Partner
+            {t.partners.introTitle}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We work with DMCs, travel agencies and activity providers. Our goal is long-term cooperation where your guests receive top service. With Frostline AS as your transport partner, you can focus on your core business while we handle the logistics.
+            {t.partners.introText}
           </p>
         </div>
       </section>
@@ -76,16 +48,16 @@ export default function Partners() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-              Partnership Benefits
+              {t.partners.benefitsTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Everything you need for reliable, professional transport logistics
+              {t.partners.benefitsSubtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
+            {t.partners.benefits.map((benefit, index) => {
+              const Icon = benefitIcons[index];
               return (
                 <Card key={index} className="p-6 hover-elevate transition-all">
                   <div className="flex flex-col items-start gap-4">
@@ -113,35 +85,35 @@ export default function Partners() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-              Who We Work With
+              {t.partners.whoWeWorkWith}
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-6">
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                DMCs & Travel Agencies
+                {t.partners.dmcs}
               </h3>
               <p className="text-muted-foreground">
-                We provide reliable logistics for destination management companies and travel agencies, ensuring seamless transport for your clients throughout their Northern Norway experience.
+                {t.partners.dmcsText}
               </p>
             </Card>
 
             <Card className="p-6">
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Hotels & Accommodations
+                {t.partners.hotels}
               </h3>
               <p className="text-muted-foreground">
-                Partner with us for consistent airport transfers and excursion transport, giving your guests a premium arrival and departure experience.
+                {t.partners.hotelsText}
               </p>
             </Card>
 
             <Card className="p-6">
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Tour & Activity Operators
+                {t.partners.tourOperators}
               </h3>
               <p className="text-muted-foreground">
-                We handle the transport logistics so you can focus on delivering exceptional experiences. Reliable pickups and drop-offs for all your activities.
+                {t.partners.tourOperatorsText}
               </p>
             </Card>
           </div>
@@ -153,77 +125,36 @@ export default function Partners() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-              How It Works
+              {t.partners.howItWorks}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Getting started is simple and straightforward
+              {t.partners.howItWorksSubtitle}
             </p>
           </div>
 
           <div className="space-y-6">
-            <Card className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 font-semibold">
-                  1
+            {[
+              { title: t.partners.step1Title, text: t.partners.step1Text },
+              { title: t.partners.step2Title, text: t.partners.step2Text },
+              { title: t.partners.step3Title, text: t.partners.step3Text },
+              { title: t.partners.step4Title, text: t.partners.step4Text },
+            ].map((step, index) => (
+              <Card key={index} className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 font-semibold">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {step.text}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Initial Contact
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Reach out to us via our contact form or email. Tell us about your transport needs and expected volume.
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 font-semibold">
-                  2
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Consultation
-                  </h3>
-                  <p className="text-muted-foreground">
-                    We'll discuss your specific requirements, scheduling needs, and how we can best support your operations.
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 font-semibold">
-                  3
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Partnership Agreement
-                  </h3>
-                  <p className="text-muted-foreground">
-                    We establish clear terms, pricing, and communication protocols that work for both parties.
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 font-semibold">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Ongoing Support
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Enjoy reliable service with dedicated support. We're always available to adjust and optimize as your needs evolve.
-                  </p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -232,10 +163,10 @@ export default function Partners() {
       <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
-            Ready to Partner With Us?
+            {t.partners.ctaTitle}
           </h2>
           <p className="text-lg mb-8 text-primary-foreground/90">
-            Let's discuss how we can support your transport needs in Northern Norway.
+            {t.partners.ctaSubtitle}
           </p>
           <Button
             size="lg"
@@ -244,7 +175,7 @@ export default function Partners() {
             onClick={() => window.location.href = '/contact'}
             data-testid="button-request-partnership"
           >
-            Request Partnership
+            {t.partners.requestPartnership}
           </Button>
         </div>
       </section>

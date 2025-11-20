@@ -5,9 +5,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function Contact() {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,7 +29,7 @@ export default function Contact() {
     
     toast({
       title: 'Message sent!',
-      description: 'We\'ll get back to you as soon as possible.',
+      description: "We'll get back to you as soon as possible.",
     });
 
     // Reset form
@@ -53,10 +55,10 @@ export default function Contact() {
       <div className="bg-muted/30 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-semibold text-foreground mb-4" data-testid="text-contact-title">
-            Contact Us
+            {t.contact.title}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Get in touch with Frostline AS for transport inquiries or partnership opportunities
+            {t.contact.subtitle}
           </p>
         </div>
       </div>
@@ -68,12 +70,12 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-semibold text-foreground mb-6">
-                Send us a message
+                {t.contact.sendMessage}
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Name *
+                    {t.contact.name} *
                   </label>
                   <Input
                     id="name"
@@ -82,14 +84,14 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your name"
+                    placeholder={t.contact.name}
                     data-testid="input-name"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email *
+                    {t.contact.email} *
                   </label>
                   <Input
                     id="email"
@@ -105,7 +107,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                    Phone
+                    {t.contact.phone}
                   </label>
                   <Input
                     id="phone"
@@ -120,7 +122,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Message *
+                    {t.contact.message} *
                   </label>
                   <Textarea
                     id="message"
@@ -128,7 +130,7 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your transport needs or partnership inquiry..."
+                    placeholder={t.contact.messagePlaceholder}
                     rows={6}
                     data-testid="input-message"
                   />
@@ -141,7 +143,7 @@ export default function Contact() {
                   className="w-full"
                   data-testid="button-submit-contact"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? t.contact.sending : t.contact.sendButton}
                 </Button>
               </form>
             </div>
@@ -149,7 +151,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-6">
               <h2 className="text-2xl font-semibold text-foreground mb-6">
-                Contact Information
+                {t.contact.contactInfo}
               </h2>
 
               <Card className="p-6">
@@ -159,7 +161,7 @@ export default function Contact() {
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                      <h3 className="font-semibold text-foreground mb-1">{t.contact.emailLabel}</h3>
                       <p className="text-muted-foreground" data-testid="text-email">info@frostline.as</p>
                     </div>
                   </div>
@@ -169,9 +171,9 @@ export default function Contact() {
                       <Phone className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                      <p className="text-muted-foreground">Available every day</p>
-                      <p className="text-sm text-muted-foreground italic">We respond quickly</p>
+                      <h3 className="font-semibold text-foreground mb-1">{t.contact.phoneLabel}</h3>
+                      <p className="text-muted-foreground">{t.contact.phoneText}</p>
+                      <p className="text-sm text-muted-foreground italic">{t.contact.phoneSubtext}</p>
                     </div>
                   </div>
 
@@ -180,9 +182,9 @@ export default function Contact() {
                       <MapPin className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                      <p className="text-muted-foreground">Based in Gamle Fredrikstad</p>
-                      <p className="text-muted-foreground">Operating in Northern Norway</p>
+                      <h3 className="font-semibold text-foreground mb-1">{t.contact.location}</h3>
+                      <p className="text-muted-foreground">{t.contact.locationText1}</p>
+                      <p className="text-muted-foreground">{t.contact.locationText2}</p>
                     </div>
                   </div>
 
@@ -191,41 +193,41 @@ export default function Contact() {
                       <Clock className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Availability</h3>
-                      <p className="text-muted-foreground">Available every day</p>
-                      <p className="text-muted-foreground">Quick response times</p>
+                      <h3 className="font-semibold text-foreground mb-1">{t.contact.availability}</h3>
+                      <p className="text-muted-foreground">{t.contact.availabilityText1}</p>
+                      <p className="text-muted-foreground">{t.contact.availabilityText2}</p>
                     </div>
                   </div>
                 </div>
               </Card>
 
               <Card className="p-6 bg-muted/30">
-                <h3 className="font-semibold text-foreground mb-3">Company Details</h3>
+                <h3 className="font-semibold text-foreground mb-3">{t.contact.companyDetails}</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Company Name:</span>
+                    <span className="text-muted-foreground">{t.contact.companyName}</span>
                     <span className="text-foreground font-medium">Frostline AS</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Org. Number:</span>
-                    <span className="text-foreground font-medium">IFHKVVT08ND</span>
+                    <span className="text-muted-foreground">{t.contact.orgNumber}</span>
+                    <span className="text-foreground font-medium">936 520 553</span>
                   </div>
                 </div>
               </Card>
 
               <div className="bg-primary/5 p-6 rounded-md border border-primary/20">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Looking for Partnership?
+                  {t.contact.partnershipTitle}
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Learn more about our partnership opportunities for DMCs, hotels, and tour operators.
+                  {t.contact.partnershipText}
                 </p>
                 <Button
                   variant="outline"
                   onClick={() => window.location.href = '/partners'}
                   data-testid="button-partnership-info"
                 >
-                  Partnership Information
+                  {t.contact.partnershipButton}
                 </Button>
               </div>
             </div>

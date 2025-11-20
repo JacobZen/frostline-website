@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import heroImage from '@assets/generated_images/northern_lights_hero_background.png';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   const handleBookTransfer = () => {
     console.log('Book Transfer clicked');
     window.location.href = '/contact';
@@ -27,13 +30,10 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-white mb-4" data-testid="text-hero-title">
-          Frostline AS
+          {t.hero.title}
         </h1>
         <p className="text-2xl sm:text-3xl text-white/95 font-medium mb-8" data-testid="text-hero-subtitle">
-          Private Transfers & Tours in Northern Norway
-        </p>
-        <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="text-hero-description">
-          Frostline AS offers reliable transport, private transfers and partner-based logistics in the Tromsø region. We collaborate with DMCs, hotels, tour operators and private groups. Our focus is safe, flexible and comfortable transport — all year round.
+          {t.hero.subtitle}
         </p>
 
         {/* CTA Buttons */}
@@ -44,7 +44,7 @@ export default function Hero() {
             onClick={handleBookTransfer}
             data-testid="button-book-transfer"
           >
-            Book Transfer
+            {t.home.bookNow}
           </Button>
           <Button
             size="lg"
@@ -53,7 +53,7 @@ export default function Hero() {
             onClick={handleBecomePartner}
             data-testid="button-become-partner"
           >
-            Become Partner
+            {t.home.becomePartner}
           </Button>
         </div>
       </div>
