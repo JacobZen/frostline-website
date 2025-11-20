@@ -2,7 +2,7 @@
 
 ## Overview
 
-Frostline AS is a modern, responsive website for a transport company based in Northern Norway, offering private transfers, partner logistics, and seasonal tours in the Tromsø region. The application is built with a React frontend and Express backend, featuring a clean Nordic minimalist design aesthetic inspired by Scandinavian travel companies.
+Frostline AS is a modern, responsive bilingual website for a transport company based in Northern Norway, specializing in Arctic private transfers, partner logistics, and seasonal tours in the Tromsø region. The application is built with a React frontend and Express backend, featuring a clean Nordic minimalist design aesthetic inspired by Scandinavian travel companies.
 
 The website serves two primary audiences:
 1. **Private travelers** seeking airport transfers, hotel pickups, and sightseeing tours

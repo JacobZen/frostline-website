@@ -191,7 +191,7 @@ const translations: Translations = {
     },
     hero: {
       title: 'Frostline AS',
-      subtitle: 'Private transfers and tours in Northern Norway',
+      subtitle: 'Arctic private transfers',
     },
     home: {
       servicesTitle: 'Our Services',
@@ -446,7 +446,7 @@ const translations: Translations = {
     },
     hero: {
       title: 'Frostline AS',
-      subtitle: 'Private transporter og turer i Nord-Norge',
+      subtitle: 'Arktiske private transporter',
     },
     home: {
       servicesTitle: 'Våre tjenester',
