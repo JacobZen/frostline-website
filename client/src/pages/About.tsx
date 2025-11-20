@@ -3,9 +3,11 @@ import { Award, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import aboutImage from '@assets/generated_images/tromsø_region_landscape.png';
 import { useLanguage } from '@/contexts/language-context';
+import { useLocation } from 'wouter';
 
 export default function About() {
   const { t } = useLanguage();
+  const [, setLocation] = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -194,7 +196,7 @@ export default function About() {
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-              onClick={() => window.location.href = '/partners'}
+              onClick={() => setLocation('/partners')}
               data-testid="button-become-partner-about"
             >
               {t.about.becomePartner}
@@ -203,7 +205,7 @@ export default function About() {
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => setLocation('/contact')}
               data-testid="button-contact-about"
             >
               {t.about.contactUs}

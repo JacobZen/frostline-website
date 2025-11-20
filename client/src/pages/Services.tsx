@@ -6,9 +6,11 @@ import toursIcon from '@assets/generated_images/northern_lights_tours_icon.png';
 import rentalIcon from '@assets/generated_images/minibus_rental_icon.png';
 import minibusImage from '@assets/generated_images/minibus_on_arctic_road.png';
 import { useLanguage } from '@/contexts/language-context';
+import { useLocation } from 'wouter';
 
 export default function Services() {
   const { t } = useLanguage();
+  const [, setLocation] = useLocation();
   const serviceIcons = [transferIcon, partnerIcon, toursIcon, rentalIcon];
 
   return (
@@ -72,7 +74,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.bookYourTransferText}
               </p>
-              <Button onClick={() => window.location.href = '/contact'} data-testid="button-book-transfer-service">
+              <Button onClick={() => setLocation('/contact')} data-testid="button-book-transfer-service">
                 {t.home.contactUs}
               </Button>
             </div>
@@ -85,7 +87,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.becomePartnerText}
               </p>
-              <Button onClick={() => window.location.href = '/partners'} data-testid="button-partner-transport">
+              <Button onClick={() => setLocation('/partners')} data-testid="button-partner-transport">
                 {t.home.learnMore}
               </Button>
             </div>
@@ -124,7 +126,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.comingSoonText}
               </p>
-              <Button variant="outline" onClick={() => window.location.href = '/contact'} data-testid="button-tours-interest">
+              <Button variant="outline" onClick={() => setLocation('/contact')} data-testid="button-tours-interest">
                 {t.services.expressInterest}
               </Button>
             </div>
@@ -137,7 +139,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.rentalInquiryText}
               </p>
-              <Button onClick={() => window.location.href = '/contact'} data-testid="button-rental-inquiry">
+              <Button onClick={() => setLocation('/contact')} data-testid="button-rental-inquiry">
                 {t.home.contactUs}
               </Button>
             </div>
@@ -171,7 +173,7 @@ export default function Services() {
             size="lg"
             variant="outline"
             className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-            onClick={() => window.location.href = '/contact'}
+            onClick={() => setLocation('/contact')}
             data-testid="button-custom-solution"
           >
             {t.services.contactUsToday}

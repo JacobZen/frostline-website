@@ -6,9 +6,11 @@ import transferIcon from '@assets/generated_images/transfer_service_icon.png';
 import partnerIcon from '@assets/generated_images/partner_logistics_icon.png';
 import toursIcon from '@assets/generated_images/northern_lights_tours_icon.png';
 import { useLanguage } from '@/contexts/language-context';
+import { useLocation } from 'wouter';
 
 export default function Home() {
   const { t } = useLanguage();
+  const [, setLocation] = useLocation();
 
   const serviceIcons = [transferIcon, partnerIcon, toursIcon];
 
@@ -42,7 +44,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Button
               size="lg"
-              onClick={() => window.location.href = '/services'}
+              onClick={() => setLocation('/services')}
               data-testid="button-view-all-services"
             >
               {t.home.viewAllServices}
@@ -82,7 +84,7 @@ export default function Home() {
                 </p>
                 <Button
                   variant="outline"
-                  onClick={() => window.location.href = '/partners'}
+                  onClick={() => setLocation('/partners')}
                   data-testid="button-partner-info"
                 >
                   {t.home.learnMore}
@@ -98,7 +100,7 @@ export default function Home() {
                 </p>
                 <Button
                   variant="outline"
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => setLocation('/contact')}
                   data-testid="button-book-now"
                 >
                   {t.home.bookNow}
@@ -123,7 +125,7 @@ export default function Home() {
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => setLocation('/contact')}
               data-testid="button-contact-us"
             >
               {t.home.contactUs}
@@ -132,7 +134,7 @@ export default function Home() {
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-              onClick={() => window.location.href = '/partners'}
+              onClick={() => setLocation('/partners')}
               data-testid="button-become-partner-cta"
             >
               {t.home.becomePartner}

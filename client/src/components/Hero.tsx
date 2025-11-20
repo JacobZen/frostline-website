@@ -1,19 +1,11 @@
 import { Button } from '@/components/ui/button';
 import heroImage from '@assets/generated_images/northern_lights_hero_background.png';
 import { useLanguage } from '@/contexts/language-context';
+import { useLocation } from 'wouter';
 
 export default function Hero() {
   const { t } = useLanguage();
-
-  const handleBookTransfer = () => {
-    console.log('Book Transfer clicked');
-    window.location.href = '/contact';
-  };
-
-  const handleBecomePartner = () => {
-    console.log('Become Partner clicked');
-    window.location.href = '/partners';
-  };
+  const [, setLocation] = useLocation();
 
   return (
     <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -41,7 +33,7 @@ export default function Hero() {
           <Button
             size="lg"
             className="bg-primary/90 backdrop-blur-sm hover:bg-primary text-primary-foreground min-w-[200px] no-default-hover-elevate"
-            onClick={handleBookTransfer}
+            onClick={() => setLocation('/contact')}
             data-testid="button-book-transfer"
           >
             {t.home.bookNow}
@@ -50,7 +42,7 @@ export default function Hero() {
             size="lg"
             variant="outline"
             className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 min-w-[200px] no-default-hover-elevate"
-            onClick={handleBecomePartner}
+            onClick={() => setLocation('/partners')}
             data-testid="button-become-partner"
           >
             {t.home.becomePartner}

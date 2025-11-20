@@ -3,9 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Clock, MessageCircle, ShieldCheck, Users, Calendar, Car } from 'lucide-react';
 import partnerImage from '@assets/generated_images/partnership_collaboration_visual.png';
 import { useLanguage } from '@/contexts/language-context';
+import { useLocation } from 'wouter';
 
 export default function Partners() {
   const { t } = useLanguage();
+  const [, setLocation] = useLocation();
   
   const benefitIcons = [Users, Calendar, ShieldCheck, MessageCircle, Car, Clock];
 
@@ -172,7 +174,7 @@ export default function Partners() {
             size="lg"
             variant="outline"
             className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
-            onClick={() => window.location.href = '/contact'}
+            onClick={() => setLocation('/contact')}
             data-testid="button-request-partnership"
           >
             {t.partners.requestPartnership}

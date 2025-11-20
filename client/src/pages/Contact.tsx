@@ -6,10 +6,12 @@ import { Card } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/contexts/language-context';
+import { useLocation } from 'wouter';
 
 export default function Contact() {
   const { toast } = useToast();
   const { t } = useLanguage();
+  const [, setLocation] = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -224,7 +226,7 @@ export default function Contact() {
                 </p>
                 <Button
                   variant="outline"
-                  onClick={() => window.location.href = '/partners'}
+                  onClick={() => setLocation('/partners')}
                   data-testid="button-partnership-info"
                 >
                   {t.contact.partnershipButton}
