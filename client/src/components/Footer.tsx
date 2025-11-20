@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">FROSTLINE AS</h3>
             <p className="text-sm text-muted-foreground">
-              Frostline AS er et transportselskap organisert som et aksjeselskap, med virksomhet innen passasjertransport på forespørsel.
+              Frostline AS is a transport company organized as a limited company, operating in passenger transport on demand.
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
               <p>Org.nr: 936 520 553</p>
