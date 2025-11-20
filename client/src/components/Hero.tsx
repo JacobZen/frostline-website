@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import heroImage from '@assets/generated_images/northern_lights_hero_background.png';
+import heroImage from '@assets/IMG_9188_1763628868230.jpeg';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 

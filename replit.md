@@ -138,7 +138,7 @@ Preferred communication style: Simple, everyday language.
 - Vite alias `@assets` for asset imports
 
 **Image Assets:**
-- Hero backgrounds: Northern lights, fjords, Arctic landscapes
+- Hero background: User-provided Northern Lights photo (IMG_9188_1763628868230.jpeg) - stunning aurora over Norwegian fjord and snow-covered mountains
 - Service icons: Transfer, partner logistics, tours, minibus rental
 - Page headers: Arctic coastal transport route (Services), Norwegian Arctic mountain peaks (About), Arctic fjord (Partners)
 - Nature showcase: Northern Lights over Arctic mountains, Arctic tundra with autumn colors
