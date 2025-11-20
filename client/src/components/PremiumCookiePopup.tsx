@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { X } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function PremiumCookiePopup() {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
@@ -62,7 +64,7 @@ export default function PremiumCookiePopup() {
         {/* Content */}
         <div className="space-y-4 pr-6">
           <p className="text-white/90 text-sm leading-relaxed">
-            We use cookies to improve your experience, provide essential site functions, and understand how our site is used. By continuing, you accept our cookie policy.
+            {t.cookie.message}
           </p>
 
           {/* Buttons */}
@@ -72,7 +74,7 @@ export default function PremiumCookiePopup() {
               className="bg-white text-black px-4 py-2 rounded-lg font-medium shadow hover:bg-gray-200 transition-all"
               data-testid="button-accept-cookies"
             >
-              Accept
+              {t.cookie.accept}
             </button>
             
             <Link
@@ -80,7 +82,7 @@ export default function PremiumCookiePopup() {
               className="text-white/80 underline hover:text-white transition-colors text-sm self-center sm:self-auto px-2 py-2"
               data-testid="link-privacy-policy"
             >
-              Privacy Policy
+              {t.cookie.privacyPolicy}
             </Link>
           </div>
         </div>

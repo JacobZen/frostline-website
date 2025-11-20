@@ -182,6 +182,11 @@ interface TranslationContent {
     terms: string;
     privacy: string;
   };
+  cookie: {
+    message: string;
+    accept: string;
+    privacyPolicy: string;
+  };
   terms: {
     title: string;
     intro: string;
@@ -481,6 +486,11 @@ const translations: Translations = {
       terms: 'Terms & Conditions',
       privacy: 'Privacy Policy',
     },
+    cookie: {
+      message: 'We use cookies to improve your experience, provide essential site functions, and understand how our site is used. By continuing, you accept our cookie policy.',
+      accept: 'Accept',
+      privacyPolicy: 'Privacy Policy',
+    },
     terms: {
       title: 'Terms & Conditions',
       intro: 'These Terms & Conditions apply to the use of the website of Frostline AS and to enquiries and bookings made through our contact channels. By using this website, you accept these terms.',
@@ -777,6 +787,11 @@ const translations: Translations = {
       copyright: '© 2025 Frostline AS. Alle rettigheter reservert.',
       terms: 'Vilkår og betingelser',
       privacy: 'Personvernerklæring',
+    },
+    cookie: {
+      message: 'Vi bruker informasjonskapsler for å forbedre din opplevelse, tilby viktige nettstedfunksjoner og forstå hvordan nettstedet vårt brukes. Ved å fortsette aksepterer du vår retningslinjer for informasjonskapsler.',
+      accept: 'Aksepter',
+      privacyPolicy: 'Personvernerklæring',
     },
     terms: {
       title: 'Vilkår og betingelser',
