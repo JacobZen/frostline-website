@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/language-context";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PremiumCookiePopup from "@/components/PremiumCookiePopup";
 import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import About from "@/pages/About";
@@ -43,6 +44,7 @@ function App() {
             <Footer />
           </div>
           <Toaster />
+          <PremiumCookiePopup />
         </LanguageProvider>
       </TooltipProvider>
     </QueryClientProvider>

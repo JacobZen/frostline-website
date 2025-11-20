@@ -1,0 +1,133 @@
+You are updating the existing Frostline AS website (React + Tailwind).
+Add a premium floating GDPR cookie popup to the site.
+Follow all instructions below precisely:
+
+1. Create a floating popup component
+
+Create a new React component named:
+
+PremiumCookiePopup.jsx
+
+Design requirements:
+
+Floating card in the bottom-right corner
+
+Rounded corners (rounded-2xl)
+
+Soft shadow (shadow-xl)
+
+Frosted glass / blur effect (backdrop-blur-xl)
+
+Semi-transparent dark Arctic theme: bg-black/50
+
+Light border: border border-white/20
+
+Smooth fade/slide-in animation
+
+Text inside the popup:
+
+We use cookies to improve your experience, provide essential site functions, and understand how our site is used. By continuing, you accept our cookie policy.
+
+2. Include buttons
+
+Add two buttons:
+
+Accept
+
+Tailwind style suggestion:
+
+bg-white text-black px-4 py-2 rounded-lg font-medium shadow hover:bg-gray-200 transition
+
+Privacy Policy
+
+A subtle text button:
+
+text-white/80 underline hover:text-white transition
+
+
+This button should link to /privacy.
+
+3. Popup behavior
+LocalStorage logic
+
+On load, check:
+localStorage.getItem("cookiesAccepted")
+
+If not accepted, show popup
+
+When user clicks Accept, run:
+localStorage.setItem("cookiesAccepted", "true")
+
+After accepting → fade out and remove popup
+
+Animations
+
+Slide up + fade in on mount
+
+Fade out on accept
+
+Use Tailwind transitions where possible.
+
+4. Positioning & responsiveness
+
+Position:
+
+fixed bottom-6 right-6 z-50 max-w-sm
+
+
+On mobile:
+
+bottom-4 right-4 max-w-xs
+
+
+Popup must not shift the layout.
+
+5. Styling notes (must follow these)
+
+Keep the “premium Arctic look”
+
+Use blur + transparency
+
+Rounded corners (large radius)
+
+Soft shadows only
+
+No bright colors
+
+High-end luxury style
+
+6. Code output
+
+Deliver:
+
+Full React component code (PremiumCookiePopup.jsx)
+
+Import + usage in root layout or App.jsx so it loads on all pages
+
+Tailwind classes already applied
+
+LocalStorage logic working
+
+Animations enabled
+
+7. Do NOT modify anything else
+
+Do not touch:
+
+Fonts
+
+Existing layout
+
+Navbar
+
+Hero section
+
+Services section
+
+Footer
+
+Images or text
+
+Only add the floating premium popup.
+
+END OF PROMPT
