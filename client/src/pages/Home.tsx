@@ -117,7 +117,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   className="shadow-md hover:shadow-lg border-2 hover:border-primary/50 transition-all"
-                  onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry'}
+                  onClick={() => setLocation('/contact')}
                   data-testid="button-book-now"
                 >
                   {t.home.bookNow}
@@ -194,7 +194,7 @@ export default function Home() {
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
-              onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry'}
+              onClick={() => setLocation('/contact')}
               data-testid="button-contact-us"
             >
               {t.home.contactUs}

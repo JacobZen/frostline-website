@@ -41,13 +41,11 @@ export default function Footer() {
                   {t.navbar.partners}
                 </span>
               </Link>
-              <a 
-                href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                data-testid="footer-link-contact"
-              >
-                {t.navbar.contact}
-              </a>
+              <Link href="/contact" data-testid="footer-link-contact">
+                <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  {t.navbar.contact}
+                </span>
+              </Link>
               <Link href="/terms" data-testid="footer-link-terms">
                 <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
                   {t.footer.terms}

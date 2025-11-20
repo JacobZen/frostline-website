@@ -33,7 +33,7 @@ export default function Hero() {
           <Button
             size="lg"
             className="bg-primary/95 backdrop-blur-sm border-2 border-transparent hover:bg-primary/90 hover:border-white text-primary-foreground min-w-[200px] no-default-hover-elevate transition-all shadow-lg hover:shadow-xl"
-            onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry'}
+            onClick={() => setLocation('/contact')}
             data-testid="button-book-transfer"
           >
             {t.home.bookNow}

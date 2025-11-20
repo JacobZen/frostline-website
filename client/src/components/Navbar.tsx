@@ -40,28 +40,17 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <div className="flex items-center gap-2">
               {navLinks.map((link) => (
-                link.path === '/contact' ? (
-                  <a
-                    key={link.path}
-                    href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry"
-                    className="px-4 py-2 rounded-md text-sm font-medium transition-all hover-elevate active-elevate-2 text-foreground"
-                    data-testid={`link-${link.label.toLowerCase().replace(' ', '-')}`}
+                <Link key={link.path} href={link.path} data-testid={`link-${link.label.toLowerCase().replace(' ', '-')}`}>
+                  <div
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover-elevate active-elevate-2 ${
+                      isActive(link.path)
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-foreground'
+                    }`}
                   >
                     {link.label}
-                  </a>
-                ) : (
-                  <Link key={link.path} href={link.path} data-testid={`link-${link.label.toLowerCase().replace(' ', '-')}`}>
-                    <div
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-all cursor-pointer hover-elevate active-elevate-2 ${
-                        isActive(link.path)
-                          ? 'bg-primary/10 text-primary'
-                          : 'text-foreground'
-                      }`}
-                    >
-                      {link.label}
-                    </div>
-                  </Link>
-                )
+                  </div>
+                </Link>
               ))}
             </div>
             <LanguageSwitcher />
@@ -86,31 +75,19 @@ export default function Navbar() {
           <div className="px-4 py-4 space-y-4">
             <div className="space-y-2">
               {navLinks.map((link) => (
-                link.path === '/contact' ? (
-                  <a
-                    key={link.path}
-                    href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry"
+                <Link key={link.path} href={link.path}>
+                  <div
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 rounded-md text-base font-medium hover-elevate active-elevate-2 text-foreground"
+                    className={`block px-4 py-3 rounded-md text-base font-medium hover-elevate active-elevate-2 cursor-pointer ${
+                      isActive(link.path)
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-foreground'
+                    }`}
                     data-testid={`mobile-link-${link.label.toLowerCase().replace(' ', '-')}`}
                   >
                     {link.label}
-                  </a>
-                ) : (
-                  <Link key={link.path} href={link.path}>
-                    <div
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`block px-4 py-3 rounded-md text-base font-medium hover-elevate active-elevate-2 cursor-pointer ${
-                        isActive(link.path)
-                          ? 'bg-primary/10 text-primary'
-                          : 'text-foreground'
-                      }`}
-                      data-testid={`mobile-link-${link.label.toLowerCase().replace(' ', '-')}`}
-                    >
-                      {link.label}
-                    </div>
-                  </Link>
-                )
+                  </div>
+                </Link>
               ))}
             </div>
             <div className="flex justify-center pt-2 border-t">

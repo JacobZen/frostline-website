@@ -263,7 +263,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div className="flex flex-col gap-1">
                       <span className="text-xs text-muted-foreground uppercase tracking-wide">{t.contact.emailLabel}</span>
-                      <span className="text-sm text-foreground font-medium" data-testid="text-email">post@frostline.as</span>
+                      <a href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry" className="text-sm text-foreground font-medium hover:text-primary transition-colors" data-testid="text-email">post@frostline.as</a>
                     </div>
                   </div>
 

@@ -74,7 +74,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.bookYourTransferText}
               </p>
-              <Button onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Transfer%20Service%20Inquiry%20-%20Frostline%20AS'} data-testid="button-book-transfer-service">
+              <Button onClick={() => setLocation('/contact')} data-testid="button-book-transfer-service">
                 {t.home.contactUs}
               </Button>
             </div>
@@ -139,7 +139,7 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.rentalInquiryText}
               </p>
-              <Button onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Minibus%20Rental%20Inquiry%20-%20Frostline%20AS'} data-testid="button-rental-inquiry">
+              <Button onClick={() => setLocation('/contact')} data-testid="button-rental-inquiry">
                 {t.home.contactUs}
               </Button>
             </div>
@@ -173,7 +173,7 @@ export default function Services() {
             size="lg"
             variant="outline"
             className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
-            onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Custom%20Solution%20Inquiry%20-%20Frostline%20AS'}
+            onClick={() => setLocation('/contact')}
             data-testid="button-custom-solution"
           >
             {t.services.contactUsToday}
