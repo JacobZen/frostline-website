@@ -196,14 +196,61 @@ Preferred communication style: Simple, everyday language.
 - Service worker only registers in production (`import.meta.env.PROD`)
 - Development logs "[PWA] Service Worker disabled in development mode"
 
+### Premium Visual Polish (Apple-Grade Enhancements)
+
+**Typography System:**
+- Fluid font sizing using CSS clamp() for seamless scaling across all viewports
+- Optimized letter-spacing: -0.03em for h1, -0.025em for h2, -0.02em for h3
+- Enhanced line-heights: 1.08 for h1, 1.12 for h2, 1.2 for h3
+- text-wrap: balance for improved heading composition
+- font-feature-settings for premium text rendering
+
+**Arctic Motion System:**
+- Custom CSS properties: --ease-apple (0.22, 1, 0.36, 1), --duration-normal (280ms)
+- GPU-optimized animations using translate3d and scale3d
+- Staggered fade-up animations with delay classes
+- All animations respect prefers-reduced-motion
+
+**Premium Hover Effects:**
+- .arctic-hover-card: Subtle translateY(-2px) and scale(1.008)
+- .arctic-image-hover: Premium image card interactions
+- All effects use 280ms duration with Apple easing curves
+
+**Arctic Gradient System:**
+- .arctic-section-gradient-light/dark: Multi-stop section backgrounds
+- .arctic-hero-gradient: Premium hero overlay
+- .arctic-accent-gradient: CTA section background
+
+**Spacing System:**
+- .section-padding: 48px/64px/80px responsive rhythm
+- Consistent padding at sm/lg/xl breakpoints
+- Unified 48/64/80px section heights
+
+**Glassmorphism Effects:**
+- .arctic-glass: backdrop-blur-xl with saturation boost
+- Inner shadows for depth perception
+- Enhanced navbar with backdrop-blur-2xl and saturate(1.6)
+
+**Shadow System:**
+- .arctic-shadow-sm/lg/xl using rgba(14, 42, 71, 0.04-0.10)
+- Natural cold-tone shadows matching Arctic theme
+- Dark mode variants for consistent depth perception
+
+**Accessibility:**
+- Full prefers-reduced-motion support
+- prefers-contrast: high support
+- Safe-area-inset support for notched devices
+- 44px minimum touch targets
+
 ### Design Philosophy
 
 The application follows a reference-based design approach inspired by Nordic minimalism, similar to Scandinavian airline and Arctic travel company websites. Key principles include:
 
 - Generous whitespace for breathing room
 - High-quality photography with dark overlays for text readability
-- Clean typography hierarchy
-- Subtle shadows and elevation effects
+- Clean typography hierarchy with fluid responsive sizing
+- Subtle shadows and elevation effects using Arctic-blue tones
 - Professional aesthetic suitable for B2B partnerships
 - Mobile-first responsive design
 - PWA-ready for app-like mobile experience
+- Apple-grade premium polish with GPU-optimized animations
