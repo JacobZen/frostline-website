@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50 h-16 transition-all duration-300"
+      className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl backdrop-saturate-150 border-b border-border/30 h-16 transition-all duration-300 shadow-sm"
       role="navigation"
       aria-label="Main navigation"
     >
@@ -108,9 +108,9 @@ export default function Navbar() {
         }`}
         aria-hidden={!mobileMenuOpen}
       >
-        {/* Backdrop blur overlay */}
+        {/* Backdrop blur overlay - Arctic frost effect */}
         <div 
-          className={`absolute inset-0 bg-background/95 backdrop-blur-lg transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-background/90 backdrop-blur-xl backdrop-saturate-150 transition-opacity duration-300 ${
             mobileMenuOpen ? 'opacity-100' : 'opacity-0'
           }`}
           onClick={() => setMobileMenuOpen(false)}

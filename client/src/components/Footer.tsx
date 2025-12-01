@@ -7,10 +7,12 @@ export default function Footer() {
 
   return (
     <footer 
-      className="bg-gradient-to-b from-muted/20 to-muted/40 border-t border-border/50 mt-auto"
+      className="bg-gradient-to-b from-muted/15 to-muted/35 border-t border-border/30 mt-auto relative"
       role="contentinfo"
       aria-label="Site footer"
     >
+      {/* Subtle Arctic frost top separator */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border/60 to-transparent" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
           {/* Company Info */}

@@ -48,14 +48,16 @@
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
-  --shadow-2xs: 0px 2px 0px 0px hsl(210 85% 25% / 0.00);
-  --shadow-xs: 0px 2px 0px 0px hsl(210 85% 25% / 0.00);
-  --shadow-sm: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 1px 2px -1px hsl(210 85% 25% / 0.00);
-  --shadow: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 1px 2px -1px hsl(210 85% 25% / 0.00);
-  --shadow-md: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 2px 4px -1px hsl(210 85% 25% / 0.00);
-  --shadow-lg: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 4px 6px -1px hsl(210 85% 25% / 0.00);
-  --shadow-xl: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 8px 10px -1px hsl(210 85% 25% / 0.00);
-  --shadow-2xl: 0px 2px 0px 0px hsl(210 85% 25% / 0.00);
+  --shadow-2xs: 0 1px 2px 0 rgba(14, 42, 71, 0.03);
+  --shadow-xs: 0 1px 3px 0 rgba(14, 42, 71, 0.04);
+  --shadow-sm: 0 2px 4px -1px rgba(14, 42, 71, 0.06), 0 1px 2px -1px rgba(14, 42, 71, 0.04);
+  --shadow: 0 4px 6px -1px rgba(14, 42, 71, 0.07), 0 2px 4px -2px rgba(14, 42, 71, 0.05);
+  --shadow-md: 0 6px 12px -2px rgba(14, 42, 71, 0.08), 0 3px 6px -3px rgba(14, 42, 71, 0.06);
+  --shadow-lg: 0 10px 20px -3px rgba(14, 42, 71, 0.10), 0 4px 8px -4px rgba(14, 42, 71, 0.06);
+  --shadow-xl: 0 16px 32px -4px rgba(14, 42, 71, 0.12), 0 8px 16px -6px rgba(14, 42, 71, 0.08);
+  --shadow-2xl: 0 24px 48px -8px rgba(14, 42, 71, 0.15);
+  --shadow-arctic: 0 8px 30px -4px rgba(14, 42, 71, 0.12), 0 4px 12px -2px rgba(14, 42, 71, 0.06);
+  --shadow-frost: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 24px -4px rgba(14, 42, 71, 0.1);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -128,14 +130,16 @@
   --chart-3: 220 70% 65%;
   --chart-4: 195 65% 70%;
   --chart-5: 215 80% 72%;
-  --shadow-2xs: 0px 2px 0px 0px hsl(210 85% 25% / 0.00);
-  --shadow-xs: 0px 2px 0px 0px hsl(210 85% 25% / 0.00);
-  --shadow-sm: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 1px 2px -1px hsl(210 85% 25% / 0.00);
-  --shadow: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 1px 2px -1px hsl(210 85% 25% / 0.00);
-  --shadow-md: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 2px 4px -1px hsl(210 85% 25% / 0.00);
-  --shadow-lg: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 4px 6px -1px hsl(210 85% 25% / 0.00);
-  --shadow-xl: 0px 2px 0px 0px hsl(210 85% 25% / 0.00), 0px 8px 10px -1px hsl(210 85% 25% / 0.00);
-  --shadow-2xl: 0px 2px 0px 0px hsl(210 85% 25% / 0.00);
+  --shadow-2xs: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  --shadow-xs: 0 1px 3px 0 rgba(0, 0, 0, 0.18);
+  --shadow-sm: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 2px -1px rgba(0, 0, 0, 0.15);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.22), 0 2px 4px -2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 6px 12px -2px rgba(0, 0, 0, 0.25), 0 3px 6px -3px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 10px 20px -3px rgba(0, 0, 0, 0.3), 0 4px 8px -4px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 16px 32px -4px rgba(0, 0, 0, 0.35), 0 8px 16px -6px rgba(0, 0, 0, 0.25);
+  --shadow-2xl: 0 24px 48px -8px rgba(0, 0, 0, 0.4);
+  --shadow-arctic: 0 8px 30px -4px rgba(0, 0, 0, 0.35), 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+  --shadow-frost: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 8px 24px -4px rgba(0, 0, 0, 0.3);
 
 /* Fallback for older browsers */
   --sidebar-primary-border: hsl(var(--sidebar-primary));
@@ -307,15 +311,15 @@
     inset: -1px;
   }
 
-  /* Arctic-themed animations - Premium Apple/iOS feel */
+  /* Arctic-themed animations - Premium Apple/iOS feel with GPU acceleration */
   @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translate3d(0, 24px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -331,23 +335,23 @@
   @keyframes fade-in-scale {
     from {
       opacity: 0;
-      transform: scale(1.02);
+      transform: scale3d(1.02, 1.02, 1);
     }
     to {
       opacity: 1;
-      transform: scale(1);
+      transform: scale3d(1, 1, 1);
     }
   }
 
   @keyframes hero-text-reveal {
     from {
       opacity: 0;
-      transform: translateY(32px);
+      transform: translate3d(0, 32px, 0);
       filter: blur(4px);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
       filter: blur(0);
     }
   }
@@ -355,46 +359,83 @@
   @keyframes hero-image-reveal {
     from {
       opacity: 0;
-      transform: scale(1.05);
+      transform: scale3d(1.05, 1.05, 1);
     }
     to {
       opacity: 1;
-      transform: scale(1);
+      transform: scale3d(1, 1, 1);
     }
   }
 
   @keyframes subtle-float {
     0%, 100% {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
     50% {
-      transform: translateY(-4px);
+      transform: translate3d(0, -4px, 0);
+    }
+  }
+
+  @keyframes subtle-parallax {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(0, var(--parallax-offset, 30px), 0);
     }
   }
 
   .animate-fade-in-up {
-    animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: transform, opacity;
   }
 
   .animate-fade-in {
-    animation: fade-in 0.6s ease-out forwards;
+    animation: fade-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: opacity;
   }
 
   .animate-fade-in-scale {
-    animation: fade-in-scale 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fade-in-scale 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: transform, opacity;
   }
 
   .animate-hero-text {
-    animation: hero-text-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: hero-text-reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: transform, opacity, filter;
   }
 
   .animate-hero-image {
-    animation: hero-image-reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: hero-image-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  /* Arctic Glass / Frost Effects */
+  .arctic-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .dark .arctic-glass {
+    background: rgba(14, 42, 71, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .frost-blur {
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
+  }
+
+  .frost-blur-lg {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
   }
 
   .animate-delay-100 {
@@ -421,17 +462,18 @@
     animation-delay: 600ms;
   }
 
-  /* Intersection Observer scroll reveal classes */
+  /* Intersection Observer scroll reveal classes - GPU optimized */
   .scroll-reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translate3d(0, 20px, 0);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
   }
 
   .scroll-reveal.revealed {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 
   .scroll-reveal-delay-1 {

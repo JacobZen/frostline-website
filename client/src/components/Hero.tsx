@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@assets/IMG_9188_1763628868230.jpeg';
 import { useLanguage } from '@/contexts/language-context';
@@ -18,28 +18,63 @@ function usePreloadImage(src: string) {
   }, [src]);
 }
 
+function useSubtleParallax(intensity: number = 0.15) {
+  const [offset, setOffset] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+    
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (ref.current) {
+            const rect = ref.current.getBoundingClientRect();
+            if (rect.bottom > 0) {
+              setOffset(window.scrollY * intensity);
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [intensity]);
+  
+  return { ref, offset };
+}
+
 export default function Hero() {
   const { t } = useLanguage();
   const [, setLocation] = useLocation();
+  const { ref: parallaxRef, offset } = useSubtleParallax(0.12);
   
   usePreloadImage(heroImage);
 
   return (
     <section 
+      ref={parallaxRef}
       className="relative h-[85vh] min-h-[540px] sm:h-[90vh] sm:min-h-[600px] flex items-center justify-center overflow-hidden"
       aria-label="Welcome to Frostline AS"
     >
-      {/* Hero Image with Premium Fade Animation */}
-      <div className="absolute inset-0 animate-hero-image">
+      {/* Hero Image with Premium Fade Animation and Subtle Parallax */}
+      <div 
+        className="absolute inset-0 animate-hero-image"
+        style={{ transform: `translate3d(0, ${offset}px, 0)` }}
+      >
         <img
           src={heroImage}
           alt="Northern Lights over Norwegian fjord with snow-covered mountains"
-          className="w-full h-full object-cover will-change-transform"
+          className="w-full h-full object-cover will-change-transform scale-[1.08]"
           width="1920"
           height="1080"
           loading="eager"
           decoding="async"
-          fetchPriority="high"
           style={{ aspectRatio: '16/9' }}
         />
         {/* Enhanced Arctic gradient overlay */}

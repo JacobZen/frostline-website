@@ -165,8 +165,10 @@ export default function Partners() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-24 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 sm:py-24 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08)_0%,_transparent_50%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,255,255,0.05)_0%,_transparent_50%)]" aria-hidden="true" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
             {t.partners.ctaTitle}
           </h2>
@@ -176,7 +178,7 @@ export default function Partners() {
           <Button
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto min-h-[48px] min-w-[200px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+            className="w-full sm:w-auto min-h-[48px] min-w-[200px] rounded-xl bg-white/10 backdrop-blur-md border-white/30 border-2 text-white hover:bg-white/20 hover:border-white/60 no-default-hover-elevate shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Partnership%20Inquiry%20-%20Frostline%20AS'}
             data-testid="button-request-partnership"
             aria-label="Request partnership with Frostline AS"

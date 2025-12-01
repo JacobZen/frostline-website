@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
@@ -33,13 +33,93 @@
     <meta name="author" content="Frostline AS" />
     <meta name="geo.region" content="NO" />
     <meta name="geo.placename" content="Tromsø" />
+    <meta name="theme-color" content="#0e2a47" />
+    <meta name="format-detection" content="telephone=no" />
     
     <link rel="icon" type="image/png" href="/favicon.png" />
     
-    <!-- Font preconnects and loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- DNS Prefetch & Preconnects for performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Optimized font loading with display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+    
+    <!-- Schema.org LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://frostline.as/#organization",
+      "name": "Frostline AS",
+      "alternateName": "Frostline Transport",
+      "description": "Premium Arctic transport services, private transfers, and partner logistics in Northern Norway. Safe, flexible and comfortable transport all year round.",
+      "url": "https://frostline.as",
+      "logo": "https://frostline.as/favicon.png",
+      "image": "https://frostline.as/frostline-share.png",
+      "telephone": "+47",
+      "email": "post@frostline.as",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kompaniveien 4",
+        "addressLocality": "Gamle Fredrikstad",
+        "postalCode": "1639",
+        "addressCountry": "NO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 69.6496,
+        "longitude": 18.9560
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Tromsø Region, Northern Norway"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Transport Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Private Airport Transfers",
+              "description": "Reliable private transfers to and from Tromsø Airport"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Partner Logistics",
+              "description": "B2B transport solutions for travel agencies and DMCs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Northern Lights Tours",
+              "description": "Guided aurora borealis experiences in Northern Norway"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>

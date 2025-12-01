@@ -1,0 +1,187 @@
+You are upgrading the Frostline AS website (React + Tailwind) into a **fully optimized PWA** (Progressive Web App) with App Store–level readiness.
+
+Do NOT change:
+
+* Any text or business content
+* Any pricing or wording
+* Any layout structure
+* Any branding choices
+
+Focus ONLY on technical app-readiness, offline capability, metadata, and performance.
+
+---
+
+# STEP 1 — Create Full PWA Infrastructure
+
+Implement:
+
+* manifest.json
+* service worker (Workbox or manual)
+* offline caching strategy
+* pre-caching of static assets
+* runtime caching for images and API calls
+* fallback offline page
+
+Follow safe defaults:
+
+* Cache-first for images
+* Network-first for dynamic content
+* Stale-while-revalidate where appropriate
+
+Ensure the PWA passes:
+
+* installability
+* correct manifest
+* correct service worker
+* HTTPS compliance
+
+---
+
+# STEP 2 — Configure Web App Manifest (manifest.json)
+
+Include:
+
+* Name: “Frostline AS”
+* Short name: “Frostline”
+* Description: “Arctic private transfers — airport, hotel & aurora transport.”
+* Start URL: “/”
+* Display mode: standalone
+* Orientation: portrait
+* Theme color and background color based on Arctic palette (#0e1a27 or similar)
+
+Add icons:
+
+* 192x192
+* 256x256
+* 384x384
+* 512x512
+
+Store icons in /public/icons/
+
+---
+
+# STEP 3 — Generate App Icons & Splash Screens
+
+Automatically generate all sizes needed for:
+
+* iOS splash screens
+* Android splash screens
+* iOS maskable icons
+* Standard maskable icons
+
+Follow Apple guidelines:
+
+* Safe zone
+* No transparent padding
+* Center Frostline logo cleanly
+* Arctic blue + white color scheme
+
+Do not alter branding.
+
+---
+
+# STEP 4 — Add Head & Metadata for App Store Compatibility
+
+In index.html:
+
+* Add `<meta name="apple-mobile-web-app-capable" content="yes"/>`
+* Add `<meta name="mobile-web-app-capable" content="yes"/>`
+* Add `<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>`
+* Add correct icon `<link rel="apple-touch-icon" ... >`
+* Add `<meta name="theme-color" content="#0e1a27"/>`
+
+Add Open Graph metadata:
+
+* og:title
+* og:description
+* og:image
+* og:url
+
+Add Twitter card.
+
+---
+
+# STEP 5 — Offline-First Capability
+
+Add:
+
+* Offline fallback for pages
+* Default offline message or offline landing page
+* Cache fonts, images, CSS, JS intelligently
+
+Ensure:
+
+* Hero loads even without full network
+* Navigation works offline
+* Contact page has graceful fallback
+
+---
+
+# STEP 6 — Lighthouse PWA Requirements
+
+Fix everything needed so the site becomes:
+
+* **Installable**
+* **PWA validated**
+* **Offline-capable**
+* **Has service worker**
+* **Has manifest**
+* **Has icons**
+
+Target Lighthouse PWA score: **100/100**
+
+---
+
+# STEP 7 — Performance Optimization for App Mode
+
+Improve:
+
+* Preload hero image
+* Preload critical fonts
+* Minify CSS & JS
+* Remove unused CSS
+* Optimize tailwind purge
+* Add resource hints (`preconnect`, `dns-prefetch`)
+
+Ensure fast loading in low 4G zones in Northern Norway.
+
+---
+
+# STEP 8 — Add Add-to-Home-Screen UX
+
+Implement:
+
+* PWA install prompt / custom A2HS banner
+* Logic to trigger only on supported devices
+* Nice Frostline-branded modal
+
+Do NOT show on desktop unless relevant.
+
+---
+
+# STEP 9 — Create App Store Readiness Metadata (internal only)
+
+Prepare internally:
+
+* app name
+* description text
+* short tagline
+* feature highlights
+* app category: “Travel / Transportation”
+* keywords
+
+Do NOT publish anything — only prepare metadata.
+
+---
+
+# STEP 10 — Return Results in Clear Format
+
+Return:
+
+1. All updated files
+2. Full code blocks for manifest, service worker, icons references
+3. List of all PWA optimizations completed
+4. List of any additional recommendations
+5. No business content or layout changes
+
+END OF PROMPT.
