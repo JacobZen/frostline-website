@@ -1,0 +1,137 @@
+You are performing a **dedicated premium navbar polish** for Frostline AS.
+Do NOT touch any text, page content, hero section, or layout structure.
+Focus ONLY on the navbar and its dropdown/theme components.
+
+This is a refinement pass on top of the brand system (Version 7).
+Fix visibility, alignment, spacing, and premium feel.
+
+---
+
+# STEP 1 — Solid & Readable Arctic Navbar Background
+
+Fix the background issues:
+
+* Replace current transparent/frost background with a **solid 95–100% opaque Arctic background** in both light and dark mode.
+* Keep a very subtle frost effect: `backdrop-blur-sm` (no heavy blur).
+* The background must NOT let the hero image shine through.
+* Ensure maximum text readability.
+
+Use token colors, but increase contrast for menu items.
+
+---
+
+# STEP 2 — Correct Navbar Height & Padding
+
+The navbar is too tall after the token update. Fix it:
+
+* Reduce vertical padding by ~35–45%.
+* Target desktop height: **64–72px max**.
+* Ensure mobile height is compact and clean.
+* Remove unintended padding from global spacing tokens.
+
+---
+
+# STEP 3 — Fix Alignment (Desktop & Mobile)
+
+Correct the layout:
+
+**Desktop:**
+
+* Left: Logo
+* Right: Menu links + Theme toggle + Mobile menu icon
+* Ensure content is centered horizontally inside its container
+* Remove unintended `justify-end`, `ml-auto`, or shifts to the right
+
+**Mobile:**
+
+* Ensure hamburger icon stays readable and aligned
+* Prevent theme-toggle from shifting icons left/right
+
+---
+
+# STEP 4 — Fix Overlapping Elements
+
+Resolve spacing/collision issues:
+
+* Reduce spacing between nav items
+* Set stable width for theme-toggle dropdown
+* Ensure icons do not overlap at 100–125% zoom
+* Remove unintended flex shrink/grow behavior
+
+---
+
+# STEP 5 — Improve Text & Icon Visibility
+
+* Increase text contrast in both modes
+* Ensure icons are not semi-transparent
+* Ensure theme-toggle icon always stays readable
+* Improve hover/focus states
+
+---
+
+# STEP 6 — Add Subtle Premium Interactions
+
+Apply safe, elegant interactions:
+
+* Soft scale on hover (`scale-105` max)
+* Slight opacity fade-in for menu items
+* Smooth easing: `ease-out` or Apple-like cubic curve
+* 150–200ms transitions (not slow)
+
+This should feel refined, not animated or flashy.
+
+---
+
+# STEP 7 — Arctic Shadow System for Navbar
+
+Add a premium shadow:
+
+* Use soft cold shadow token:
+  `shadow-[0_8px_24px_rgba(0,0,0,0.12)]`
+* Very subtle; no harsh edges
+* Works in both themes
+
+---
+
+# STEP 8 — Mobile Menu Polish
+
+Ensure:
+
+* Mobile menu background is NOT transparent
+* Text remains readable
+* Proper spacing between menu items
+* Smooth open/close animation
+* No overflow / white gaps
+
+---
+
+# STEP 9 — Theme Toggle Polish
+
+Fix the theme-toggle component:
+
+* Align vertically with nav items
+* Remove unintended margin/padding
+* Ensure it doesn’t push content sideways
+* Make icon crisp and readable
+* Apply subtle hover effect
+
+---
+
+# STEP 10 — Return Clean Output
+
+Return:
+
+1. Updated Navbar.tsx
+2. Updated ThemeToggle.tsx (if needed)
+3. Updated CSS/Tailwind classes
+4. Before/after code blocks
+5. Clear summary of all fixes
+
+Do NOT modify:
+
+* Any business text
+* Any layout structure
+* Any hero content
+* Any page sections outside navbar
+
+END OF PROMPT.
