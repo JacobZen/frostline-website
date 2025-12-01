@@ -84,7 +84,7 @@ export default function Contact() {
               </h3>
               <div className="text-sm text-muted-foreground space-y-1">
                 <p className="font-medium text-foreground" data-testid="text-org-number">Org.nr: 936 520 553</p>
-                <p className="text-xs mt-2">{t.contact.companyName}</p>
+                <p className="text-xs mt-2">Frostline AS</p>
                 <p className="text-xs">Passasjertransport på forespørsel</p>
               </div>
             </div>
