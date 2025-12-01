@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Card } from '@/components/ui/card';
 import { Award, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -5,14 +6,39 @@ import arcticMountains from '@assets/generated_images/norwegian_arctic_mountain_
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const elements = ref.current?.querySelectorAll('.scroll-reveal');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return ref;
+}
+
 export default function About() {
   const { t } = useLanguage();
   const [, setLocation] = useLocation();
+  const scrollRef = useScrollReveal();
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="About header">
-        <div className="absolute inset-0">
+    <div className="min-h-screen flex flex-col" ref={scrollRef}>
+      <section className="relative h-[35vh] min-h-[260px] sm:h-[40vh] sm:min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="About header">
+        <div className="absolute inset-0 animate-fade-in-scale">
           <img
             src={arcticMountains}
             alt="Norwegian Arctic mountain peaks in Northern Norway"
@@ -22,13 +48,14 @@ export default function About() {
             loading="eager"
             style={{ aspectRatio: '16/9' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-blue-950/15 mix-blend-overlay" aria-hidden="true" />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight" data-testid="text-about-title">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-tight animate-hero-text" data-testid="text-about-title">
             {t.about.title}
           </h1>
-          <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed animate-hero-text animate-delay-200">
             {t.about.subtitle}
           </p>
         </div>
@@ -186,19 +213,20 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-24 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08)_0%,_transparent_50%)]" aria-hidden="true" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-6 scroll-reveal">
             {t.about.ctaTitle}
           </h2>
-          <p className="text-lg mb-8 text-primary-foreground/90">
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 text-primary-foreground/90 scroll-reveal scroll-reveal-delay-1">
             {t.about.ctaSubtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-0 scroll-reveal scroll-reveal-delay-2">
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto min-h-[48px] min-w-[180px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+              className="w-full sm:w-auto min-h-[44px] sm:min-h-[48px] min-w-[160px] sm:min-w-[180px] rounded-xl bg-white/10 backdrop-blur-md border-white/30 border-2 text-white hover:bg-white/20 hover:border-white/60 no-default-hover-elevate shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               onClick={() => setLocation('/partners')}
               data-testid="button-become-partner-about"
               aria-label="Learn about partnership opportunities"
@@ -208,7 +236,7 @@ export default function About() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto min-h-[48px] min-w-[180px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+              className="w-full sm:w-auto min-h-[44px] sm:min-h-[48px] min-w-[160px] sm:min-w-[180px] rounded-xl bg-white/10 backdrop-blur-md border-white/30 border-2 text-white hover:bg-white/20 hover:border-white/60 no-default-hover-elevate shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               onClick={() => setLocation('/contact')}
               data-testid="button-contact-about"
               aria-label="Contact Frostline AS"

@@ -1,0 +1,203 @@
+You are performing an elite-level Apple-style optimization pass on the Frostline AS website (React + Tailwind).
+Do NOT change layout, text, business messaging, branding, or structure.
+Focus ONLY on premium refinement, performance, micro-interactions, and visual polish.
+All changes must be subtle, fast, stable, and production-safe.
+
+STEP 1 — Lighthouse Target: 95+ on Mobile & Desktop
+
+Bring the site to:
+
+Performance: 95+
+
+Accessibility: 95+
+
+Best practices: 95+
+
+SEO: 95+
+
+Do this WITHOUT altering layout or copy.
+
+If any score is below this, fix:
+
+unused JS
+
+uncompressed images
+
+missing alt text
+
+missing aria labels
+
+missing metadata
+
+render-blocking CSS
+
+STEP 2 — GPU-Optimized Animations (Apple-style smoothness)
+
+Upgrade animations to use GPU acceleration:
+
+Use transform, opacity, translateY, scale
+
+Avoid animating width, height, or top/left
+
+Add easing curves (ease-out, ease-[custom]) for premium feeling
+
+Ensure animations run smoothly at 60fps on iPhone 12 and lower
+
+Apply to:
+
+Hero fade-in
+
+Section fade-up
+
+CTA hover scale
+
+Cards entering viewport
+
+Animations should remain subtle.
+
+STEP 3 — Smooth Scroll + Premium Motion System
+
+Implement a global motion system:
+
+Smooth scroll
+
+Reduced jitter on section transitions
+
+Slight parallax on hero background (VERY subtle)
+
+Gentle fade for headers on scroll
+
+Do NOT add heavy parallax or anything distracting.
+
+STEP 4 — Advanced Responsive Pass (ALL breakpoints)
+
+Polish every breakpoint:
+
+360px (small Android)
+
+390px (iPhone 12/13/14)
+
+414px (iPhone Plus)
+
+768px (iPad)
+
+1024px (iPad Pro)
+
+1280px (desktop)
+
+1536px (large desktop)
+
+Fix:
+
+padding inconsistencies
+
+CTA spacing
+
+image scaling
+
+any overflow
+
+typography balance
+
+STEP 5 — Arctic Glass & Frost Effects (subtle, modern)
+
+Apply frosted glass effects using backdrop blur ONLY where appropriate:
+
+Nav background (tiny blur, subtle transparency)
+
+Contact cards or CTA panels (light frost look)
+
+Footer top border (soft separation)
+
+Keep everything extremely minimal and elegant — no heavy blur.
+
+STEP 6 — Ultra-Clean Shadow & Layer System
+
+Update shadow system to match Apple / premium Arctic UI:
+
+Unified shadow tokens
+
+Very soft, diffused shadows (shadow-[0_8px_30px_rgba(...)])
+
+Remove any harsh or inconsistent shadows
+
+STEP 7 — Loading Optimization + Instant Load Feel
+
+Make the site feel instant:
+
+Preload logo
+
+Preload hero image
+
+Add "anticipated paint" optimizations
+
+Enable lazy loading for everything below hero
+
+Use low-quality image placeholders (LQIP) if needed
+
+Prioritize contentful paint improvements
+
+STEP 8 — Codebase Refinement & Component Hardening
+
+Remove unused CSS
+
+Remove duplicate Tailwind classes
+
+Combine repeated animations
+
+Ensure consistent component patterns
+
+Fix any console warnings
+
+Fix any hydration mismatch issues
+
+Do NOT change existing component names or folder structure.
+
+STEP 9 — SEO & Metadata Upgrade (Advanced)
+
+Add/refine:
+
+Open Graph + Twitter metadata
+
+Schema.org structured data (LocalBusiness, Product, FAQ)
+
+Proper canonical URLs
+
+Preconnect to analytics endpoints
+
+Ensure this improves SEO without changing visible content.
+
+STEP 10 — Final Premium Arctic Identity Pass
+
+Unify the entire brand visually:
+
+Consistent cold-toned gradients
+
+Consistent Arctic blues
+
+Harmonize all spacing
+
+Smooth transitions between sections
+
+Micro-interactions aligned with Frostline’s theme
+
+Do NOT introduce new graphics or replace hero image.
+
+OUTPUT REQUIREMENTS
+
+Return:
+
+A full numbered list of changes for Steps 1–10
+
+Any files updated (with code blocks only where actual changes occurred)
+
+No changes to layout, text, pricing, business logic, or structure
+
+No new components
+
+No deletions of visible content
+
+This is the most advanced polish pass.
+All modifications must be subtle, high-performance, and stable on production.
+
+END OF PROMPT

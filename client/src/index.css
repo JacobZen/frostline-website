@@ -307,11 +307,11 @@
     inset: -1px;
   }
 
-  /* Arctic-themed fade-in animations */
+  /* Arctic-themed animations - Premium Apple/iOS feel */
   @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(24px);
     }
     to {
       opacity: 1;
@@ -328,12 +328,73 @@
     }
   }
 
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(1.02);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes hero-text-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes hero-image-reveal {
+    from {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes subtle-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
   .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out forwards;
+    animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
   }
 
   .animate-fade-in {
-    animation: fade-in 0.5s ease-out forwards;
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-scale {
+    animation: fade-in-scale 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  .animate-hero-text {
+    animation: hero-text-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  .animate-hero-image {
+    animation: hero-image-reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
   }
 
   .animate-delay-100 {
@@ -346,6 +407,119 @@
 
   .animate-delay-300 {
     animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Intersection Observer scroll reveal classes */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-delay-1 {
+    transition-delay: 100ms;
+  }
+
+  .scroll-reveal-delay-2 {
+    transition-delay: 200ms;
+  }
+
+  .scroll-reveal-delay-3 {
+    transition-delay: 300ms;
+  }
+
+  /* Premium Arctic section transitions */
+  .arctic-section {
+    position: relative;
+  }
+
+  .arctic-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+    opacity: 0.5;
+  }
+
+  /* Subtle Arctic gradient overlay for sections */
+  .arctic-gradient-subtle {
+    background: linear-gradient(
+      180deg, 
+      hsl(var(--background)) 0%, 
+      hsl(210 20% 98% / 0.5) 50%, 
+      hsl(var(--background)) 100%
+    );
+  }
+
+  .dark .arctic-gradient-subtle {
+    background: linear-gradient(
+      180deg, 
+      hsl(var(--background)) 0%, 
+      hsl(210 20% 12% / 0.5) 50%, 
+      hsl(var(--background)) 100%
+    );
+  }
+
+  /* Focus visible styles for accessibility */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Premium button hover glow effect */
+  .arctic-glow {
+    position: relative;
+  }
+
+  .arctic-glow::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(210 67% 17% / 0.1), hsl(210 67% 17% / 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .arctic-glow:hover::after {
+    opacity: 1;
+  }
+
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up,
+    .animate-fade-in,
+    .animate-fade-in-scale,
+    .animate-hero-text,
+    .animate-hero-image,
+    .scroll-reveal {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 
   /* Screen reader only utility */

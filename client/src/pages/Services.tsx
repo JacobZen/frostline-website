@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import ServiceCard from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import transferIcon from '@assets/generated_images/transfer_service_icon.png';
@@ -8,15 +9,40 @@ import arcticCoastalRoute from '@assets/generated_images/arctic_coastal_transpor
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const elements = ref.current?.querySelectorAll('.scroll-reveal');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return ref;
+}
+
 export default function Services() {
   const { t } = useLanguage();
   const [, setLocation] = useLocation();
+  const scrollRef = useScrollReveal();
   const serviceIcons = [transferIcon, partnerIcon, toursIcon, rentalIcon];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="Services header">
-        <div className="absolute inset-0">
+    <div className="min-h-screen flex flex-col" ref={scrollRef}>
+      <section className="relative h-[35vh] min-h-[260px] sm:h-[40vh] sm:min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="Services header">
+        <div className="absolute inset-0 animate-fade-in-scale">
           <img
             src={arcticCoastalRoute}
             alt="Arctic coastal transport route in Northern Norway"
@@ -26,29 +52,31 @@ export default function Services() {
             loading="eager"
             style={{ aspectRatio: '16/9' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-blue-950/15 mix-blend-overlay" aria-hidden="true" />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight" data-testid="text-services-title">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-tight animate-hero-text" data-testid="text-services-title">
             {t.services.title}
           </h1>
-          <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed animate-hero-text animate-delay-200">
             {t.services.subtitle}
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 sm:py-24 bg-background">
+      <section className="py-16 sm:py-20 lg:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {t.services.serviceCards.map((service, index) => (
-              <ServiceCard
-                key={index}
-                icon={serviceIcons[index]}
-                title={service.title}
-                description={service.description}
-              />
+              <div key={index} className={`scroll-reveal scroll-reveal-delay-${index + 1}`}>
+                <ServiceCard
+                  icon={serviceIcons[index]}
+                  title={service.title}
+                  description={service.description}
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -185,18 +213,19 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-24 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-6">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08)_0%,_transparent_50%)]" aria-hidden="true" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-6 scroll-reveal">
             {t.services.ctaTitle}
           </h2>
-          <p className="text-lg mb-8 text-primary-foreground/90">
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 text-primary-foreground/90 scroll-reveal scroll-reveal-delay-1">
             {t.services.ctaSubtitle}
           </p>
           <Button
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto min-h-[48px] min-w-[200px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+            className="w-full sm:w-auto min-h-[44px] sm:min-h-[48px] min-w-[180px] sm:min-w-[200px] rounded-xl bg-white/10 backdrop-blur-md border-white/30 border-2 text-white hover:bg-white/20 hover:border-white/60 no-default-hover-elevate shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] scroll-reveal scroll-reveal-delay-2"
             onClick={() => setLocation('/contact')}
             data-testid="button-custom-solution"
             aria-label="Contact us today for custom transport solutions"
