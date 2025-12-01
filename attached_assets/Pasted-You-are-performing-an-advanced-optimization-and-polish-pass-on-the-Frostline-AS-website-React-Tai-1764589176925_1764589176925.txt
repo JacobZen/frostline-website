@@ -1,0 +1,154 @@
+You are performing an advanced optimization and polish pass on the Frostline AS website (React + Tailwind).
+Do not modify any business text, branding, messaging, or layout structure.
+Focus only on performance, polish, animations, responsiveness, and premium feel.
+
+STEP 1 — Advanced Image Optimization & Lazy Loading
+
+Convert remaining images to WebP/AVIF where beneficial
+
+Add loading="lazy" for all below-the-fold images
+
+Preload hero image for faster above-the-fold render
+
+Ensure correct responsive sizes (sm:, md:, lg:)
+
+STEP 2 — Hero Section Premium Visual Upgrade
+
+Without changing layout or text:
+
+Add subtle fade-in animation on hero image
+
+Add smooth text fade-up animation for title + tagline
+
+Ensure animations do NOT hurt performance on older devices
+
+Goal: Arctic premium like Apple/iOS landing pages.
+
+STEP 3 — Mobile & Tablet Responsive Pass (Deep Scan)
+
+Check ALL screen sizes:
+
+iPhone SE
+
+iPhone 12
+
+iPhone 14/15
+
+iPad mini
+
+iPad Pro
+
+Small Android
+
+Large Android
+
+Fix:
+
+Any wrapping issues
+
+Padding inconsistencies
+
+Buttons too close or too spaced out
+
+Overflows / hidden edges
+
+STEP 4 — Section Transition Enhancement
+
+Add extremely subtle section transitions:
+
+Light fade
+
+Slight parallax where appropriate
+
+Reduce harsh breaks between hero → next sections
+
+No layout changes, only smoothness.
+
+STEP 5 — Navbar & Mobile Menu Polish
+
+Improve mobile menu open/close animation
+
+Make backdrop blur smoother
+
+Ensure no scroll lock bugs
+
+Perfect-center the Frostline logo vertically
+
+STEP 6 — Footer Premium Pass
+
+Do NOT change content.
+Improve:
+
+Vertical spacing
+
+Padding
+
+Link hover animations
+
+Font weight balance
+
+Make it feel “premium Arctic”, not plain utility.
+
+STEP 7 — Add Subtle Global Micro-Animations
+
+Examples:
+
+Fade-in cards when scrolled into view
+
+Soft hover effects
+
+Smooth transitions on CTAs
+
+Avoid heavy animations or performance hits.
+
+STEP 8 — Improve Code Quality & Organization
+
+Remove unused components + files
+
+Remove commented-out code
+
+Consolidate repeated Tailwind classes
+
+Run final Prettier and ESLint passes
+
+Improve consistency of component structure (if mismatched)
+
+No functional changes.
+
+STEP 9 — Accessibility (WCAG 2.1 AA) Final Pass
+
+Check all interactive elements for focus states
+
+Ensure keyboard navigation is smooth
+
+Add aria-labels where missing
+
+Check contrast on buttons & hero text
+
+STEP 10 — Final Arctic Identity Polish
+
+Without changing images, text, or content:
+
+Enhance gradients slightly to match Arctic tones
+
+Improve background blur effects
+
+Ensure shadows are consistent (Arctic soft shadows)
+
+Make the overall experience feel colder, cleaner, more premium
+
+OUTPUT REQUIREMENTS
+
+You MUST return:
+
+A numbered summary of every change made (1–10)
+
+Only code blocks for files that were modified
+
+No changes to layout, content, pricing, or business text
+
+No new sections or components
+
+No removal of any existing structure
+
+END OF PROMPT

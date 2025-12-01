@@ -1,0 +1,116 @@
+You are updating the Frostline AS website (React + Tailwind).
+Follow ALL steps below in the exact order.
+Do NOT change layout structure or business content unless specified.
+This is a post-launch professional optimization pass.
+
+STEP 1 — Global Performance Optimization
+
+Compress all hero/background images using next-gen formats (webp or avif).
+
+Reduce file sizes without visible quality loss.
+
+Ensure responsive images use correct size variants.
+
+STEP 2 — Reduce CLS (layout shifts)
+
+Add fixed height/width attributes to all hero images, logos, icons.
+
+Ensure navbar and hero do not shift on load.
+
+Apply aspect-video or aspect-[16/9] where needed.
+
+STEP 3 — Mobile & Tablet Polish Pass
+
+Improve spacing for CTA buttons on mobile.
+
+Ensure hero text never wraps awkwardly on iPhone SE / smaller screens.
+
+Check spacing between sections (hero → next section).
+
+STEP 4 — Premium Button Consistency
+
+Improve button styling across the site:
+
+Slightly increase rounded-xl or rounded-2xl.
+
+Align hover animation, shadow, and color transitions.
+
+Ensure primary and secondary CTAs follow identical height and padding rules.
+
+No content or text changes.
+
+STEP 5 — Navigation UX Upgrade
+
+Ensure navbar is perfectly centered vertically.
+
+Optimize mobile menu animation (faster and smoother).
+
+Prevent scroll locking issues on mobile when menu is open.
+
+STEP 6 — Footer Polish Pass
+
+Add more breathing room (padding-y).
+
+Ensure links are clear, readable, consistent.
+
+Do NOT change footer content or layout boxes.
+
+STEP 7 — Metadata & SEO Essentials
+
+Add or improve:
+
+Title tags
+
+Meta descriptions
+
+Open Graph image
+
+Twitter card metadata
+
+Canonical URL
+
+Language attribute
+Do NOT modify visible content — only metadata.
+
+STEP 8 — Accessibility Pass (WCAG 2.1 AA)
+
+Ensure heading hierarchy is correct (no H1 after another H1).
+
+Add aria-label for nav, footer, CTA icons.
+
+Ensure color contrast meets AA.
+
+Add skip-to-content link.
+
+STEP 9 — Codebase Cleanup
+
+Remove unused imports.
+
+Remove unused Tailwind classes.
+
+Ensure consistent formatting (Prettier pass).
+
+Remove commented-out code.
+No functional changes.
+
+STEP 10 — Final Arctic-Themed Polish
+
+Enhance subtle gradients.
+
+Add micro-animations (fade-in sections).
+
+Ensure consistent use of Frostline’s Arctic identity.
+
+Do not modify text or business information.
+
+OUTPUT REQUIREMENTS
+
+Return:
+
+Full list of changes per step.
+
+Only show code blocks where modifications are needed.
+
+Never change structure, layout, business text, prices, or branding.
+
+END OF PROMPT.

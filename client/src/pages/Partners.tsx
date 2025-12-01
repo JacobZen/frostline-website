@@ -13,25 +13,28 @@ export default function Partners() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header Section */}
-      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="Partners header">
         <div className="absolute inset-0">
           <img
             src={arcticFjord}
             alt="Arctic fjord in Northern Norway"
             className="w-full h-full object-cover"
+            width="1920"
+            height="800"
+            loading="eager"
+            style={{ aspectRatio: '16/9' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" aria-hidden="true" />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4" data-testid="text-partners-title">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight" data-testid="text-partners-title">
             {t.partners.title}
           </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
             {t.partners.subtitle}
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Introduction */}
       <section className="py-20 sm:py-24 bg-background">
@@ -173,9 +176,10 @@ export default function Partners() {
           <Button
             size="lg"
             variant="outline"
-            className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+            className="w-full sm:w-auto min-h-[48px] min-w-[200px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
             onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Partnership%20Inquiry%20-%20Frostline%20AS'}
             data-testid="button-request-partnership"
+            aria-label="Request partnership with Frostline AS"
           >
             {t.partners.requestPartnership}
           </Button>

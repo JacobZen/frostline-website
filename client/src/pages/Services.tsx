@@ -15,25 +15,28 @@ export default function Services() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header Section */}
-      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="Services header">
         <div className="absolute inset-0">
           <img
             src={arcticCoastalRoute}
             alt="Arctic coastal transport route in Northern Norway"
             className="w-full h-full object-cover"
+            width="1920"
+            height="800"
+            loading="eager"
+            style={{ aspectRatio: '16/9' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" aria-hidden="true" />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4" data-testid="text-services-title">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight" data-testid="text-services-title">
             {t.services.title}
           </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
             {t.services.subtitle}
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Services Grid */}
       <section className="py-20 sm:py-24 bg-background">
@@ -74,7 +77,12 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.bookYourTransferText}
               </p>
-              <Button onClick={() => setLocation('/contact')} data-testid="button-book-transfer-service">
+              <Button 
+                className="min-h-[44px] rounded-xl"
+                onClick={() => setLocation('/contact')} 
+                data-testid="button-book-transfer-service"
+                aria-label="Contact us about transfer services"
+              >
                 {t.home.contactUs}
               </Button>
             </div>
@@ -87,7 +95,12 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.becomePartnerText}
               </p>
-              <Button onClick={() => setLocation('/partners')} data-testid="button-partner-transport">
+              <Button 
+                className="min-h-[44px] rounded-xl"
+                onClick={() => setLocation('/partners')} 
+                data-testid="button-partner-transport"
+                aria-label="Learn more about partner transport"
+              >
                 {t.home.learnMore}
               </Button>
             </div>
@@ -126,7 +139,13 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.comingSoonText}
               </p>
-              <Button variant="outline" onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Northern%20Lights%20Tours%20Interest%20-%20Frostline%20AS'} data-testid="button-tours-interest">
+              <Button 
+                variant="outline" 
+                className="min-h-[44px] rounded-xl"
+                onClick={() => window.location.href = 'mailto:post@frostline.as?subject=Northern%20Lights%20Tours%20Interest%20-%20Frostline%20AS'} 
+                data-testid="button-tours-interest"
+                aria-label="Express interest in Northern Lights tours"
+              >
                 {t.services.expressInterest}
               </Button>
             </div>
@@ -139,7 +158,12 @@ export default function Services() {
               <p className="text-muted-foreground mb-4">
                 {t.services.rentalInquiryText}
               </p>
-              <Button onClick={() => setLocation('/contact')} data-testid="button-rental-inquiry">
+              <Button 
+                className="min-h-[44px] rounded-xl"
+                onClick={() => setLocation('/contact')} 
+                data-testid="button-rental-inquiry"
+                aria-label="Inquire about minibus rental"
+              >
                 {t.home.contactUs}
               </Button>
             </div>
@@ -172,9 +196,10 @@ export default function Services() {
           <Button
             size="lg"
             variant="outline"
-            className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+            className="w-full sm:w-auto min-h-[48px] min-w-[200px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
             onClick={() => setLocation('/contact')}
             data-testid="button-custom-solution"
+            aria-label="Contact us today for custom transport solutions"
           >
             {t.services.contactUsToday}
           </Button>

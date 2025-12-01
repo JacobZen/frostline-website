@@ -58,9 +58,10 @@ export default function Home() {
           <div className="text-center mt-10">
             <Button
               size="lg"
-              className="shadow-lg hover:shadow-xl border-2 border-transparent hover:border-white transition-all"
+              className="min-h-[48px] min-w-[180px] rounded-xl shadow-lg hover:shadow-xl border-2 border-transparent hover:border-white transition-all"
               onClick={() => setLocation('/services')}
               data-testid="button-view-all-services"
+              aria-label="View all our services"
             >
               {t.home.viewAllServices}
             </Button>
@@ -99,9 +100,10 @@ export default function Home() {
                 </p>
                 <Button
                   variant="outline"
-                  className="shadow-md hover:shadow-lg border-2 hover:border-primary/50 transition-all"
+                  className="min-h-[44px] rounded-xl shadow-md hover:shadow-lg border-2 hover:border-primary/50 transition-all"
                   onClick={() => setLocation('/partners')}
                   data-testid="button-partner-info"
+                  aria-label="Learn more about partnerships"
                 >
                   {t.home.learnMore}
                 </Button>
@@ -116,9 +118,10 @@ export default function Home() {
                 </p>
                 <Button
                   variant="outline"
-                  className="shadow-md hover:shadow-lg border-2 hover:border-primary/50 transition-all"
+                  className="min-h-[44px] rounded-xl shadow-md hover:shadow-lg border-2 hover:border-primary/50 transition-all"
                   onClick={() => setLocation('/contact')}
                   data-testid="button-book-now"
+                  aria-label="Book your transfer now"
                 >
                   {t.home.bookNow}
                 </Button>
@@ -189,22 +192,24 @@ export default function Home() {
           <p className="text-lg mb-8 text-primary-foreground/90">
             {t.home.ctaSubtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+              className="w-full sm:w-auto min-h-[48px] min-w-[180px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
               onClick={() => setLocation('/contact')}
               data-testid="button-contact-us"
+              aria-label="Contact us for inquiries"
             >
               {t.home.contactUs}
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+              className="w-full sm:w-auto min-h-[48px] min-w-[180px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
               onClick={() => setLocation('/partners')}
               data-testid="button-become-partner-cta"
+              aria-label="Become a partner"
             >
               {t.home.becomePartner}
             </Button>

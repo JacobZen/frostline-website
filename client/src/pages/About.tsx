@@ -11,25 +11,28 @@ export default function About() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header Section */}
-      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="About header">
         <div className="absolute inset-0">
           <img
             src={arcticMountains}
             alt="Norwegian Arctic mountain peaks in Northern Norway"
             className="w-full h-full object-cover"
+            width="1920"
+            height="800"
+            loading="eager"
+            style={{ aspectRatio: '16/9' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" aria-hidden="true" />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4" data-testid="text-about-title">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight" data-testid="text-about-title">
             {t.about.title}
           </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
             {t.about.subtitle}
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Company Story */}
       <section className="py-20 sm:py-24 bg-background">
@@ -191,22 +194,24 @@ export default function About() {
           <p className="text-lg mb-8 text-primary-foreground/90">
             {t.about.ctaSubtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 no-default-hover-elevate"
+              className="w-full sm:w-auto min-h-[48px] min-w-[180px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
               onClick={() => setLocation('/partners')}
               data-testid="button-become-partner-about"
+              aria-label="Learn about partnership opportunities"
             >
               {t.about.becomePartner}
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
+              className="w-full sm:w-auto min-h-[48px] min-w-[180px] rounded-xl bg-white/10 backdrop-blur-sm border-white/30 border-2 text-white hover:bg-white/20 hover:border-white no-default-hover-elevate shadow-lg hover:shadow-xl transition-all"
               onClick={() => setLocation('/contact')}
               data-testid="button-contact-about"
+              aria-label="Contact Frostline AS"
             >
               {t.about.contactUs}
             </Button>

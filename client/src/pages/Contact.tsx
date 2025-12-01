@@ -10,21 +10,21 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* SECTION 1 — TOP BANNER */}
-      <div 
+      <section 
         className="relative h-[240px] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-white text-center"
         style={{ backgroundImage: `url(${heroImage})` }}
+        aria-label="Contact header"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 backdrop-brightness-75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 backdrop-brightness-75" aria-hidden="true" />
         <div className="relative z-10 px-4">
-          <h1 className="text-4xl sm:text-5xl font-semibold mb-3" data-testid="text-contact-title">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 leading-tight" data-testid="text-contact-title">
             {t.contact.title}
           </h1>
-          <p className="text-lg sm:text-xl text-white/95">
+          <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed">
             {t.contact.subtitle}
           </p>
         </div>
-      </div>
+      </section>
 
       {/* SECTION 2 — CONTACT CARDS (3 CARDS) */}
       <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
@@ -36,7 +36,7 @@ export default function Contact() {
               data-testid="card-quick-location"
             >
               <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-7 h-7 text-primary" />
+                <MapPin className="w-7 h-7 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 {t.contact.location}
@@ -54,7 +54,7 @@ export default function Contact() {
               data-testid="card-quick-email"
             >
               <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-7 h-7 text-primary" />
+                <Mail className="w-7 h-7 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 {t.contact.emailLabel}
@@ -77,7 +77,7 @@ export default function Contact() {
               data-testid="card-company-details"
             >
               <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-7 h-7 text-primary" />
+                <Building2 className="w-7 h-7 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 {t.contact.companyDetails}
@@ -102,23 +102,25 @@ export default function Contact() {
             {t.contact.partnershipText || "Contact us today — we'll get back to you quickly."}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 sm:px-0">
             <a
               href="mailto:post@frostline.as?subject=Frostline%20AS%20Inquiry"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all hover-elevate active-elevate-2"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 min-h-[48px] rounded-xl font-medium shadow-lg hover:shadow-xl transition-all hover-elevate active-elevate-2"
               data-testid="button-send-email"
+              aria-label="Send email to Frostline AS"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5" aria-hidden="true" />
               {t.contact.sendButton || "Send Email"}
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </a>
             
             <button
               onClick={() => setLocation('/partners')}
-              className="inline-flex items-center gap-2 border-2 border-primary/40 text-foreground px-6 py-3 rounded-xl font-medium hover:bg-primary/10 transition-all hover-elevate active-elevate-2"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-primary/40 text-foreground px-6 py-3 min-h-[48px] rounded-xl font-medium hover:bg-primary/10 transition-all hover-elevate active-elevate-2"
               data-testid="button-partnership-info"
+              aria-label="View partnership information"
             >
-              <Users className="w-5 h-5" />
+              <Users className="w-5 h-5" aria-hidden="true" />
               {t.contact.partnershipButton || "Partner Inquiries"}
             </button>
           </div>
@@ -136,7 +138,7 @@ export default function Contact() {
             data-testid="card-map-placeholder"
           >
             <div className="text-center px-4">
-              <MapPin className="w-12 h-12 text-muted-foreground/70 mx-auto mb-3" />
+              <MapPin className="w-12 h-12 text-muted-foreground/70 mx-auto mb-3" aria-hidden="true" />
               <p className="text-muted-foreground/70 text-sm">
                 {t.contact.locationText2 || "Kompaniveien 4, 1639 Gamle Fredrikstad, Norway"}
               </p>
