@@ -1,0 +1,205 @@
+You are performing a **FULL PREMIUM APPLE-GRADE VISUAL REBRAND & MOTION SYSTEM PASS** on the Frostline AS website (React + Tailwind).
+
+Do NOT change:
+
+* Any text
+* Any business content
+* Any layout structure
+* Any pricing
+* Any branding decisions already made (logo, colors, hero image)
+
+Only enhance:
+
+* Visual identity
+* Typography system
+* Motion/animation system
+* Spacing system
+* Hover effects
+* Responsiveness
+* Shadows and gradients
+* Overall luxury “Arctic premium” feeling
+
+All improvements must remain subtle, fast, GPU-optimized, and production-safe.
+
+---
+
+# STEP 1 — Create a Premium Typography System (Apple-level)
+
+Define a type system with perfect hierarchy and reading comfort.
+
+Tasks:
+
+* Set consistent font-sizes for all breakpoints
+* Use fluid typography (`clamp()`) for titles and subtitles
+* Improve letter-spacing and line-height for clarity
+* Add consistent font weights (300–600)
+* No radical changes — keep the same fonts and overall appearance
+
+Goal: **Premium readability like Apple's site**, clean and calm.
+
+---
+
+# STEP 2 — Introduce a Global Arctic Motion System
+
+Create a unified motion design language:
+
+* Fade-up sections
+* Soft staggered transitions
+* Smooth, GPU-accelerated transforms
+* Zero jank on iPhone SE and older Android
+* Use `opacity`, `translateY`, `scale` only
+* Short durations (150–280ms)
+* Ease curves: `ease-out` or custom cubic-bezier (Apple-like)
+
+Apply subtly to:
+
+* Hero
+* Buttons
+* Cards
+* Section entries
+* Images
+
+---
+
+# STEP 3 — Add Ultra-Premium Hover Effects (Minimalistic)
+
+Improve hover interactions for desktop users:
+
+* Soft elevation (`shadow-[0_12px_40px_rgba(0,0,0,0.25)]`)
+* Smooth scale: `scale-[1.015]`
+* Light background glow on cards (very subtle)
+* Gentle frosting on hover for CTA buttons
+
+Goal: **Luxury feel without any “gimmick”.**
+
+---
+
+# STEP 4 — Arctic Gradient & Color System Upgrade
+
+Without changing color identity, improve consistency:
+
+* Add subtle multi-stop gradients
+* Refine Arctic blue tones
+* Apply whisper-soft overlays for depth
+* Ensure perfect contrast on small screens
+* No neon colors, no oversaturation
+
+Aesthetic target: **Northern lights softness + Apple clarity.**
+
+---
+
+# STEP 5 — Create a Global Spacing System (Consistent Rhythm)
+
+Unify spacing across all components:
+
+* Fix mismatched padding/margin
+* Unify vertical rhythm (consistent 32/48/64px spacing)
+* Ensure perfect proportional layout
+* Optimize spacing for mobile and iPad
+
+Outcome: cleaner, calmer, premium layout flow.
+
+---
+
+# STEP 6 — Arctic “Glass & Frost” Layers
+
+Add extremely subtle glassmorphism:
+
+* Light backdrop blur on navbar
+* Optional frost overlays on cards
+* Soft translucency on UI panels
+
+Rules:
+
+* Never reduce legibility
+* No heavy blur
+* Only thin, elegant Apple-style layers
+
+---
+
+# STEP 7 — Super-Premium Shadow System
+
+Replace all shadows with a unified system:
+
+* Ultra-soft ambient shadows
+* No harsh black shadows
+* 3-level shadow scale (Low, Medium, High elevation)
+* Use rgba(0,0,0,0.06–0.18) ranges only
+
+All shadows must feel **natural, cold, and diffused**.
+
+---
+
+# STEP 8 — Smooth Section Transitions & Scroll Behavior
+
+Apply:
+
+* Subtle parallax (very tiny)
+* Smooth scroll
+* Reduced jitter
+* Gradual fade-ins
+* Safe mobile performance
+
+Ensure that each section flows like an iOS onboarding screen.
+
+---
+
+# STEP 9 — Advanced Responsive Polish (All Breakpoints)
+
+Polish typography, spacing, and animations for:
+
+* iPhone SE
+* iPhone 11/12/13/14/15
+* iPad Mini
+* iPad Air
+* iPad Pro
+* Small Android
+* Large Android
+* Laptops
+* 4K monitors
+
+Fix any:
+
+* Overflow
+* Awkward wrapping
+* Too-tight spacing
+* XXL gaps
+
+Goal: **pixel-perfect on every device.**
+
+---
+
+# STEP 10 — Final Arctic Identity Unification
+
+Bring everything together:
+
+* Consistent spacing
+* Harmonized typography
+* Unified animation language
+* Elegant shadow system
+* Balanced gradients
+* Premium “ease-out” motion curves
+* Clean cold-tone aesthetic
+
+Do NOT alter:
+
+* Copy
+* Layout
+* Branding
+* Page structure
+
+---
+
+# OUTPUT REQUIREMENTS
+
+Return:
+
+1. Summary of all enhancements (10 steps)
+2. Only code blocks for files modified
+3. No new sections added
+4. No layout or content changes
+5. No changes to business logic, text, or branding
+
+This is a **pure premium Apple-grade polish pass**, not a redesign.
+
+END OF PROMPT.

@@ -158,6 +158,44 @@ Preferred communication style: Simple, everyday language.
 - Nature showcase: Northern Lights over Arctic mountains, Arctic tundra with autumn colors
 - Partnership and about page visuals
 
+### Progressive Web App (PWA)
+
+**PWA Infrastructure:**
+- `public/manifest.json` - Web app manifest with full metadata
+- `public/sw.js` - Service worker with Workbox-style caching
+- `public/offline.html` - Offline fallback page with Arctic branding
+- `public/icons/` - PWA icons (192x192, 256x256, 384x384, 512x512)
+
+**Manifest Configuration:**
+- Name: "Frostline AS", Short name: "Frostline"
+- Theme/background color: #0e1a27 (Arctic navy)
+- Display: standalone, Orientation: portrait
+- Categories: travel, transportation
+- App shortcuts for Contact and Services pages
+
+**Service Worker Caching Strategies:**
+- Cache-first for Google Fonts (1-year expiration)
+- Cache-first for images (30-day expiration, 60 max entries)
+- Network-first for API calls (24-hour expiration, 100 max entries)
+- Stale-while-revalidate for static assets
+- Offline navigation fallback to /offline.html
+
+**PWA Install Prompt:**
+- `PWAInstallPrompt.tsx` component with Arctic design
+- Detects `beforeinstallprompt` event for Android/Chrome
+- iOS-specific instructions for Add to Home Screen
+- Bilingual support (EN/NO)
+- 7-day dismissal persistence in localStorage
+
+**Apple Meta Tags:**
+- `apple-mobile-web-app-capable: yes`
+- `apple-mobile-web-app-status-bar-style: black-translucent`
+- Apple touch icons and splash screen links
+
+**Development Mode:**
+- Service worker only registers in production (`import.meta.env.PROD`)
+- Development logs "[PWA] Service Worker disabled in development mode"
+
 ### Design Philosophy
 
 The application follows a reference-based design approach inspired by Nordic minimalism, similar to Scandinavian airline and Arctic travel company websites. Key principles include:
@@ -168,3 +206,4 @@ The application follows a reference-based design approach inspired by Nordic min
 - Subtle shadows and elevation effects
 - Professional aesthetic suitable for B2B partnerships
 - Mobile-first responsive design
+- PWA-ready for app-like mobile experience

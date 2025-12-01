@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/contexts/language-context";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PremiumCookiePopup from "@/components/PremiumCookiePopup";
+import PWAInstallPrompt from "@/components/PWAInstallPrompt";
 import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import About from "@/pages/About";
@@ -45,6 +46,7 @@ function App() {
           </div>
           <Toaster />
           <PremiumCookiePopup />
+          <PWAInstallPrompt />
         </LanguageProvider>
       </TooltipProvider>
     </QueryClientProvider>
