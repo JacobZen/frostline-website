@@ -38,6 +38,17 @@ Preferred communication style: Simple, everyday language.
 - Centralized translation management in `language-context.tsx`
 - localStorage persistence for language preference
 
+**Theme System (Arctic Day/Night):**
+- Light/Dark/System theme support via ThemeProvider (`theme-context.tsx`)
+- **Arctic Day (Light)**: Clean whites and soft blues, subtle Arctic shadows
+- **Arctic Night (Dark)**: Deep midnight navy (#0e1a27), Aurora Green accents (#00e892)
+- Theme toggle with dropdown menu (Light/Dark/System options) in both desktop and mobile navbar
+- localStorage persistence with key "frostline-theme"
+- System preference detection via `prefers-color-scheme` media query
+- Smooth 280ms theme transitions using CSS custom properties and `theme-transitioning` class
+- Meta theme-color updates for mobile browser chrome
+- All components automatically adapt using CSS custom properties and dark mode classes
+
 **Page Structure:**
 - Home: Hero section with CTA buttons, service previews, benefits showcase, Arctic nature showcase with Northern Lights and tundra images
 - Services: Detailed service offerings with feature cards, header showcasing Arctic coastal transport route

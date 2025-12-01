@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@assets/Color logo - no background_1763624644274.png';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { useLanguage } from '@/contexts/language-context';
 
 export default function Navbar() {
@@ -72,7 +73,8 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
-            <div className="ml-2">
+            <div className="ml-2 flex items-center gap-1">
+              <ThemeToggle />
               <LanguageSwitcher />
             </div>
           </div>
@@ -139,7 +141,8 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center pt-4 border-t border-border/50">
+          <div className="flex justify-center items-center gap-3 pt-4 border-t border-border/50">
+            <ThemeToggle />
             <LanguageSwitcher />
           </div>
         </div>
