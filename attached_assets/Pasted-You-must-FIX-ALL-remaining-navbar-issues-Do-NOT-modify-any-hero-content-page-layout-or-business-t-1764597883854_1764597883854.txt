@@ -1,0 +1,127 @@
+You must FIX ALL remaining navbar issues.
+Do NOT modify any hero content, page layout, or business text.
+
+This is a **strict navbar hardening pass**.
+Make the navbar 100% readable, aligned, stable, and premium.
+
+Apply ALL changes below exactly:
+
+---
+
+# 1. NAVBAR BACKGROUND — MAKE IT 100% SOLID
+
+The background is STILL bleeding the hero image through.
+Fix this completely:
+
+* Light mode: `bg-white` (no opacity)
+* Dark mode: `bg-[#0e1a27]` (no opacity)
+* Keep a VERY light `backdrop-blur-sm`, but it MUST NOT affect contrast.
+* Remove ANY `[0.xx]` opacity modifiers.
+
+The navbar must be fully solid, zero transparency.
+
+---
+
+# 2. TEXT COLOR — HARD-LOCK BOTH MODES
+
+Current text disappears against hero.
+
+Set:
+
+* Light mode: `text-gray-900` (or token equivalent)
+* Dark mode: `text-gray-100`
+
+NO translucency, no opacity modifiers.
+
+---
+
+# 3. FIX OVERLAP — HARD-LOCK WIDTHS & GAPS
+
+Some nav items still collide.
+
+Apply:
+
+* Theme toggle container width: **fixed 40px–48px**
+* Language toggle container width: **fixed 40px–48px**
+* Gap between nav items: **gap-4** (locked)
+* Gap between right-group items: **gap-3**
+* Prevent any item from shrinking: `flex-shrink-0`
+
+---
+
+# 4. ALIGNMENT — RESTORE PERFECT CENTER LAYOUT
+
+Fix desktop alignment:
+
+* Left group: Logo only
+* Right group: Nav links + Language + Theme toggle
+* Container: `max-w-7xl mx-auto px-4`
+* Main flex: `flex items-center justify-between`
+
+Remove any:
+
+* `ml-auto`
+* `mr-auto`
+* `justify-end` on child groups
+
+Everything must align cleanly.
+
+---
+
+# 5. REDUCE NAVBAR HEIGHT AGAIN
+
+It is still too tall.
+
+Set:
+
+* Py should be around: `py-2` for desktop
+* Final total height target: **64px** hard target
+* Mobile: keep compact but readable
+
+---
+
+# 6. MOBILE DROPDOWN — MAKE BACKGROUND 100% SOLID
+
+Ensure:
+
+* Mobile menu background is fully solid, no transparency.
+* Text always readable.
+* No hero-bleed.
+* Proper spacing between menu items.
+
+---
+
+# 7. PREMIUM FEEL — KEEP ONLY SUBTLE EFFECTS
+
+* Keep hover scale ≤ 1.03
+* Transitions: `duration-150 ease-out`
+* Keep shadow subtle: `shadow-[0_4px_20px_rgba(14,42,71,0.08)]`
+* No heavy animations
+
+---
+
+# 8. NO BREAKING CHANGES
+
+Do NOT touch:
+
+* Hero
+* Pricing
+* Content
+* Footer
+* Theme system
+* Tokens
+* Page components outside navbar
+
+---
+
+# 9. RETURN
+
+Return:
+
+1. Updated Navbar.tsx
+2. Updated ThemeToggle.tsx (if needed)
+3. All Tailwind class changes
+4. Before/After comparison
+5. Clear summary of what was fixed
+
+END OF PROMPT.
