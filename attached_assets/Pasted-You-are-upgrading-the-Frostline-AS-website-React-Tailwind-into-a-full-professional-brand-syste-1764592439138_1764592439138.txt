@@ -1,0 +1,230 @@
+You are upgrading the Frostline AS website (React + Tailwind) into a **full professional brand system** using:
+
+* Design tokens
+* Color modes (light + dark)
+* Arctic theme
+* Scaling system (fluid spacing + typography)
+* Component-level tokens
+* Global motion system
+* Tailwind theme extension
+* True luxury-brand consistency
+
+Do NOT change:
+
+* Any business text
+* Any layout structure
+* Any branding decisions already made (logo, hero image)
+* Any content or messaging
+
+This is a **system-level upgrade**, not a redesign.
+
+---
+
+# STEP 1 — Create a Professional Design Token Architecture
+
+Create a complete design token file (JSON or JS) for:
+
+### Colors
+
+* Primary Arctic Blue
+* Aurora Green
+* Midnight Navy
+* Ice Grey
+* Snow White
+
+Each with:
+
+* 50 / 100 / 200 / 300 / 400 / 500 / 600 / 700 / 800 / 900 scale
+
+### Typography Tokens
+
+* Font sizes (xs → 6xl)
+* Line-heights
+* Letter-spacing
+* Font weights
+* Fluid scaling using `clamp()`
+
+### Spacing Tokens
+
+* `space-1` to `space-20`
+* Fluid spacing for responsive breakpoints
+
+### Shadow Tokens
+
+* shadow-sm
+* shadow-md
+* shadow-lg
+* shadow-xl
+* All based on Arctic “soft cold shadows”
+
+### Radius Tokens
+
+* sm / md / lg / xl / 2xl / full
+
+### Motion Tokens
+
+* Duration (fast/medium/slow)
+* Easing curves
+* Opacity transitions
+* Transform transitions
+
+Store everything in:
+`client/src/design/tokens.ts`
+(or equivalent)
+
+---
+
+# STEP 2 — Extend Tailwind Config with the Full Token Set
+
+Modify `tailwind.config.ts` to:
+
+* Map all colors to the new design tokens
+* Map spacing to custom spacing tokens
+* Add fluid typography scale
+* Add custom animations from the motion system
+* Add glass/frost utilities
+* Add gradients using token colors
+* Add dark mode using `class` strategy
+
+---
+
+# STEP 3 — Create Light Mode + Dark Mode Arctic Themes
+
+Implement two themes:
+
+### LIGHT MODE — “Arctic Day”
+
+* White + soft blues
+* Crisp clarity
+* Cold shadows
+* Frosted glass on navbar
+
+### DARK MODE — “Arctic Night”
+
+* Deep navy + emerald aurora accents
+* High contrast but calm
+* Subtle gradients
+* Premium low-light UI
+
+Automatic:
+
+* Add theme switcher component
+* Add theme persistence with localStorage
+* Add smooth theme transition animation
+* Respect user’s system preference
+
+---
+
+# STEP 4 — Build a Fluid Scaling System
+
+All typography and spacing should scale smoothly across devices using `clamp()`.
+
+Apply to:
+
+* H1–H6
+* Body text
+* Button text
+* Section spacing
+* Card padding
+* Navbar height
+
+Goal: Frostline looks absolutely perfect on every screen size, from iPhone SE → 4K monitor.
+
+---
+
+# STEP 5 — Build Global Component-Level Tokens
+
+Create system tokens for:
+
+* Buttons
+* Cards
+* Panels
+* Navigation
+* Footer
+* CTA components
+* Service cards
+* Hero section text
+
+Make everything consistent:
+
+* Same radius
+* Same shadows
+* Same spacing
+* Same animation easing
+* Same brand colors
+
+---
+
+# STEP 6 — Motion & Interaction System
+
+Implement motion tokens into all interactions:
+
+* Fade-up sections
+* Slide-up cards
+* Hover scale (very subtle)
+* Button press animation
+* Premium easing curves
+* Crossfade theme transition
+* Parallax-lite hero movement (VERY subtle)
+
+All GPU-optimized.
+
+---
+
+# STEP 7 — Frosted Glass & Arctic Glow Utilities
+
+Create utilities for:
+
+* `frost-light` (barely noticeable)
+* `frost-medium`
+* `frost-strong`
+* Aurora-gradient background helpers
+* Glow-on-hover (tiny, luxury feel)
+
+Make sure these utilities respect BOTH themes (light & dark).
+
+---
+
+# STEP 8 — System-Wide Consistency Pass
+
+Apply the new design system to:
+
+* Navbar
+* Hero
+* Buttons
+* Cards
+* Footer
+* Contact section
+* Pricing section
+* CTA sections
+
+No layout changes — only style harmonization.
+
+---
+
+# STEP 9 — Accessibility & Contrast Pass (WCAG 2.1 AA)
+
+Ensure:
+
+* Proper dark/light contrast
+* All states visible in both themes
+* Focus rings accessible
+* Correct aria-labels
+
+---
+
+# STEP 10 — Return Full Results
+
+Return:
+
+1. All design token files
+2. Tailwind config updates
+3. Global CSS enhancements
+4. Component modifications (only styling)
+5. Summary of all work completed (Steps 1–10)
+6. Do NOT add, remove, or rewrite any business text
+7. Do NOT modify layout or page structure
+
+This is a full brand identity & component system upgrade, not a redesign.
+
+END OF PROMPT.

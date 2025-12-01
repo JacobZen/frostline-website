@@ -175,28 +175,72 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    letter-spacing: -0.011em;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+    text-wrap: balance;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
   }
 
   h1 {
     @apply font-semibold;
+    font-size: clamp(2rem, 5vw + 0.5rem, 4rem);
+    letter-spacing: -0.03em;
+    line-height: 1.08;
   }
 
-  h2, h3 {
+  h2 {
     @apply font-semibold;
+    font-size: clamp(1.5rem, 3.5vw + 0.5rem, 2.75rem);
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+  }
+
+  h3 {
+    @apply font-semibold;
+    font-size: clamp(1.25rem, 2.5vw + 0.25rem, 2rem);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   h4, h5, h6 {
     @apply font-medium;
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+  }
+
+  p {
+    line-height: 1.65;
+    letter-spacing: -0.006em;
   }
 
   button {
     @apply font-medium;
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background-color: hsl(210 67% 17% / 0.2);
+    color: hsl(210 15% 15%);
+  }
+
+  .dark ::selection {
+    background-color: hsl(210 67% 50% / 0.3);
+    color: hsl(210 8% 95%);
   }
 }
 
@@ -311,11 +355,28 @@
     inset: -1px;
   }
 
-  /* Arctic-themed animations - Premium Apple/iOS feel with GPU acceleration */
+  /* ========================================================================
+     STEP 2: Global Arctic Motion System - Apple-grade GPU-accelerated animations
+     Premium ease curves: cubic-bezier(0.22, 1, 0.36, 1) - Apple's signature
+     Durations: 150-280ms for interactions, 600-900ms for reveals
+     ======================================================================== */
+
+  /* Arctic custom easing variables */
+  :root {
+    --ease-apple: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-apple-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-arctic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --duration-fast: 180ms;
+    --duration-normal: 280ms;
+    --duration-slow: 450ms;
+    --duration-reveal: 700ms;
+  }
+
   @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translate3d(0, 24px, 0);
+      transform: translate3d(0, 20px, 0);
     }
     to {
       opacity: 1;
@@ -335,7 +396,7 @@
   @keyframes fade-in-scale {
     from {
       opacity: 0;
-      transform: scale3d(1.02, 1.02, 1);
+      transform: scale3d(0.97, 0.97, 1);
     }
     to {
       opacity: 1;
@@ -346,8 +407,8 @@
   @keyframes hero-text-reveal {
     from {
       opacity: 0;
-      transform: translate3d(0, 32px, 0);
-      filter: blur(4px);
+      transform: translate3d(0, 28px, 0);
+      filter: blur(3px);
     }
     to {
       opacity: 1;
@@ -359,7 +420,7 @@
   @keyframes hero-image-reveal {
     from {
       opacity: 0;
-      transform: scale3d(1.05, 1.05, 1);
+      transform: scale3d(1.03, 1.03, 1);
     }
     to {
       opacity: 1;
@@ -372,7 +433,7 @@
       transform: translate3d(0, 0, 0);
     }
     50% {
-      transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -3px, 0);
     }
   }
 
@@ -381,61 +442,191 @@
       transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translate3d(0, var(--parallax-offset, 30px), 0);
+      transform: translate3d(0, var(--parallax-offset, 20px), 0);
+    }
+  }
+
+  /* Premium staggered entrance animation */
+  @keyframes stagger-fade-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 16px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  /* Subtle glow pulse for CTAs */
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(14, 42, 71, 0);
+    }
+    50% {
+      box-shadow: 0 0 20px 2px rgba(14, 42, 71, 0.08);
     }
   }
 
   .animate-fade-in-up {
-    animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fade-in-up var(--duration-reveal) var(--ease-apple) forwards;
     opacity: 0;
     will-change: transform, opacity;
   }
 
   .animate-fade-in {
-    animation: fade-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fade-in 600ms var(--ease-apple) forwards;
     opacity: 0;
     will-change: opacity;
   }
 
   .animate-fade-in-scale {
-    animation: fade-in-scale 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fade-in-scale 750ms var(--ease-apple) forwards;
     opacity: 0;
     will-change: transform, opacity;
   }
 
   .animate-hero-text {
-    animation: hero-text-reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: hero-text-reveal 850ms var(--ease-apple) forwards;
     opacity: 0;
     will-change: transform, opacity, filter;
   }
 
   .animate-hero-image {
-    animation: hero-image-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: hero-image-reveal 1100ms var(--ease-apple-out) forwards;
     opacity: 0;
     will-change: transform, opacity;
   }
 
-  /* Arctic Glass / Frost Effects */
+  .animate-stagger-fade {
+    animation: stagger-fade-up 600ms var(--ease-apple) forwards;
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  /* ========================================================================
+     STEP 6: Arctic "Glass & Frost" Layers - Ultra-subtle Apple-style glassmorphism
+     Never reduce legibility, thin elegant layers only
+     ======================================================================== */
+
   .arctic-glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 3px rgba(14, 42, 71, 0.04), 
+                0 4px 12px rgba(14, 42, 71, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   .dark .arctic-glass {
-    background: rgba(14, 42, 71, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(14, 42, 71, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 
+                0 4px 12px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .frost-blur {
-    backdrop-filter: blur(8px) saturate(150%);
-    -webkit-backdrop-filter: blur(8px) saturate(150%);
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
   }
 
   .frost-blur-lg {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .frost-blur-xl {
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+  }
+
+  /* ========================================================================
+     STEP 3: Ultra-Premium Hover Effects - Minimalistic luxury
+     Soft elevation, smooth scale, light background glow
+     ======================================================================== */
+
+  .arctic-hover-card {
+    transition: transform var(--duration-normal) var(--ease-apple),
+                box-shadow var(--duration-normal) var(--ease-apple);
+    will-change: transform, box-shadow;
+  }
+
+  .arctic-hover-card:hover {
+    transform: translateY(-2px) scale(1.008);
+    box-shadow: 0 8px 24px -6px rgba(14, 42, 71, 0.12),
+                0 12px 40px -8px rgba(14, 42, 71, 0.08);
+  }
+
+  .dark .arctic-hover-card:hover {
+    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.35),
+                0 12px 40px -8px rgba(0, 0, 0, 0.25);
+  }
+
+  .arctic-hover-card:active {
+    transform: translateY(0) scale(0.995);
+  }
+
+  /* Premium button glow on hover */
+  .arctic-button-glow {
+    position: relative;
+    transition: transform var(--duration-fast) var(--ease-apple),
+                box-shadow var(--duration-normal) var(--ease-apple);
+  }
+
+  .arctic-button-glow::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, 
+      rgba(14, 42, 71, 0.08), 
+      rgba(14, 42, 71, 0.03));
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-apple);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .arctic-button-glow:hover::before {
+    opacity: 1;
+  }
+
+  .arctic-button-glow:hover {
+    transform: scale(1.015);
+    box-shadow: 0 6px 20px -4px rgba(14, 42, 71, 0.15);
+  }
+
+  .dark .arctic-button-glow:hover {
+    box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.4);
+  }
+
+  .arctic-button-glow:active {
+    transform: scale(0.985);
+  }
+
+  /* Premium image hover effect */
+  .arctic-image-hover {
+    overflow: hidden;
+    transition: box-shadow var(--duration-normal) var(--ease-apple);
+  }
+
+  .arctic-image-hover img {
+    transition: transform 600ms var(--ease-apple-out);
+    will-change: transform;
+  }
+
+  .arctic-image-hover:hover {
+    box-shadow: 0 12px 40px -8px rgba(14, 42, 71, 0.18);
+  }
+
+  .arctic-image-hover:hover img {
+    transform: scale(1.04);
+  }
+
+  .dark .arctic-image-hover:hover {
+    box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.45);
   }
 
   .animate-delay-100 {
@@ -462,12 +653,16 @@
     animation-delay: 600ms;
   }
 
-  /* Intersection Observer scroll reveal classes - GPU optimized */
+  /* ========================================================================
+     STEP 8: Smooth Section Transitions & Scroll Behavior - iOS onboarding feel
+     GPU optimized, reduced jitter, gradual fade-ins
+     ======================================================================== */
+
   .scroll-reveal {
     opacity: 0;
-    transform: translate3d(0, 20px, 0);
-    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
-                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translate3d(0, 18px, 0);
+    transition: opacity 650ms var(--ease-apple), 
+                transform 650ms var(--ease-apple);
     will-change: transform, opacity;
   }
 
@@ -477,39 +672,54 @@
   }
 
   .scroll-reveal-delay-1 {
-    transition-delay: 100ms;
+    transition-delay: 80ms;
   }
 
   .scroll-reveal-delay-2 {
-    transition-delay: 200ms;
+    transition-delay: 160ms;
   }
 
   .scroll-reveal-delay-3 {
-    transition-delay: 300ms;
+    transition-delay: 240ms;
+  }
+
+  .scroll-reveal-delay-4 {
+    transition-delay: 320ms;
   }
 
   /* Premium Arctic section transitions */
   .arctic-section {
     position: relative;
+    contain: layout style;
   }
 
   .arctic-section::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 5%;
+    right: 5%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
-    opacity: 0.5;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      hsl(var(--border) / 0.4) 20%,
+      hsl(var(--border) / 0.6) 50%, 
+      hsl(var(--border) / 0.4) 80%,
+      transparent 100%);
+    opacity: 0.6;
   }
 
-  /* Subtle Arctic gradient overlay for sections */
+  /* ========================================================================
+     STEP 4: Arctic Gradient & Color System Upgrade
+     Multi-stop gradients, whisper-soft overlays, northern lights softness
+     ======================================================================== */
+
   .arctic-gradient-subtle {
     background: linear-gradient(
       180deg, 
       hsl(var(--background)) 0%, 
-      hsl(210 20% 98% / 0.5) 50%, 
+      hsl(210 15% 97% / 0.6) 35%,
+      hsl(210 20% 98% / 0.4) 65%, 
       hsl(var(--background)) 100%
     );
   }
@@ -518,8 +728,58 @@
     background: linear-gradient(
       180deg, 
       hsl(var(--background)) 0%, 
-      hsl(210 20% 12% / 0.5) 50%, 
+      hsl(210 18% 11% / 0.6) 35%,
+      hsl(210 20% 12% / 0.4) 65%, 
       hsl(var(--background)) 100%
+    );
+  }
+
+  /* Premium hero gradient overlay */
+  .arctic-hero-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.35) 25%,
+      rgba(0, 0, 0, 0.42) 60%,
+      rgba(0, 0, 0, 0.72) 100%
+    );
+  }
+
+  /* Northern lights-inspired accent gradient */
+  .arctic-accent-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(210 67% 17%) 0%,
+      hsl(210 60% 22%) 50%,
+      hsl(205 55% 18%) 100%
+    );
+  }
+
+  /* Soft depth gradient for cards */
+  .arctic-card-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--card) / 0.95) 100%
+    );
+  }
+
+  /* Section background gradients */
+  .arctic-section-gradient-light {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--muted) / 0.08) 0%,
+      hsl(var(--muted) / 0.25) 50%,
+      hsl(var(--muted) / 0.08) 100%
+    );
+  }
+
+  .arctic-section-gradient-dark {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--muted) / 0.15) 0%,
+      hsl(var(--muted) / 0.35) 50%,
+      hsl(var(--muted) / 0.15) 100%
     );
   }
 
@@ -549,18 +809,182 @@
     opacity: 1;
   }
 
+  /* ========================================================================
+     STEP 5: Global Spacing System - Consistent 32/48/64px rhythm
+     Premium proportional layout with unified vertical rhythm
+     ======================================================================== */
+
+  .section-padding-sm {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-padding-lg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-padding-sm {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .section-padding-lg {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding-sm {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+    .section-padding-lg {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+  }
+
+  /* ========================================================================
+     STEP 7: Super-Premium Shadow System - Natural cold diffused shadows
+     3-level scale (Low, Medium, High), rgba 0.04-0.16 range
+     ======================================================================== */
+
+  .arctic-shadow-sm {
+    box-shadow: 0 1px 2px rgba(14, 42, 71, 0.03),
+                0 2px 6px rgba(14, 42, 71, 0.04);
+  }
+
+  .arctic-shadow {
+    box-shadow: 0 2px 4px rgba(14, 42, 71, 0.04),
+                0 4px 12px rgba(14, 42, 71, 0.06),
+                0 8px 20px rgba(14, 42, 71, 0.04);
+  }
+
+  .arctic-shadow-lg {
+    box-shadow: 0 4px 8px rgba(14, 42, 71, 0.05),
+                0 8px 24px rgba(14, 42, 71, 0.08),
+                0 16px 40px rgba(14, 42, 71, 0.06);
+  }
+
+  .arctic-shadow-xl {
+    box-shadow: 0 6px 12px rgba(14, 42, 71, 0.06),
+                0 12px 32px rgba(14, 42, 71, 0.10),
+                0 24px 56px rgba(14, 42, 71, 0.08);
+  }
+
+  .dark .arctic-shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12),
+                0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .dark .arctic-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15),
+                0 4px 12px rgba(0, 0, 0, 0.20),
+                0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .dark .arctic-shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18),
+                0 8px 24px rgba(0, 0, 0, 0.25),
+                0 16px 40px rgba(0, 0, 0, 0.20);
+  }
+
+  .dark .arctic-shadow-xl {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20),
+                0 12px 32px rgba(0, 0, 0, 0.30),
+                0 24px 56px rgba(0, 0, 0, 0.25);
+  }
+
+  /* ========================================================================
+     STEP 9: Advanced Responsive Polish - All breakpoints
+     iPhone SE to 4K monitors, no overflow or awkward spacing
+     ======================================================================== */
+
+  /* Container width adjustments for ultra-wide */
+  @media (min-width: 1536px) {
+    .container-premium {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* Safe area insets for notched devices */
+  @supports (padding: env(safe-area-inset-top)) {
+    .safe-area-padding {
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+  }
+
+  /* Touch target minimum sizing */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Text size adjustments for small screens */
+  @media (max-width: 374px) {
+    .text-responsive-sm {
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Improved text wrapping */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
   /* Reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
     .animate-fade-in-up,
     .animate-fade-in,
     .animate-fade-in-scale,
     .animate-hero-text,
     .animate-hero-image,
+    .animate-stagger-fade,
     .scroll-reveal {
       animation: none !important;
       transition: none !important;
       opacity: 1 !important;
       transform: none !important;
+      filter: none !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: more) {
+    .arctic-glass {
+      background: hsl(var(--background));
+      border-width: 2px;
     }
   }
 
@@ -587,5 +1011,52 @@
     overflow: visible;
     clip: auto;
     white-space: normal;
+  }
+
+  /* ========================================================================
+     STEP 10: Final Arctic Identity Unification
+     Unified transition curves, consistent interaction feedback
+     ======================================================================== */
+
+  /* Global smooth transitions for interactive elements */
+  a, button, input, select, textarea,
+  [role="button"], [tabindex]:not([tabindex="-1"]) {
+    transition-timing-function: var(--ease-apple);
+  }
+
+  /* Premium link underline animation */
+  .arctic-link {
+    position: relative;
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-apple);
+  }
+
+  .arctic-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--duration-normal) var(--ease-apple);
+  }
+
+  .arctic-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Premium focus states */
+  .arctic-focus {
+    outline: none;
+    transition: box-shadow var(--duration-fast) var(--ease-apple);
+  }
+
+  .arctic-focus:focus-visible {
+    box-shadow: 0 0 0 2px hsl(var(--background)),
+                0 0 0 4px hsl(var(--ring));
   }
 }

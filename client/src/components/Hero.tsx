@@ -70,21 +70,21 @@ export default function Hero() {
         <img
           src={heroImage}
           alt="Northern Lights over Norwegian fjord with snow-covered mountains"
-          className="w-full h-full object-cover will-change-transform scale-[1.08]"
+          className="w-full h-full object-cover will-change-transform scale-[1.05]"
           width="1920"
           height="1080"
           loading="eager"
           decoding="async"
           style={{ aspectRatio: '16/9' }}
         />
-        {/* Enhanced Arctic gradient overlay */}
+        {/* Premium Arctic hero gradient overlay - multi-stop for depth */}
         <div 
-          className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/75" 
+          className="absolute inset-0 arctic-hero-gradient" 
           aria-hidden="true" 
         />
-        {/* Subtle blue Arctic tint overlay */}
+        {/* Subtle blue Arctic tint overlay - northern lights softness */}
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-blue-950/20 mix-blend-overlay" 
+          className="absolute inset-0 bg-gradient-to-br from-blue-900/8 via-transparent to-blue-950/15 mix-blend-overlay" 
           aria-hidden="true" 
         />
       </div>
@@ -92,13 +92,13 @@ export default function Hero() {
       {/* Hero Content with Staggered Text Animations */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white mb-3 sm:mb-4 leading-tight tracking-tight animate-hero-text"
+          className="text-[clamp(1.875rem,5vw+0.5rem,4.5rem)] font-semibold text-white mb-3 sm:mb-5 leading-[1.08] tracking-[-0.03em] animate-hero-text drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
           data-testid="text-hero-title"
         >
           {t.hero.title}
         </h1>
         <p 
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 font-medium mb-6 sm:mb-8 leading-snug animate-hero-text animate-delay-200"
+          className="text-[clamp(1.125rem,2.5vw+0.25rem,1.875rem)] text-white/95 font-medium mb-7 sm:mb-9 leading-[1.35] tracking-[-0.01em] animate-hero-text animate-delay-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.25)]"
           data-testid="text-hero-subtitle"
         >
           {t.hero.subtitle}
@@ -107,7 +107,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 sm:px-0 animate-fade-in-up animate-delay-400">
           <Button
             size="lg"
-            className="w-full sm:w-auto bg-primary/95 backdrop-blur-md border-2 border-white/20 hover:bg-primary hover:border-white/60 text-primary-foreground min-w-[180px] sm:min-w-[200px] min-h-[44px] sm:min-h-[48px] rounded-xl no-default-hover-elevate transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto bg-primary/95 backdrop-blur-xl border-2 border-white/25 hover:bg-primary hover:border-white/50 text-primary-foreground min-w-[180px] sm:min-w-[200px] min-h-[44px] sm:min-h-[50px] rounded-xl no-default-hover-elevate transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:scale-[1.015] active:scale-[0.985]"
             onClick={() => setLocation('/contact')}
             data-testid="button-book-transfer"
             aria-label="Book your transfer now"
@@ -117,7 +117,7 @@ export default function Hero() {
           <Button
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border-white/30 border-2 text-white hover:bg-white/20 hover:border-white/60 min-w-[180px] sm:min-w-[200px] min-h-[44px] sm:min-h-[48px] rounded-xl no-default-hover-elevate transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto bg-white/8 backdrop-blur-xl border-white/25 border-2 text-white hover:bg-white/15 hover:border-white/50 min-w-[180px] sm:min-w-[200px] min-h-[44px] sm:min-h-[50px] rounded-xl no-default-hover-elevate transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.28)] hover:scale-[1.015] active:scale-[0.985]"
             onClick={() => setLocation('/partners')}
             data-testid="button-become-partner"
             aria-label="Learn about partnership opportunities"

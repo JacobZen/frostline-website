@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl backdrop-saturate-150 border-b border-border/30 h-16 transition-all duration-300 shadow-sm"
+      className="sticky top-0 z-50 bg-background/88 backdrop-blur-2xl backdrop-saturate-[1.6] border-b border-border/20 h-16 transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_1px_3px_rgba(14,42,71,0.04),0_4px_12px_rgba(14,42,71,0.03)]"
       role="navigation"
       aria-label="Main navigation"
     >
@@ -110,7 +110,7 @@ export default function Navbar() {
       >
         {/* Backdrop blur overlay - Arctic frost effect */}
         <div 
-          className={`absolute inset-0 bg-background/90 backdrop-blur-xl backdrop-saturate-150 transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-background/92 backdrop-blur-2xl backdrop-saturate-[1.6] transition-opacity duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
             mobileMenuOpen ? 'opacity-100' : 'opacity-0'
           }`}
           onClick={() => setMobileMenuOpen(false)}
