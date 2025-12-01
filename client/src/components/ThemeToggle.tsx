@@ -36,16 +36,16 @@ export function ThemeToggle() {
         <Button
           variant="ghost"
           size="icon"
-          className="relative h-8 w-8 rounded-md text-foreground/80 hover:text-foreground hover:bg-muted/60 dark:text-foreground/75 dark:hover:text-foreground dark:hover:bg-muted/40"
+          className="relative h-8 w-8 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-150 ease-out hover:scale-105 active:scale-95"
           aria-label={t.toggleTheme}
           data-testid="button-theme-toggle"
         >
           <Sun 
-            className="h-[1.1rem] w-[1.1rem] rotate-0 scale-100 transition-transform duration-200 dark:-rotate-90 dark:scale-0" 
+            className="h-4 w-4 rotate-0 scale-100 transition-transform duration-200 ease-out dark:-rotate-90 dark:scale-0" 
             strokeWidth={2}
           />
           <Moon 
-            className="absolute h-[1.1rem] w-[1.1rem] rotate-90 scale-0 transition-transform duration-200 dark:rotate-0 dark:scale-100" 
+            className="absolute h-4 w-4 rotate-90 scale-0 transition-transform duration-200 ease-out dark:rotate-0 dark:scale-100" 
             strokeWidth={2}
           />
           <span className="sr-only">{t.toggleTheme}</span>
@@ -53,40 +53,40 @@ export function ThemeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent 
         align="end" 
-        className="w-28 bg-popover/[0.98] dark:bg-popover backdrop-blur-sm border border-border/50"
+        className="w-28 bg-white dark:bg-[#0e1a27] border border-gray-200/80 dark:border-white/15 shadow-[0_8px_24px_rgba(14,42,71,0.12)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
         sideOffset={6}
       >
         <DropdownMenuItem 
           onClick={() => setTheme('light')}
-          className="flex items-center gap-2 cursor-pointer text-sm py-1.5"
+          className="flex items-center gap-2 cursor-pointer text-sm py-1.5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors duration-150"
           data-testid="menu-theme-light"
         >
           <Sun className="h-3.5 w-3.5" />
           <span>{t.light}</span>
           {theme === 'light' && (
-            <span className="ml-auto text-primary text-xs">✓</span>
+            <span className="ml-auto text-[#0e2a47] dark:text-[#00e892] text-xs font-medium">✓</span>
           )}
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme('dark')}
-          className="flex items-center gap-2 cursor-pointer text-sm py-1.5"
+          className="flex items-center gap-2 cursor-pointer text-sm py-1.5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors duration-150"
           data-testid="menu-theme-dark"
         >
           <Moon className="h-3.5 w-3.5" />
           <span>{t.dark}</span>
           {theme === 'dark' && (
-            <span className="ml-auto text-primary text-xs">✓</span>
+            <span className="ml-auto text-[#0e2a47] dark:text-[#00e892] text-xs font-medium">✓</span>
           )}
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme('system')}
-          className="flex items-center gap-2 cursor-pointer text-sm py-1.5"
+          className="flex items-center gap-2 cursor-pointer text-sm py-1.5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors duration-150"
           data-testid="menu-theme-system"
         >
           <Monitor className="h-3.5 w-3.5" />
           <span>{t.system}</span>
           {theme === 'system' && (
-            <span className="ml-auto text-primary text-xs">✓</span>
+            <span className="ml-auto text-[#0e2a47] dark:text-[#00e892] text-xs font-medium">✓</span>
           )}
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -105,16 +105,16 @@ export function ThemeToggleSimple() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="relative h-8 w-8 rounded-md text-foreground/80 hover:text-foreground hover:bg-muted/60 dark:text-foreground/75 dark:hover:text-foreground dark:hover:bg-muted/40"
+      className="relative h-8 w-8 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-150 ease-out hover:scale-105 active:scale-95"
       aria-label={label}
       data-testid="button-theme-toggle-simple"
     >
       <Sun 
-        className="h-[1.1rem] w-[1.1rem] rotate-0 scale-100 transition-transform duration-200 dark:-rotate-90 dark:scale-0" 
+        className="h-4 w-4 rotate-0 scale-100 transition-transform duration-200 ease-out dark:-rotate-90 dark:scale-0" 
         strokeWidth={2}
       />
       <Moon 
-        className="absolute h-[1.1rem] w-[1.1rem] rotate-90 scale-0 transition-transform duration-200 dark:rotate-0 dark:scale-100" 
+        className="absolute h-4 w-4 rotate-90 scale-0 transition-transform duration-200 ease-out dark:rotate-0 dark:scale-100" 
         strokeWidth={2}
       />
       <span className="sr-only">{label}</span>
