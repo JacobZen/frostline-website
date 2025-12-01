@@ -94,12 +94,19 @@ export default function Footer() {
                   post@frostline.as
                 </span>
               </a>
-              <div className="flex items-center gap-3 text-sm">
-                <span className="w-9 h-9 rounded-lg bg-muted/50 flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-muted-foreground" aria-hidden="true" />
+              <a 
+                href="tel:99157437" 
+                className="flex items-center gap-3 text-sm group" 
+                data-testid="footer-link-phone"
+                aria-label="Call Frostline AS"
+              >
+                <span className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
+                  <Phone className="w-4 h-4 text-primary" aria-hidden="true" />
                 </span>
-                <span className="text-muted-foreground">{t.contact.availabilityText1}</span>
-              </div>
+                <span className="text-foreground group-hover:text-primary transition-colors duration-200 font-medium">
+                  {t.contact.phoneNumber}
+                </span>
+              </a>
               <p className="text-sm text-foreground/80 font-medium mt-5 pt-4 border-t border-border/30" data-testid="text-quick-response">
                 {t.contact.phoneSubtext}
               </p>

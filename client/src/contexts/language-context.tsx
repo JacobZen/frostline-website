@@ -159,6 +159,7 @@ interface TranslationContent {
     contactInfo: string;
     emailLabel: string;
     phoneLabel: string;
+    phoneNumber: string;
     phoneText: string;
     phoneSubtext: string;
     location: string;
@@ -463,6 +464,7 @@ const translations: Translations = {
       contactInfo: 'Contact Information',
       emailLabel: 'Email',
       phoneLabel: 'Phone',
+      phoneNumber: '991 57 437',
       phoneText: 'Available every day',
       phoneSubtext: 'We respond quickly',
       location: 'Location',
@@ -765,6 +767,7 @@ const translations: Translations = {
       contactInfo: 'Kontaktinformasjon',
       emailLabel: 'E-post',
       phoneLabel: 'Telefon',
+      phoneNumber: '991 57 437',
       phoneText: 'Tilgjengelig hver dag',
       phoneSubtext: 'Vi svarer raskt',
       location: 'Lokasjon',

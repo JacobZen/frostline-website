@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { MapPin, Mail, Building2, ArrowRight, Users } from 'lucide-react';
+import { MapPin, Mail, Building2, ArrowRight, Users, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import heroImage from '@assets/IMG_9188_1763628868230.jpeg';
@@ -170,10 +170,19 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 {t.contact.phoneLabel}
               </h3>
-              <p className="text-muted-foreground" data-testid="text-phone-quick">
+              <a 
+                href="tel:99157437"
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium inline-flex items-center gap-2"
+                data-testid="link-phone-quick"
+                aria-label="Call Frostline AS"
+              >
+                <Phone className="w-4 h-4" aria-hidden="true" />
+                {t.contact.phoneNumber}
+              </a>
+              <p className="text-muted-foreground mt-2" data-testid="text-phone-quick">
                 {t.contact.phoneText}
               </p>
-              <p className="text-sm text-muted-foreground mt-2 italic">
+              <p className="text-sm text-muted-foreground mt-1 italic">
                 {t.contact.phoneSubtext}
               </p>
             </div>
