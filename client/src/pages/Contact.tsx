@@ -25,7 +25,6 @@ export default function Contact() {
           </p>
         </div>
       </section>
-
       {/* SECTION 2 — CONTACT CARDS (3 CARDS) */}
       <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +42,7 @@ export default function Contact() {
               </h3>
               <div className="text-sm text-muted-foreground space-y-1">
                 <p>Kompaniveien 4</p>
-                <p>1639 Gamle Fredrikstad</p>
+                <p>Balsjord</p>
                 <p>Norway</p>
               </div>
             </div>
@@ -91,7 +90,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
       {/* SECTION 3 — DIRECT CONTACT CTA BLOCK */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -126,7 +124,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
       {/* SECTION 4 — OPTIONAL MAP BLOCK */}
       <section className="py-16 bg-muted/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,7 +146,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
       {/* Additional Contact Information */}
       <section className="py-16 bg-background border-t">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
