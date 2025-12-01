@@ -123,24 +123,6 @@ export default function Home() {
             <div className="space-y-5 sm:space-y-6">
               <div className="bg-card p-5 sm:p-7 rounded-xl border border-border/30 arctic-shadow-sm arctic-hover-card scroll-reveal scroll-reveal-delay-1">
                 <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2.5 sm:mb-3 tracking-[-0.015em]">
-                  {t.home.forTravelPartners}
-                </h3>
-                <p className="text-sm sm:text-base text-muted-foreground mb-5 leading-[1.65]">
-                  {t.home.forTravelPartnersText}
-                </p>
-                <Button
-                  variant="outline"
-                  className="min-h-[42px] sm:min-h-[46px] rounded-xl border hover:border-primary/40 transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985]"
-                  onClick={() => setLocation('/partners')}
-                  data-testid="button-partner-info"
-                  aria-label="Learn more about partnerships"
-                >
-                  {t.home.learnMore}
-                </Button>
-              </div>
-
-              <div className="bg-card p-5 sm:p-7 rounded-xl border border-border/30 arctic-shadow-sm arctic-hover-card scroll-reveal scroll-reveal-delay-2">
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2.5 sm:mb-3 tracking-[-0.015em]">
                   {t.home.privateTravelers}
                 </h3>
                 <p className="text-sm sm:text-base text-muted-foreground mb-5 leading-[1.65]">
