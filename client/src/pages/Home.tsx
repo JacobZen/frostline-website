@@ -59,13 +59,16 @@ export default function Home() {
       </section>
 
       {/* Services Preview Section */}
-      <section className="section-padding bg-background">
+      <section className="py-12 sm:py-14 lg:py-16 bg-[#f7f9fc] dark:bg-[#0c1c2c] relative">
+        {/* Ultra-subtle top divider */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" aria-hidden="true" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-14">
+          <div className="text-center mb-10 sm:mb-12">
             <h2 className="font-semibold text-foreground mb-4 sm:mb-5 scroll-reveal tracking-[-0.025em]">
               {t.home.servicesTitle}
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto scroll-reveal scroll-reveal-delay-1 leading-[1.65]">
+            <p className="text-base sm:text-lg text-muted-foreground/90 max-w-2xl mx-auto scroll-reveal scroll-reveal-delay-1 leading-[1.65]">
               {t.home.servicesSubtitle}
             </p>
           </div>
