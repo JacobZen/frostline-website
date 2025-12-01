@@ -29,25 +29,7 @@ export default function Contact() {
       <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 — Address */}
-            <div 
-              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(14,42,71,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(14,42,71,0.12)]"
-              data-testid="card-quick-location"
-            >
-              <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-7 h-7 text-primary" aria-hidden="true" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">
-                {t.contact.location}
-              </h3>
-              <div className="text-sm text-muted-foreground space-y-1">
-                <p>Kompaniveien 4</p>
-                <p>Balsjord</p>
-                <p>Norway</p>
-              </div>
-            </div>
-
-            {/* Card 2 — Email */}
+            {/* Card 1 — Email */}
             <div 
               className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(14,42,71,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(14,42,71,0.12)]"
               data-testid="card-quick-email"
@@ -68,6 +50,24 @@ export default function Contact() {
               <p className="text-xs text-muted-foreground mt-2">
                 {t.contact.phoneSubtext}
               </p>
+            </div>
+
+            {/* Card 2 — Location */}
+            <div 
+              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(14,42,71,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(14,42,71,0.12)]"
+              data-testid="card-quick-location"
+            >
+              <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-7 h-7 text-primary" aria-hidden="true" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-3">
+                {t.contact.location}
+              </h3>
+              <div className="text-sm text-muted-foreground space-y-1">
+                <p>Kompaniveien 4</p>
+                <p>Balsjord</p>
+                <p>Norway</p>
+              </div>
             </div>
 
             {/* Card 3 — Organization */}
