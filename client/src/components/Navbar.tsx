@@ -48,7 +48,7 @@ export default function Navbar() {
               <img 
                 src={logo} 
                 alt="Frostline AS" 
-                className="h-8 w-auto"
+                className="h-8 w-auto dark:brightness-0 dark:invert"
                 width="100"
                 height="32"
                 loading="eager"
