@@ -131,7 +131,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   className="min-h-[42px] sm:min-h-[46px] rounded-xl border hover:border-primary/40 transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985]"
-                  onClick={() => setLocation('/contact')}
+                  onClick={() => setLocation('/routes')}
                   data-testid="button-book-now"
                   aria-label="Book your transfer now"
                 >

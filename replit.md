@@ -55,6 +55,7 @@ Preferred communication style: Simple, everyday language.
 - About: Company story, team information, certifications, header featuring Norwegian Arctic mountain peaks
 - Partners: B2B partnership benefits and collaboration details, header displaying Arctic fjord landscape
 - Contact: Enhanced engaging design with gradient hero header, quick contact cards (4-card grid), large contact form with animations, and organized sidebar with company details, partnership CTA, and contact information
+- Routes & Prices: Fixed-price minibus transfer pricing table (5 routes from Hammerfest), per-person pricing with min 5 passengers, integrated booking form with route selector, date picker, passenger count, and mailto submission to post@frostline.as
 - 404: Custom not-found page
 
 **Component Architecture:**

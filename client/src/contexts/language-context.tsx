@@ -14,6 +14,7 @@ interface TranslationContent {
     about: string;
     partners: string;
     contact: string;
+    routes: string;
   };
   hero: {
     title: string;
@@ -179,6 +180,7 @@ interface TranslationContent {
   footer: {
     companyDescription: string;
     quickLinks: string;
+    routesLink: string;
     copyright: string;
     terms: string;
     privacy: string;
@@ -226,6 +228,41 @@ interface TranslationContent {
     contactText: string;
     disclaimer: string;
   };
+  routes: {
+    title: string;
+    subtitle: string;
+    tableTitle: string;
+    route: string;
+    distance: string;
+    duration: string;
+    pricePerPerson: string;
+    minPassengers: string;
+    bookNow: string;
+    pricingNote: string;
+    pricingNote2: string;
+    bookingTitle: string;
+    bookingSubtitle: string;
+    selectRoute: string;
+    selectRoutePlaceholder: string;
+    date: string;
+    passengers: string;
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+    messagePlaceholder: string;
+    submitBooking: string;
+    priceFrom: string;
+    hours: string;
+    km: string;
+    routesList: Array<{
+      from: string;
+      to: string;
+      distance: string;
+      duration: string;
+      price: string;
+    }>;
+  };
 }
 
 const translations: Translations = {
@@ -236,6 +273,7 @@ const translations: Translations = {
       about: 'About Us',
       partners: 'Partners',
       contact: 'Contact',
+      routes: 'Routes & Prices',
     },
     hero: {
       title: 'Frostline AS',
@@ -484,6 +522,7 @@ const translations: Translations = {
     footer: {
       companyDescription: 'Frostline AS is a transport company organized as a limited company, operating in passenger transport on demand.',
       quickLinks: 'Quick Links',
+      routesLink: 'Routes & Prices',
       copyright: '© 2025 Frostline AS. All rights reserved.',
       terms: 'Terms & Conditions',
       privacy: 'Privacy Policy',
@@ -531,6 +570,41 @@ const translations: Translations = {
       contactText: 'If you have questions about this Privacy Policy or how we process your personal data, please contact us at: post@frostline.as',
       disclaimer: 'This page is a general template and should be reviewed and adapted if needed to ensure full legal compliance.',
     },
+    routes: {
+      title: 'Routes & Prices',
+      subtitle: 'Fixed-price minibus transfers across Northern Norway. Per person, minimum 5 passengers.',
+      tableTitle: 'Popular Routes',
+      route: 'Route',
+      distance: 'Distance',
+      duration: 'Duration',
+      pricePerPerson: 'Price / person',
+      minPassengers: 'Min. 5 passengers',
+      bookNow: 'Book Now',
+      pricingNote: 'All prices are per person. Minimum 5 passengers required for all routes. Prices may vary by season.',
+      pricingNote2: 'Need a custom route or group booking? Contact us for a tailored quote.',
+      bookingTitle: 'Book Your Transfer',
+      bookingSubtitle: 'Select your route and fill in the details below. We will confirm your booking by email.',
+      selectRoute: 'Select Route',
+      selectRoutePlaceholder: 'Choose a route...',
+      date: 'Preferred Date',
+      passengers: 'Number of Passengers',
+      name: 'Full Name',
+      email: 'Email Address',
+      phone: 'Phone Number',
+      message: 'Additional Information',
+      messagePlaceholder: 'Any special requests, luggage details, or questions...',
+      submitBooking: 'Send Booking Request',
+      priceFrom: 'from',
+      hours: 'hrs',
+      km: 'km',
+      routesList: [
+        { from: 'Hammerfest', to: 'Alta', distance: '150', duration: '2', price: '790' },
+        { from: 'Hammerfest', to: 'Tromsø', distance: '500', duration: '7', price: '1 990' },
+        { from: 'Evenes', to: 'Hammerfest', distance: '600', duration: '8', price: '2 290' },
+        { from: 'Hammerfest', to: 'Lofoten', distance: '700', duration: '10', price: '2 790' },
+        { from: 'Hammerfest', to: 'Andøy', distance: '550', duration: '8', price: '2 490' },
+      ],
+    },
   },
   no: {
     navbar: {
@@ -539,6 +613,7 @@ const translations: Translations = {
       about: 'Om oss',
       partners: 'Partnere',
       contact: 'Kontakt',
+      routes: 'Ruter og priser',
     },
     hero: {
       title: 'Frostline AS',
@@ -787,6 +862,7 @@ const translations: Translations = {
     footer: {
       companyDescription: 'Frostline AS er et transportselskap organisert som et aksjeselskap, med virksomhet innen passasjertransport på forespørsel.',
       quickLinks: 'Hurtiglenker',
+      routesLink: 'Ruter og priser',
       copyright: '© 2025 Frostline AS. Alle rettigheter reservert.',
       terms: 'Vilkår og betingelser',
       privacy: 'Personvernerklæring',
@@ -833,6 +909,41 @@ const translations: Translations = {
       contactTitle: 'Kontakt',
       contactText: 'Hvis du har spørsmål om denne personvernerklæringen eller hvordan vi behandler personopplysninger, kan du kontakte oss på: post@frostline.as',
       disclaimer: 'Denne siden er en generell mal og bør vurderes og tilpasses ved behov for å sikre full juridisk etterlevelse.',
+    },
+    routes: {
+      title: 'Ruter og priser',
+      subtitle: 'Faste priser for minibuss-transport i Nord-Norge. Per person, minimum 5 passasjerer.',
+      tableTitle: 'Populære ruter',
+      route: 'Rute',
+      distance: 'Avstand',
+      duration: 'Kjøretid',
+      pricePerPerson: 'Pris / person',
+      minPassengers: 'Min. 5 passasjerer',
+      bookNow: 'Book nå',
+      pricingNote: 'Alle priser er per person. Minimum 5 passasjerer kreves for alle ruter. Prisene kan variere etter sesong.',
+      pricingNote2: 'Trenger du en tilpasset rute eller gruppebooking? Kontakt oss for et skreddersydd tilbud.',
+      bookingTitle: 'Book din transport',
+      bookingSubtitle: 'Velg ruten din og fyll inn detaljene nedenfor. Vi bekrefter bookingen din via e-post.',
+      selectRoute: 'Velg rute',
+      selectRoutePlaceholder: 'Velg en rute...',
+      date: 'Ønsket dato',
+      passengers: 'Antall passasjerer',
+      name: 'Fullt navn',
+      email: 'E-postadresse',
+      phone: 'Telefonnummer',
+      message: 'Tilleggsinformasjon',
+      messagePlaceholder: 'Spesielle ønsker, bagasjedetaljer eller spørsmål...',
+      submitBooking: 'Send bookingforespørsel',
+      priceFrom: 'fra',
+      hours: 'timer',
+      km: 'km',
+      routesList: [
+        { from: 'Hammerfest', to: 'Alta', distance: '150', duration: '2', price: '790' },
+        { from: 'Hammerfest', to: 'Tromsø', distance: '500', duration: '7', price: '1 990' },
+        { from: 'Evenes', to: 'Hammerfest', distance: '600', duration: '8', price: '2 290' },
+        { from: 'Hammerfest', to: 'Lofoten', distance: '700', duration: '10', price: '2 790' },
+        { from: 'Hammerfest', to: 'Andøy', distance: '550', duration: '8', price: '2 490' },
+      ],
     },
   },
 };

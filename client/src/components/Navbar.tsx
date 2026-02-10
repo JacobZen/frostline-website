@@ -18,6 +18,7 @@ export default function Navbar() {
     { path: '/about', label: t.navbar.about },
     { path: '/partners', label: t.navbar.partners },
     { path: '/contact', label: t.navbar.contact },
+    { path: '/routes', label: t.navbar.routes },
   ];
 
   const isActive = (path: string) => location === path;

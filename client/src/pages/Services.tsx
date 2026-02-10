@@ -107,11 +107,11 @@ export default function Services() {
               </p>
               <Button 
                 className="min-h-[44px] rounded-xl"
-                onClick={() => setLocation('/contact')} 
+                onClick={() => setLocation('/routes')} 
                 data-testid="button-book-transfer-service"
-                aria-label="Contact us about transfer services"
+                aria-label="View routes and book a transfer"
               >
-                {t.home.contactUs}
+                {t.routes.bookNow}
               </Button>
             </div>
           </div>

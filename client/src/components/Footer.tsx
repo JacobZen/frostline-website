@@ -60,6 +60,13 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link href="/routes" data-testid="footer-link-routes">
+                  <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-all duration-200 hover:translate-x-1 inline-block">
+                    {t.footer.routesLink}
+                  </span>
+                </Link>
+              </li>
               <li className="pt-2 mt-2 border-t border-border/30">
                 <Link href="/terms" data-testid="footer-link-terms">
                   <span className="text-sm text-muted-foreground hover:text-primary cursor-pointer transition-all duration-200 hover:translate-x-1 inline-block">
