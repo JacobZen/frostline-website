@@ -59,7 +59,7 @@ export default function Hero() {
   return (
     <section 
       ref={parallaxRef}
-      className="relative h-[85vh] min-h-[540px] sm:h-[90vh] sm:min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative h-[85vh] min-h-[540px] sm:h-[90vh] sm:min-h-[600px] flex items-center justify-center overflow-hidden bg-[#0e2a47]"
       aria-label="Welcome to Frostline AS"
     >
       {/* Hero Image with Premium Fade Animation and Subtle Parallax */}
@@ -75,6 +75,7 @@ export default function Hero() {
           height="1080"
           loading="eager"
           decoding="async"
+          fetchPriority="high"
           style={{ aspectRatio: '16/9' }}
         />
         {/* Premium Arctic hero gradient overlay - multi-stop for depth */}

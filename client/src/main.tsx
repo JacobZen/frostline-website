@@ -8,14 +8,18 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
       const registration = await navigator.serviceWorker.register('/sw.js', {
         scope: '/',
       });
-      console.log('[PWA] Service Worker registered:', registration.scope);
-      
+
       registration.addEventListener('updatefound', () => {
         const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              console.log('[PWA] New content available, refresh to update');
+            if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+              const lastReload = sessionStorage.getItem('sw-reload');
+              const now = Date.now();
+              if (!lastReload || now - parseInt(lastReload) > 10000) {
+                sessionStorage.setItem('sw-reload', now.toString());
+                window.location.reload();
+              }
             }
           });
         }

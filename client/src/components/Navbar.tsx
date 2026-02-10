@@ -52,7 +52,9 @@ export default function Navbar() {
                 width="100"
                 height="32"
                 loading="eager"
+                onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling?.classList.remove('hidden'); }}
               />
+              <span className="hidden text-lg font-heading font-bold text-foreground tracking-tight">Frostline AS</span>
             </div>
           </Link>
 
