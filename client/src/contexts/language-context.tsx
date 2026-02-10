@@ -244,6 +244,7 @@ interface TranslationContent {
     bookingSubtitle: string;
     selectRoute: string;
     selectRoutePlaceholder: string;
+    requestCustomRoute: string;
     date: string;
     passengers: string;
     name: string;
@@ -586,6 +587,7 @@ const translations: Translations = {
       bookingSubtitle: 'Select your route and fill in the details below. We will confirm your booking by email.',
       selectRoute: 'Select Route',
       selectRoutePlaceholder: 'Choose a route...',
+      requestCustomRoute: 'Request custom route',
       date: 'Preferred Date',
       passengers: 'Number of Passengers',
       name: 'Full Name',
@@ -926,6 +928,7 @@ const translations: Translations = {
       bookingSubtitle: 'Velg ruten din og fyll inn detaljene nedenfor. Vi bekrefter bookingen din via e-post.',
       selectRoute: 'Velg rute',
       selectRoutePlaceholder: 'Velg en rute...',
+      requestCustomRoute: 'Forespør annen rute',
       date: 'Ønsket dato',
       passengers: 'Antall passasjerer',
       name: 'Fullt navn',
