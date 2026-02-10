@@ -109,7 +109,7 @@ export default function Hero() {
           <Button
             size="lg"
             className="w-full sm:w-auto bg-primary/95 backdrop-blur-xl border-2 border-white/25 hover:bg-primary hover:border-white/50 text-primary-foreground min-w-[180px] sm:min-w-[200px] min-h-[44px] sm:min-h-[50px] rounded-xl no-default-hover-elevate transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:scale-[1.015] active:scale-[0.985]"
-            onClick={() => setLocation('/contact')}
+            onClick={() => setLocation('/routes')}
             data-testid="button-book-transfer"
             aria-label="Book your transfer now"
           >
