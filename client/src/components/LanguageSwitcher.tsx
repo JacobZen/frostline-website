@@ -1,34 +1,43 @@
 import { useLanguage } from '@/contexts/language-context';
-import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
 
 export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center gap-4" data-testid="language-switcher">
-      <Button
-        size="sm"
-        variant={language === 'no' ? 'default' : 'ghost'}
+    <div
+      className="inline-flex items-center rounded-full bg-muted/60 dark:bg-white/10 p-0.5 border border-border/50"
+      data-testid="language-switcher"
+      role="radiogroup"
+      aria-label="Select language"
+    >
+      <button
         onClick={() => setLanguage('no')}
+        className={`relative px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 ${
+          language === 'no'
+            ? 'bg-primary text-primary-foreground shadow-sm'
+            : 'text-muted-foreground hover:text-foreground'
+        }`}
         data-testid="button-language-no"
         title="Norsk"
-        className={language === 'no' ? 'shadow-md ring-2 ring-primary/20' : ''}
+        role="radio"
+        aria-checked={language === 'no'}
       >
-        <Globe className="w-4 h-4 mr-1" />
         NO
-      </Button>
-      <Button
-        size="sm"
-        variant={language === 'en' ? 'default' : 'ghost'}
+      </button>
+      <button
         onClick={() => setLanguage('en')}
+        className={`relative px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 ${
+          language === 'en'
+            ? 'bg-primary text-primary-foreground shadow-sm'
+            : 'text-muted-foreground hover:text-foreground'
+        }`}
         data-testid="button-language-en"
         title="English"
-        className={language === 'en' ? 'shadow-md ring-2 ring-primary/20' : ''}
+        role="radio"
+        aria-checked={language === 'en'}
       >
-        <Globe className="w-4 h-4 mr-1" />
         EN
-      </Button>
+      </button>
     </div>
   );
 }

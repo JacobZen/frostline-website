@@ -80,12 +80,8 @@ export default function Navbar() {
             
             {/* Controls: Theme + Language */}
             <div className="flex items-center gap-3 ml-6 pl-6 border-l border-gray-200 dark:border-gray-700">
-              <div className="flex-shrink-0 w-10">
-                <ThemeToggle />
-              </div>
-              <div className="flex-shrink-0 w-10">
-                <LanguageSwitcher />
-              </div>
+              <ThemeToggle />
+              <LanguageSwitcher />
             </div>
           </div>
 
@@ -153,13 +149,9 @@ export default function Navbar() {
           </div>
           
           {/* Mobile controls */}
-          <div className="flex justify-center items-center gap-3 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-            <div className="flex-shrink-0 w-10">
-              <ThemeToggle />
-            </div>
-            <div className="flex-shrink-0 w-10">
-              <LanguageSwitcher />
-            </div>
+          <div className="flex justify-center items-center gap-4 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <ThemeToggle />
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
