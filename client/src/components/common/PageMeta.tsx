@@ -11,7 +11,7 @@ interface PageMetaProps {
 }
 
 const SITE_NAME = 'Frostline AS';
-const BASE_URL = 'https://frostline.no';
+const BASE_URL = 'https://frostline.as';
 const OG_IMAGE = `${BASE_URL}/frostline-share.png`;
 
 function setMeta(name: string, content: string, isProperty = false) {

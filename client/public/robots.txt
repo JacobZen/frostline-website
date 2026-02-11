@@ -3,4 +3,4 @@ Allow: /
 Disallow: /install
 Disallow: /404
 
-Sitemap: https://frostline.no/sitemap.xml
+Sitemap: https://frostline.as/sitemap.xml
