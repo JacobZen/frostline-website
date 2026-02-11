@@ -10,6 +10,7 @@ import northernLights from '@assets/generated_images/northern_lights_arctic_moun
 import arcticTundra from '@assets/generated_images/arctic_tundra_autumn_colors.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
+import PageMeta from '@/components/common/PageMeta';
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -44,6 +45,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col" ref={scrollRef}>
+      <PageMeta
+        titleEn="Reliable Transport in Northern Norway"
+        titleNo="Pålitelig transport i Nord-Norge"
+        descriptionEn="Frostline AS offers private transfers, partner logistics and seasonal tours in Arctic Norway. Safe, flexible transport year-round."
+        descriptionNo="Frostline AS tilbyr privat transport, partnerlogistikk og sesongbaserte turer i Nord-Norge. Trygg, fleksibel transport hele året."
+        path="/"
+      />
       <Hero />
 
       {/* About Frostline AS Teaser */}

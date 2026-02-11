@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { MapPin, Clock, Bus, ArrowRight, Send, Info, ChevronDown, Sparkles, CreditCard, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
+import PageMeta from '@/components/common/PageMeta';
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -70,6 +71,13 @@ export default function Routes() {
 
   return (
     <div className="min-h-screen flex flex-col" ref={scrollRef}>
+      <PageMeta
+        titleEn="Routes & Prices"
+        titleNo="Ruter og priser"
+        descriptionEn="Fixed-price minibus and bus transfers across Northern Norway. Book your group transport from Harstad with Frostline AS."
+        descriptionNo="Faste priser for minibuss- og busstransport i Nord-Norge. Book din gruppetransport fra Harstad med Frostline AS."
+        path="/routes"
+      />
       <section className="relative bg-[#0e2a47] py-16 sm:py-20 lg:py-24 overflow-hidden" aria-label="Routes header">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0e2a47] via-[#163a5f] to-[#0e2a47]" />
         <div className="absolute inset-0 opacity-10">

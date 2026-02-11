@@ -1,0 +1,58 @@
+KONTEKST: Frostline AS er et transportfirma i Nord-Norge (Tromsø-området).
+Nettadressen er frostline.no (eller tilsvarende).
+Siden har 10 sider: Home, Services, About, Partners, Contact, Terms, Privacy, Routes, Install, NotFound.
+Siden har INGEN SEO i dag — ingen meta-tags, ingen sitemap, ingen structured data.
+Dette er forretningskritisk for en lokal bedrift.
+
+OPPGAVE: Implementer komplett SEO-oppsett:
+
+1. PAGEMET-KOMPONENT:
+   Lag client/src/components/common/PageMeta.tsx som dynamisk setter:
+   - document.title (format: "Sidenavn | Frostline AS — Transport i Nord-Norge")
+   - meta description (unik per side, 150-160 tegn)
+   - og:title, og:description, og:type, og:url, og:image
+   - twitter:card, twitter:title, twitter:description
+
+   Bruk useEffect for å sette meta-tags. Alternativt installer react-helmet-async
+   og bruk Helmet-komponenten.
+
+2. BRUK PAGEMETA PÅ ALLE SIDER:
+   Legg til PageMeta øverst i hver side-komponent med relevante norske beskrivelser:
+   - Home: "Frostline AS — Pålitelig transport i Nord-Norge. Frakt, logistikk og rutetransport."
+   - Services: "Våre transporttjenester — frakt, pakkelevering og logistikkløsninger i Nord-Norge"
+   - About: "Om Frostline AS — vårt team og vår historie innen transport i Nord-Norge"
+   - Routes: "Transportruter og priser — faste ruter i Nord-Norge med booking"
+   - Contact: "Kontakt Frostline AS — telefon, e-post og kontaktskjema"
+   - Partners: "Våre samarbeidspartnere — Frostline AS"
+   - osv. for alle sider
+
+3. STRUCTURED DATA (JSON-LD):
+   Legg til i client/index.html (eller dynamisk via PageMeta):
+
+   LocalBusiness schema med:
+   - @type: "TransportationBusiness" (eller "LocalBusiness")
+   - name: "Frostline AS"
+   - address (Tromsø/Nord-Norge)
+   - telephone
+   - url
+   - openingHours
+   - areaServed: "Nord-Norge"
+   - serviceType: transport/frakt
+
+4. SITEMAP OG ROBOTS:
+   Lag public/sitemap.xml med alle 8 offentlige sider (ikke Install eller NotFound).
+   Lag public/robots.txt:
+     User-agent: *
+     Allow: /
+     Sitemap: https://frostline.no/sitemap.xml
+
+5. CLIENT/INDEX.HTML:
+   - Legg til lang="nb" på <html>-taggen
+   - Legg til <link rel="canonical" href="https://frostline.no/">
+   - Verifiser at viewport meta-tag finnes
+   - Legg til preconnect for eksterne fonter hvis de brukes
+
+6. Verifiser at siden fortsatt fungerer korrekt etter alle endringer.
+```
+
+---

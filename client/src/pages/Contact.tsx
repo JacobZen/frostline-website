@@ -3,6 +3,7 @@ import { MapPin, Mail, Building2, ArrowRight, Users, Phone } from 'lucide-react'
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import heroImage from '@assets/IMG_9188_1763628868230.jpeg';
+import PageMeta from '@/components/common/PageMeta';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -10,6 +11,13 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageMeta
+        titleEn="Contact Us"
+        titleNo="Kontakt oss"
+        descriptionEn="Get in touch with Frostline AS — phone, email and contact form. We respond quickly to all transport inquiries."
+        descriptionNo="Ta kontakt med Frostline AS — telefon, e-post og kontaktskjema. Vi svarer raskt på alle transportforespørsler."
+        path="/contact"
+      />
       <section 
         className="relative h-[240px] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-white text-center"
         style={{ backgroundImage: `url(${heroImage})` }}

@@ -4,6 +4,7 @@ import { Clock, MessageCircle, ShieldCheck, Users, Calendar, Car } from 'lucide-
 import arcticFjord from '@assets/generated_images/arctic_fjord_northern_norway.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
+import PageMeta from '@/components/common/PageMeta';
 
 export default function Partners() {
   const { t } = useLanguage();
@@ -13,6 +14,13 @@ export default function Partners() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageMeta
+        titleEn="Partner with Frostline AS"
+        titleNo="Samarbeid med Frostline AS"
+        descriptionEn="Partner logistics for DMCs, travel agencies and tour operators. Reliable B2B transport solutions in Northern Norway."
+        descriptionNo="Partnerlogistikk for DMC-er, reisebyråer og turoperatører. Pålitelige B2B-transportløsninger i Nord-Norge."
+        path="/partners"
+      />
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="Partners header">
         <div className="absolute inset-0">
           <img

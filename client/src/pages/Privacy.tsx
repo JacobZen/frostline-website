@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLanguage } from '@/contexts/language-context';
 import { Card } from '@/components/ui/card';
 import { Shield, AlertCircle, Mail } from 'lucide-react';
+import PageMeta from '@/components/common/PageMeta';
 
 export default function Privacy() {
   const { t, language } = useLanguage();
@@ -72,6 +73,13 @@ export default function Privacy() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <PageMeta
+        titleEn="Privacy Policy"
+        titleNo="Personvernerklæring"
+        descriptionEn="Privacy policy for Frostline AS — how we collect, use and protect your personal data under GDPR."
+        descriptionNo="Personvernerklæring for Frostline AS — hvordan vi samler inn, bruker og beskytter dine personopplysninger under GDPR."
+        path="/privacy"
+      />
       {/* Hero Header */}
       <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/80 to-primary/60">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>

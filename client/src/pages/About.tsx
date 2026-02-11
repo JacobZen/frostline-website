@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import arcticMountains from '@assets/generated_images/norwegian_arctic_mountain_peaks.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
+import PageMeta from '@/components/common/PageMeta';
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -37,6 +38,13 @@ export default function About() {
 
   return (
     <div className="min-h-screen flex flex-col" ref={scrollRef}>
+      <PageMeta
+        titleEn="About Us"
+        titleNo="Om oss"
+        descriptionEn="Learn about Frostline AS — our team, history and commitment to safe Arctic transport in Northern Norway."
+        descriptionNo="Les om Frostline AS — vårt team, vår historie og vårt engasjement for trygg arktisk transport i Nord-Norge."
+        path="/about"
+      />
       <section className="relative h-[35vh] min-h-[260px] sm:h-[40vh] sm:min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="About header">
         <div className="absolute inset-0 animate-fade-in-scale">
           <img

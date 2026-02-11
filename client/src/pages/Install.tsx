@@ -3,6 +3,7 @@ import { Smartphone, Share, PlusSquare, MoreVertical, ArrowDown, CheckCircle } f
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'wouter';
+import PageMeta from '@/components/common/PageMeta';
 
 const translations = {
   en: {
@@ -85,6 +86,13 @@ export default function Install() {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta
+        titleEn="Install Frostline App"
+        titleNo="Installer Frostline-appen"
+        descriptionEn="Add Frostline AS to your home screen for quick access to Arctic transport booking and route information."
+        descriptionNo="Legg Frostline AS til startskjermen din for rask tilgang til arktisk transportbooking og ruteinformasjon."
+        path="/install"
+      />
       <section className="relative py-16 sm:py-24 bg-[#0e1a27] text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0e2a47]/80 to-[#0e1a27]" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">

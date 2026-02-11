@@ -8,6 +8,7 @@ import rentalIcon from '@assets/generated_images/minibus_rental_icon.png';
 import arcticCoastalRoute from '@assets/generated_images/arctic_coastal_transport_route.png';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
+import PageMeta from '@/components/common/PageMeta';
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -41,6 +42,13 @@ export default function Services() {
 
   return (
     <div className="min-h-screen flex flex-col" ref={scrollRef}>
+      <PageMeta
+        titleEn="Our Transport Services"
+        titleNo="Våre transporttjenester"
+        descriptionEn="Private transfers, partner logistics and Northern Lights tours in Arctic Norway. Professional transport solutions by Frostline AS."
+        descriptionNo="Privat transport, partnerlogistikk og nordlysturer i Nord-Norge. Profesjonelle transportløsninger fra Frostline AS."
+        path="/services"
+      />
       <section className="relative h-[35vh] min-h-[260px] sm:h-[40vh] sm:min-h-[300px] flex items-center justify-center overflow-hidden" aria-label="Services header">
         <div className="absolute inset-0 animate-fade-in-scale">
           <img
