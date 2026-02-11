@@ -1,0 +1,38 @@
+===== FROSTLINE.AS - FASTE TURER & PRISER =====
+(Dette er teksten og strukturen du kan lime inn i Replit for å lage/endre "Faste Turer"-seksjonen)
+
+Tittel på siden/seksjonen:
+Faste Turer fra Harstad – Privat Minibuss & Buss med Sjåfør
+
+Innledningstekst (sett inn øverst på siden eller i seksjonen):
+Her er våre mest populære ruter med faste priser for hele gruppen. Perfekt for familier, vennegjenger, bedrifter eller turister som vil ha bekvem og trygg transport i Nord-Norge. Alle priser inkluderer sjåfør, drivstoff, ferger og bompenger. Vi tilbyr 9-seters minibuss eller større buss (17–30 seter) på forespørsel. Prisene er veiledende – kontakt oss for eksakt tilbud eller tilpasninger.
+
+Tabell med faste turer (bruk som HTML-table eller markdown i Replit):
+
+Rute                            | Ca. tid én vei     | 9-seter Minibuss (total) | Større buss (17–30 seter) | Kommentar / inkludert
+--------------------------------|--------------------|---------------------------|----------------------------|---------------------------
+Harstad ↔ Evenes flyplass       | 45–60 min         | 3 900 – 4 900 NOK        | 5 900 – 7 500 NOK         | Kort transfer, minsteoppdrag
+Harstad ↔ Tromsø sentrum        | 2–2,5 timer       | 9 500 – 12 500 NOK       | 14 000 – 18 000 NOK       | Populær rute, 1–2 korte stopp mulig
+Harstad ↔ Andenes / Andøy       | 4–5 timer (ferge) | 14 500 – 19 000 NOK      | 20 000 – 26 000 NOK       | Fergekostnad inkludert
+Harstad ↔ Svolvær / Lofoten     | 4–5 timer         | 16 000 – 22 000 NOK      | 23 000 – 32 000 NOK       | Sightseeing-stop inkludert
+Harstad ↔ Alta                  | 6–8 timer         | 22 000 – 28 000 NOK      | 30 000 – 40 000 NOK       | Langtur, ekstra pause mulig
+
+Tekst under tabellen:
+Prisene gjelder tur/retur fra Harstad-base. Minimumsbeløp per oppdrag: 4 500 NOK.  
+For custom stopp, ventetid eller ekstra tjenester – send oss en forespørsel!
+
+Tillegg & Opsjoner (sett inn som bullet-liste under tabellen eller i egen boks):
+• Nordlys-jakt med ekstra stopp: +1 500–3 000 NOK  
+• Guide-fortelling underveis: +800 NOK/time  
+• Snacks/varm drikke-pakke: +300–500 NOK  
+• Barneseter / rullestolplass: Gratis eller +200 NOK  
+• Ventetid utover avtalt: 250 NOK / halvtime  
+
+CTA-knapper (legg til under teksten):
+- "Be om tilbud nå" → lenke til kontaktformular  
+- "Book tur" → lenke til booking eller e-post  
+
+Ekstra info å vise et sted på siden:
+Vi tilpasser alltid turen etter deres behov. Minimumsbeløp per oppdrag: 4 500 NOK. Depositum 20–30% ved booking. Vi svarer raskt – ofte innen få timer!
+
+===== SLUTT PÅ TUR-INNHOLD =====

@@ -231,15 +231,24 @@ interface TranslationContent {
   routes: {
     title: string;
     subtitle: string;
+    introText: string;
     tableTitle: string;
     route: string;
     distance: string;
     duration: string;
-    pricePerPerson: string;
+    minibusPrice: string;
+    busPrice: string;
+    comment: string;
     minPassengers: string;
     bookNow: string;
+    requestQuote: string;
     pricingNote: string;
     pricingNote2: string;
+    minimumOrder: string;
+    depositInfo: string;
+    responseTime: string;
+    addOnsTitle: string;
+    addOns: Array<{ name: string; price: string }>;
     bookingTitle: string;
     bookingSubtitle: string;
     selectRoute: string;
@@ -247,6 +256,9 @@ interface TranslationContent {
     requestCustomRoute: string;
     date: string;
     passengers: string;
+    vehicleType: string;
+    vehicleMinibus: string;
+    vehicleBus: string;
     name: string;
     email: string;
     phone: string;
@@ -259,9 +271,10 @@ interface TranslationContent {
     routesList: Array<{
       from: string;
       to: string;
-      distance: string;
       duration: string;
-      price: string;
+      minibusPrice: string;
+      busPrice: string;
+      comment: string;
     }>;
   };
 }
@@ -572,17 +585,32 @@ const translations: Translations = {
       disclaimer: 'This page is a general template and should be reviewed and adapted if needed to ensure full legal compliance.',
     },
     routes: {
-      title: 'Routes & Prices',
-      subtitle: 'Fixed-price minibus transfers across Northern Norway. Per person, minimum 5 passengers.',
+      title: 'Fixed Routes from Harstad',
+      subtitle: 'Private minibus & bus with driver',
+      introText: 'Our most popular routes with fixed prices for the entire group. Perfect for families, friends, businesses, or tourists wanting comfortable and safe transport in Northern Norway. All prices include driver, fuel, ferries, and tolls.',
       tableTitle: 'Popular Routes',
       route: 'Route',
       distance: 'Distance',
       duration: 'Duration',
-      pricePerPerson: 'Price / person',
-      minPassengers: 'Min. 5 passengers',
+      minibusPrice: '9-seater Minibus',
+      busPrice: 'Larger Bus (17\u201330 seats)',
+      comment: 'Details',
+      minPassengers: 'Prices are for the entire group, not per person',
       bookNow: 'Book Now',
-      pricingNote: 'All prices are per person. Minimum 5 passengers required for all routes. Prices may vary by season.',
-      pricingNote2: 'Need a custom route or group booking? Contact us for a tailored quote.',
+      requestQuote: 'Request a Quote',
+      pricingNote: 'Prices are round-trip from Harstad base. Minimum order: 4,500 NOK. We offer 9-seater minibus or larger bus (17\u201330 seats) on request. Prices are indicative \u2013 contact us for an exact quote.',
+      pricingNote2: 'For custom stops, waiting time, or extra services \u2013 send us a request!',
+      minimumOrder: 'Minimum order: 4,500 NOK',
+      depositInfo: 'Deposit 20\u201330% at booking',
+      responseTime: 'We respond quickly \u2013 often within a few hours!',
+      addOnsTitle: 'Add-ons & Options',
+      addOns: [
+        { name: 'Northern Lights chase with extra stops', price: '+1,500\u20133,000 NOK' },
+        { name: 'Guide narration during the trip', price: '+800 NOK/hour' },
+        { name: 'Snacks & hot drinks package', price: '+300\u2013500 NOK' },
+        { name: 'Child seat / wheelchair space', price: 'Free or +200 NOK' },
+        { name: 'Waiting time beyond agreed', price: '250 NOK / half hour' },
+      ],
       bookingTitle: 'Book Your Transfer',
       bookingSubtitle: 'Select your route and fill in the details below. We will confirm your booking by email.',
       selectRoute: 'Select Route',
@@ -590,21 +618,24 @@ const translations: Translations = {
       requestCustomRoute: 'Request custom route',
       date: 'Preferred Date',
       passengers: 'Number of Passengers',
+      vehicleType: 'Vehicle Type',
+      vehicleMinibus: '9-seater Minibus',
+      vehicleBus: 'Larger Bus (17\u201330 seats)',
       name: 'Full Name',
       email: 'Email Address',
       phone: 'Phone Number',
       message: 'Additional Information',
-      messagePlaceholder: 'Any special requests, luggage details, or questions...',
+      messagePlaceholder: 'Custom stops, special requests, luggage details...',
       submitBooking: 'Send Booking Request',
       priceFrom: 'from',
       hours: 'hrs',
       km: 'km',
       routesList: [
-        { from: 'Harstad', to: 'Alta', distance: '150', duration: '2', price: '790' },
-        { from: 'Harstad', to: 'Tromsø', distance: '500', duration: '7', price: '1 990' },
-        { from: 'Evenes', to: 'Harstad', distance: '600', duration: '8', price: '2 290' },
-        { from: 'Harstad', to: 'Lofoten', distance: '700', duration: '10', price: '2 790' },
-        { from: 'Harstad', to: 'Andøy', distance: '550', duration: '8', price: '2 490' },
+        { from: 'Harstad', to: 'Evenes Airport', duration: '45\u201360 min', minibusPrice: '3,900\u20134,900', busPrice: '5,900\u20137,500', comment: 'Short transfer' },
+        { from: 'Harstad', to: 'Troms\u00f8', duration: '2\u20132.5 hrs', minibusPrice: '9,500\u201312,500', busPrice: '14,000\u201318,000', comment: 'Popular route, 1\u20132 stops possible' },
+        { from: 'Harstad', to: 'Andenes / And\u00f8y', duration: '4\u20135 hrs', minibusPrice: '14,500\u201319,000', busPrice: '20,000\u201326,000', comment: 'Ferry cost included' },
+        { from: 'Harstad', to: 'Svolv\u00e6r / Lofoten', duration: '4\u20135 hrs', minibusPrice: '16,000\u201322,000', busPrice: '23,000\u201332,000', comment: 'Sightseeing stop included' },
+        { from: 'Harstad', to: 'Alta', duration: '6\u20138 hrs', minibusPrice: '22,000\u201328,000', busPrice: '30,000\u201340,000', comment: 'Long trip, extra break possible' },
       ],
     },
   },
@@ -913,17 +944,32 @@ const translations: Translations = {
       disclaimer: 'Denne siden er en generell mal og bør vurderes og tilpasses ved behov for å sikre full juridisk etterlevelse.',
     },
     routes: {
-      title: 'Ruter og priser',
-      subtitle: 'Faste priser for minibuss-transport i Nord-Norge. Per person, minimum 5 passasjerer.',
+      title: 'Faste turer fra Harstad',
+      subtitle: 'Privat minibuss & buss med sjåfør',
+      introText: 'Her er våre mest populære ruter med faste priser for hele gruppen. Perfekt for familier, vennegjenger, bedrifter eller turister som vil ha bekvem og trygg transport i Nord-Norge. Alle priser inkluderer sjåfør, drivstoff, ferger og bompenger.',
       tableTitle: 'Populære ruter',
       route: 'Rute',
       distance: 'Avstand',
       duration: 'Kjøretid',
-      pricePerPerson: 'Pris / person',
-      minPassengers: 'Min. 5 passasjerer',
+      minibusPrice: '9-seters minibuss',
+      busPrice: 'Større buss (17\u201330 seter)',
+      comment: 'Detaljer',
+      minPassengers: 'Prisene gjelder for hele gruppen, ikke per person',
       bookNow: 'Book nå',
-      pricingNote: 'Alle priser er per person. Minimum 5 passasjerer kreves for alle ruter. Prisene kan variere etter sesong.',
-      pricingNote2: 'Trenger du en tilpasset rute eller gruppebooking? Kontakt oss for et skreddersydd tilbud.',
+      requestQuote: 'Be om tilbud',
+      pricingNote: 'Prisene gjelder tur/retur fra Harstad-base. Minimumsbeløp per oppdrag: 4 500 NOK. Vi tilbyr 9-seters minibuss eller større buss (17\u201330 seter) på forespørsel. Prisene er veiledende \u2013 kontakt oss for eksakt tilbud.',
+      pricingNote2: 'For custom stopp, ventetid eller ekstra tjenester \u2013 send oss en forespørsel!',
+      minimumOrder: 'Minimumsbeløp per oppdrag: 4 500 NOK',
+      depositInfo: 'Depositum 20\u201330% ved booking',
+      responseTime: 'Vi svarer raskt \u2013 ofte innen få timer!',
+      addOnsTitle: 'Tillegg og opsjoner',
+      addOns: [
+        { name: 'Nordlys-jakt med ekstra stopp', price: '+1 500\u20133 000 NOK' },
+        { name: 'Guide-fortelling underveis', price: '+800 NOK/time' },
+        { name: 'Snacks/varm drikke-pakke', price: '+300\u2013500 NOK' },
+        { name: 'Barneseter / rullestolplass', price: 'Gratis eller +200 NOK' },
+        { name: 'Ventetid utover avtalt', price: '250 NOK / halvtime' },
+      ],
       bookingTitle: 'Book din transport',
       bookingSubtitle: 'Velg ruten din og fyll inn detaljene nedenfor. Vi bekrefter bookingen din via e-post.',
       selectRoute: 'Velg rute',
@@ -931,21 +977,24 @@ const translations: Translations = {
       requestCustomRoute: 'Forespør annen rute',
       date: 'Ønsket dato',
       passengers: 'Antall passasjerer',
+      vehicleType: 'Kjøretøytype',
+      vehicleMinibus: '9-seters minibuss',
+      vehicleBus: 'Større buss (17\u201330 seter)',
       name: 'Fullt navn',
       email: 'E-postadresse',
       phone: 'Telefonnummer',
       message: 'Tilleggsinformasjon',
-      messagePlaceholder: 'Spesielle ønsker, bagasjedetaljer eller spørsmål...',
+      messagePlaceholder: 'Egne stopp, spesielle ønsker, bagasjedetaljer...',
       submitBooking: 'Send bookingforespørsel',
       priceFrom: 'fra',
       hours: 'timer',
       km: 'km',
       routesList: [
-        { from: 'Harstad', to: 'Alta', distance: '150', duration: '2', price: '790' },
-        { from: 'Harstad', to: 'Tromsø', distance: '500', duration: '7', price: '1 990' },
-        { from: 'Evenes', to: 'Harstad', distance: '600', duration: '8', price: '2 290' },
-        { from: 'Harstad', to: 'Lofoten', distance: '700', duration: '10', price: '2 790' },
-        { from: 'Harstad', to: 'Andøy', distance: '550', duration: '8', price: '2 490' },
+        { from: 'Harstad', to: 'Evenes flyplass', duration: '45\u201360 min', minibusPrice: '3 900\u20134 900', busPrice: '5 900\u20137 500', comment: 'Kort transfer' },
+        { from: 'Harstad', to: 'Tromsø', duration: '2\u20132,5 timer', minibusPrice: '9 500\u201312 500', busPrice: '14 000\u201318 000', comment: 'Populær rute, 1\u20132 stopp mulig' },
+        { from: 'Harstad', to: 'Andenes / Andøy', duration: '4\u20135 timer', minibusPrice: '14 500\u201319 000', busPrice: '20 000\u201326 000', comment: 'Fergekostnad inkludert' },
+        { from: 'Harstad', to: 'Svolvær / Lofoten', duration: '4\u20135 timer', minibusPrice: '16 000\u201322 000', busPrice: '23 000\u201332 000', comment: 'Sightseeing-stopp inkludert' },
+        { from: 'Harstad', to: 'Alta', duration: '6\u20138 timer', minibusPrice: '22 000\u201328 000', busPrice: '30 000\u201340 000', comment: 'Langtur, ekstra pause mulig' },
       ],
     },
   },
