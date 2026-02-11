@@ -35,7 +35,9 @@ Preferred communication style: Simple, everyday language.
 **Internationalization:**
 - Language context supporting English and Norwegian (Bokmål)
 - Language switcher component with Globe icons from lucide-react (NO/EN language codes)
-- Centralized translation management in `language-context.tsx`
+- Translation JSON files in `client/src/i18n/locales/` (en.json, nb.json)
+- `useTranslation` hook in `client/src/i18n/useTranslation.ts` for accessing translations
+- Slim `language-context.tsx` imports translations from JSON files
 - localStorage persistence for language preference
 
 **Theme System (Arctic Day/Night):**
@@ -58,11 +60,14 @@ Preferred communication style: Simple, everyday language.
 - Routes & Prices: Fixed-price minibus transfer pricing table (5 routes from Hammerfest), per-person pricing with min 5 passengers, integrated booking form with route selector, date picker, passenger count, and mailto submission to post@frostline.as
 - 404: Custom not-found page
 
-**Component Architecture:**
-- Reusable components: Navbar, Footer, Hero, ServiceCard, LanguageSwitcher, PremiumCookiePopup
-- UI components from shadcn/ui in `components/ui/`
-- Page components in `pages/` directory
-- Example components for development/testing in `components/examples/`
+**Component Architecture (Feature-Based):**
+- `components/layout/` — Navbar, Footer
+- `components/common/` — ThemeToggle, LanguageSwitcher, PWAInstallPrompt, CookieConsent, ErrorBoundary, LoadingSpinner, PageMeta
+- `components/home/` — Hero, ServiceCard
+- `components/ui/` — shadcn/ui primitives (unchanged)
+- Page components in `pages/` directory (PascalCase naming)
+- Lazy loading via React.lazy() with Suspense fallback (LoadingSpinner)
+- ErrorBoundary wraps the entire app for graceful error handling
 
 **GDPR Cookie Consent:**
 - Premium floating cookie popup with Arctic design aesthetic

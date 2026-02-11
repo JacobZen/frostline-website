@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import ServiceCard from '@/components/ServiceCard';
+import ServiceCard from '@/components/home/ServiceCard';
 import { Button } from '@/components/ui/button';
 import transferIcon from '@assets/generated_images/transfer_service_icon.png';
 import partnerIcon from '@assets/generated_images/partner_logistics_icon.png';

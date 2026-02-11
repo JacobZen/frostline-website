@@ -1,0 +1,359 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "partners": "Partners",
+    "contact": "Contact",
+    "routes": "Routes & Prices"
+  },
+  "hero": {
+    "title": "Frostline AS",
+    "subtitle": "Arctic private transfers"
+  },
+  "home": {
+    "aboutTeaserTitle": "About Frostline AS",
+    "aboutTeaserText": "Frostline AS is a certified passenger transport company operating in Tromsø and Eastern Norway. We provide reliable Arctic transfers for travelers and professional partners.",
+    "servicesTitle": "Our Services",
+    "servicesSubtitle": "Professional transport solutions for every need in Northern Norway",
+    "viewAllServices": "View All Services",
+    "whyChooseTitle": "Why Choose Frostline AS?",
+    "whyChooseText": "We understand the unique challenges of Arctic transport. With years of experience navigating Northern Norwegian roads in all conditions, we provide the reliability and professionalism your guests deserve.",
+    "benefits": [
+      "Safe and comfortable transport year-round",
+      "Certified and experienced drivers",
+      "Flexible scheduling for your needs",
+      "Modern, well-maintained vehicles",
+      "Quick and reliable communication",
+      "Competitive rates for all services"
+    ],
+    "forTravelPartners": "For Travel Partners",
+    "forTravelPartnersText": "We work closely with DMCs, hotels, and tour operators to ensure seamless logistics for your guests.",
+    "learnMore": "Learn More",
+    "privateTravelers": "Private Travelers",
+    "privateTravelersText": "Enjoy personalized transfers and tours tailored to your schedule and preferences.",
+    "bookNow": "Book Now",
+    "experienceArctic": "Experience the Arctic",
+    "experienceArcticText": "Discover the breathtaking beauty of Northern Norway through our transport services",
+    "northernLights": "Nordlys - Northern Lights",
+    "northernLightsText": "Witness the magical aurora borealis dancing across Arctic skies",
+    "arcticWilderness": "Arctic Wilderness",
+    "arcticWildernessText": "Explore vast tundra landscapes with stunning seasonal colors",
+    "ctaTitle": "Ready to Experience Arctic Transport Excellence?",
+    "ctaSubtitle": "Contact us today to discuss your transport needs or establish a partnership.",
+    "contactUs": "Contact Us",
+    "becomePartner": "Become a Partner",
+    "services": [
+      {
+        "title": "Private Transfers",
+        "description": "Airport transfers, hotel pick-ups, sightseeing and custom routes in Tromsø and surrounding areas."
+      },
+      {
+        "title": "Partner Transport",
+        "description": "Reliable logistics for DMCs, tour operators and activity companies. We ensure your guests arrive on time — every time."
+      },
+      {
+        "title": "Northern Lights & Seasonal Tours",
+        "description": "Optional add-on product for the future. Small-group experiences with a certified driver."
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional transport solutions for Northern Norway",
+    "privateTransfers": "Private Transfers",
+    "privateTransfersDesc": "Airport transfers, hotel pick-ups, sightseeing and custom routes in Tromsø and surrounding areas. We provide comfortable, reliable transport tailored to your schedule.",
+    "privateTransfersFeatures": [
+      "Airport to hotel transfers",
+      "Hotel pick-ups and drop-offs",
+      "Custom sightseeing routes",
+      "Flexible scheduling",
+      "All-weather Arctic driving expertise"
+    ],
+    "bookYourTransfer": "Book Your Transfer",
+    "bookYourTransferText": "Contact us to arrange your private transfer. We respond quickly to all inquiries.",
+    "partnerTransport": "Partner Transport",
+    "partnerTransportDesc": "Reliable logistics for DMCs, tour operators and activity companies. We ensure your guests arrive on time — every time.",
+    "partnerTransportFeatures": [
+      "Dedicated driver support",
+      "Flexible scheduling coordination",
+      "High reliability guarantee",
+      "Quick communication response",
+      "Clean, comfortable vehicles"
+    ],
+    "becomePartner": "Become a Partner",
+    "becomePartnerText": "Join our network of travel partners and ensure your guests receive reliable, professional transport.",
+    "northernLights": "Northern Lights & Seasonal Tours",
+    "northernLightsDesc": "Optional add-on product for the future. Small-group experiences with a certified driver who knows the best viewing locations.",
+    "northernLightsFeatures": [
+      "Small group tours (max 8 people)",
+      "Certified, experienced drivers",
+      "Seasonal tour options",
+      "Flexible departure times",
+      "Arctic expertise included"
+    ],
+    "comingSoon": "Coming Soon",
+    "comingSoonText": "We're developing our tour offerings. Contact us to express interest or inquire about custom tours.",
+    "expressInterest": "Express Interest",
+    "minibusRental": "Minibus Rental",
+    "minibusRentalDesc": "Rent our modern minibus with or without driver. Ideal for groups, events, and excursions.",
+    "minibusRentalFeatures": [
+      "Modern, well-maintained vehicles",
+      "With or without driver options",
+      "Suitable for groups and events",
+      "Flexible rental periods",
+      "Fully insured and serviced"
+    ],
+    "rentalInquiry": "Rental Inquiry",
+    "rentalInquiryText": "Get in touch to discuss your minibus rental needs. We offer flexible options for all group sizes.",
+    "ctaTitle": "Need a Custom Solution?",
+    "ctaSubtitle": "We can tailor our services to meet your specific transport needs in Northern Norway.",
+    "contactUsToday": "Contact Us Today",
+    "serviceCards": [
+      {
+        "title": "Private Transfers",
+        "description": "Airport transfers, hotel pick-ups, sightseeing and custom routes in Tromsø and surrounding areas."
+      },
+      {
+        "title": "Partner Transport",
+        "description": "Reliable logistics for DMCs, tour operators and activity companies. We ensure your guests arrive on time — every time."
+      },
+      {
+        "title": "Northern Lights & Seasonal Tours",
+        "description": "Optional add-on product for the future. Small-group experiences with a certified driver."
+      },
+      {
+        "title": "Minibus Rental",
+        "description": "Rent our modern minibus with or without driver. Ideal for groups, events, and excursions."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Your trusted transport partner in Northern Norway",
+    "ourStory": "Our Story",
+    "storyText1": "Frostline AS is a transport company organized as a limited company, operating in passenger transport on demand. The company offers safe and flexible transport services, and can also participate in cooperation with other companies and related investments.",
+    "storyText2": "With a focus on reliability, service and flexibility, we work closely with partners who need a trustworthy transport provider year-round. Our commitment to excellence has made us a preferred choice for DMCs, hotels, and tour operators throughout the Tromsø region.",
+    "storyText3": "We understand the unique challenges of Arctic transport and have built our business around providing safe, comfortable, and reliable solutions regardless of weather conditions or season.",
+    "companyDetails": "Company Details",
+    "legalName": "Legal Name",
+    "orgNumber": "Organization Number",
+    "address": "Address",
+    "naceIndustry": "NACE Industry",
+    "driverCompetence": "Driver & Competence",
+    "driverCompetenceSubtitle": "Our team brings professional expertise and Arctic experience to every journey",
+    "mainDriver": "Main Driver: Jørgen",
+    "mainDriverText": "Our main driver Jørgen holds professional certifications, safety training and experience with Northern Norwegian road conditions. With years of expertise navigating Arctic roads in all seasons, Jørgen ensures safe and comfortable transport for all passengers.",
+    "certifications": [
+      "Professional driver certification",
+      "Arctic driving safety training",
+      "First aid certified",
+      "Extensive Northern Norwegian road experience",
+      "Customer service excellence"
+    ],
+    "safetyFirst": "Safety First",
+    "safetyFirstText": "All our drivers undergo rigorous safety training specific to Arctic conditions, ensuring passenger safety in all weather situations.",
+    "customerService": "Customer Service",
+    "customerServiceText": "We pride ourselves on professional, friendly service that makes every journey comfortable and stress-free for our guests.",
+    "ourValues": "Our Values",
+    "reliability": "Reliability",
+    "reliabilityText": "We're there when you need us, on time, every time. Your guests can count on us.",
+    "service": "Service",
+    "serviceText": "Professional, friendly service that exceeds expectations and creates positive experiences.",
+    "flexibility": "Flexibility",
+    "flexibilityText": "We adapt to your needs, offering customized solutions for every transport requirement.",
+    "ctaTitle": "Partner With Us",
+    "ctaSubtitle": "Join our network of satisfied partners and experience the Frostline difference.",
+    "becomePartner": "Become a Partner",
+    "contactUs": "Contact Us"
+  },
+  "partners": {
+    "title": "Partner With Us",
+    "subtitle": "Building long-term relationships with travel professionals",
+    "introTitle": "Your Trusted Transport Partner",
+    "introText": "We work with DMCs, travel agencies and activity providers. Our goal is long-term cooperation where your guests receive top service. With Frostline AS as your transport partner, you can focus on your core business while we handle the logistics.",
+    "benefitsTitle": "Partnership Benefits",
+    "benefitsSubtitle": "Everything you need for reliable, professional transport logistics",
+    "benefits": [
+      {
+        "title": "Dedicated Driver",
+        "description": "Your guests receive personalized attention from our experienced professional drivers."
+      },
+      {
+        "title": "Flexible Scheduling",
+        "description": "We adapt to your operational needs with customizable pickup and drop-off times."
+      },
+      {
+        "title": "High Reliability",
+        "description": "Consistent, punctual service you can depend on for all your transport logistics."
+      },
+      {
+        "title": "Quick Communication",
+        "description": "Fast response times and clear communication channels for seamless coordination."
+      },
+      {
+        "title": "Clean & Comfortable Vehicle",
+        "description": "Modern, well-maintained vehicles that provide a premium experience for your guests."
+      },
+      {
+        "title": "Year-Round Service",
+        "description": "Reliable transport in all seasons and weather conditions throughout Northern Norway."
+      }
+    ],
+    "whoWeWorkWith": "Who We Work With",
+    "dmcs": "DMCs & Travel Agencies",
+    "dmcsText": "We provide reliable logistics for destination management companies and travel agencies, ensuring seamless transport for your clients throughout their Northern Norway experience.",
+    "hotels": "Hotels & Accommodations",
+    "hotelsText": "Partner with us for consistent airport transfers and excursion transport, giving your guests a premium arrival and departure experience.",
+    "tourOperators": "Tour & Activity Operators",
+    "tourOperatorsText": "We handle the transport logistics so you can focus on delivering exceptional experiences. Reliable pickups and drop-offs for all your activities.",
+    "howItWorks": "How It Works",
+    "howItWorksSubtitle": "Getting started is simple and straightforward",
+    "step1Title": "Initial Contact",
+    "step1Text": "Reach out to us via our contact form or email. Tell us about your transport needs and expected volume.",
+    "step2Title": "Consultation",
+    "step2Text": "We'll discuss your specific requirements, scheduling needs, and how we can best support your operations.",
+    "step3Title": "Partnership Agreement",
+    "step3Text": "We establish clear terms, pricing, and communication protocols that work for both parties.",
+    "step4Title": "Ongoing Support",
+    "step4Text": "Enjoy reliable service with dedicated support. We're always available to adjust and optimize as your needs evolve.",
+    "ctaTitle": "Ready to Partner With Us?",
+    "ctaSubtitle": "Let's discuss how we can support your transport needs in Northern Norway.",
+    "requestPartnership": "Request Partnership"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with Frostline AS for transport inquiries or partnership opportunities",
+    "sendMessage": "Send us a message",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "contactInfo": "Contact Information",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "phoneNumber": "991 57 437",
+    "phoneText": "Available every day",
+    "phoneSubtext": "We respond quickly",
+    "location": "Location",
+    "locationText1": "Based in Gamle Fredrikstad",
+    "locationText2": "Operating in Northern Norway",
+    "availability": "Availability",
+    "availabilityText1": "Available every day",
+    "availabilityText2": "Quick response times",
+    "companyDetails": "Company Details",
+    "companyName": "Company Name:",
+    "orgNumber": "Org. Number:",
+    "partnershipTitle": "Looking for Partnership?",
+    "partnershipText": "Learn more about our partnership opportunities for DMCs, hotels, and tour operators.",
+    "partnershipButton": "Partnership Information",
+    "messagePlaceholder": "Tell us about your transport needs or partnership inquiry..."
+  },
+  "footer": {
+    "companyDescription": "Frostline AS is a transport company organized as a limited company, operating in passenger transport on demand.",
+    "quickLinks": "Quick Links",
+    "routesLink": "Routes & Prices",
+    "copyright": "© 2025 Frostline AS. All rights reserved.",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy"
+  },
+  "cookie": {
+    "message": "We use cookies to improve your experience, provide essential site functions, and understand how our site is used. By continuing, you accept our cookie policy.",
+    "accept": "Accept",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "intro": "These Terms & Conditions apply to the use of the website of Frostline AS and to enquiries and bookings made through our contact channels. By using this website, you accept these terms.",
+    "scopeTitle": "Scope of Services",
+    "scopeText": "Frostline AS offers passenger transport on request, including private transfers, partner transport for DMCs and tour operators, and related services in Northern Norway.",
+    "bookingsTitle": "Bookings and Enquiries",
+    "bookingsText": "Bookings are usually confirmed via email or written agreement. The contact form on this website is for enquiries only and does not constitute a binding booking.",
+    "pricesTitle": "Prices and Payment",
+    "pricesText": "Prices are provided on request and may depend on route, season, and availability. Payment terms are agreed separately for each booking.",
+    "cancellationsTitle": "Cancellations and Changes",
+    "cancellationsText": "Cancellations must be made no later than 5 days before the scheduled transport. It is not possible to cancel later than 5 days before. Later cancellations will be charged in full.",
+    "liabilityTitle": "Liability and Responsibility",
+    "liabilityText": "Frostline AS takes reasonable care for the safety and comfort of passengers. However, we are not liable for delays or disruptions caused by weather conditions, traffic, road closures, or other circumstances beyond our control, within the limits of applicable Norwegian law.",
+    "lawTitle": "Governing Law and Disputes",
+    "lawText": "These terms are governed by Norwegian law. Any disputes shall be handled by Norwegian courts.",
+    "disclaimer": "This page is a general template and does not replace legal advice. Frostline AS may update these terms without prior notice."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy explains how Frostline AS collects and processes personal data when you use our website or contact us. We are committed to protecting your privacy and processing personal data in accordance with applicable data protection laws, including the GDPR.",
+    "controllerTitle": "Data Controller",
+    "controllerText": "Frostline AS (Org.no 936 520 553, Kompaniveien 4, 1639 Gamle Fredrikstad, Norway) is the data controller for the personal data we collect through this website.",
+    "dataTitle": "What Data We Collect",
+    "dataText": "We collect information you provide through our contact form, including: name, contact details (email, phone), organisation, and message content. We may also collect technical data such as IP address, browser type, and approximate location for security, logging, and statistical purposes.",
+    "purposeTitle": "Purpose of Processing",
+    "purposeText": "Your personal data is used to: handle enquiries and bookings, respond to messages, maintain security, and improve the website.",
+    "basisTitle": "Legal Basis",
+    "basisText": "We process personal data based on legitimate interest and/or as necessary to take steps before entering into a contract with you.",
+    "storageTitle": "Storage Period",
+    "storageText": "Personal data is stored as long as necessary to fulfil the purpose, and then deleted or anonymised, unless longer storage is required by law.",
+    "sharingTitle": "Sharing of Data",
+    "sharingText": "Personal data may be shared with IT providers or partners strictly as necessary to fulfil our services. Frostline AS will not sell your personal data to third parties.",
+    "rightsTitle": "Your Rights",
+    "rightsText": "You have the right to access, correct, delete, restrict, object to processing, and request portability of your personal data where applicable under GDPR. You also have the right to complain to Datatilsynet (the Norwegian Data Protection Authority).",
+    "contactTitle": "Contact",
+    "contactText": "If you have questions about this Privacy Policy or how we process your personal data, please contact us at: post@frostline.as",
+    "disclaimer": "This page is a general template and should be reviewed and adapted if needed to ensure full legal compliance."
+  },
+  "routes": {
+    "title": "Fixed Routes from Harstad",
+    "subtitle": "Private minibus & bus with driver",
+    "introText": "Our most popular routes with fixed prices for the entire group. Perfect for families, friends, businesses, or tourists wanting comfortable and safe transport in Northern Norway. All prices include driver, fuel, ferries, and tolls.",
+    "tableTitle": "Popular Routes",
+    "route": "Route",
+    "distance": "Distance",
+    "duration": "Duration",
+    "minibusPrice": "9-seater Minibus",
+    "busPrice": "Larger Bus (17–30 seats)",
+    "comment": "Details",
+    "minPassengers": "Prices are for the entire group, not per person",
+    "bookNow": "Book Now",
+    "requestQuote": "Request a Quote",
+    "pricingNote": "Prices are round-trip from Harstad base. Minimum order: 4,500 NOK. We offer 9-seater minibus or larger bus (17–30 seats) on request. Prices are indicative – contact us for an exact quote.",
+    "pricingNote2": "For custom stops, waiting time, or extra services – send us a request!",
+    "minimumOrder": "Minimum order: 4,500 NOK",
+    "depositInfo": "Deposit 20–30% at booking",
+    "responseTime": "We respond quickly – often within a few hours!",
+    "addOnsTitle": "Add-ons & Options",
+    "addOns": [
+      { "name": "Northern Lights chase with extra stops", "price": "+1,500–3,000 NOK" },
+      { "name": "Guide narration during the trip", "price": "+800 NOK/hour" },
+      { "name": "Snacks & hot drinks package", "price": "+300–500 NOK" },
+      { "name": "Child seat / wheelchair space", "price": "Free or +200 NOK" },
+      { "name": "Waiting time beyond agreed", "price": "250 NOK / half hour" }
+    ],
+    "bookingTitle": "Book Your Transfer",
+    "bookingSubtitle": "Select your route and fill in the details below. We will confirm your booking by email.",
+    "selectRoute": "Select Route",
+    "selectRoutePlaceholder": "Choose a route...",
+    "requestCustomRoute": "Request custom route",
+    "date": "Preferred Date",
+    "passengers": "Number of Passengers",
+    "vehicleType": "Vehicle Type",
+    "vehicleMinibus": "9-seater Minibus",
+    "vehicleBus": "Larger Bus (17–30 seats)",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Additional Information",
+    "messagePlaceholder": "Custom stops, special requests, luggage details...",
+    "submitBooking": "Send Booking Request",
+    "priceFrom": "from",
+    "hours": "hrs",
+    "km": "km",
+    "routesList": [
+      { "from": "Harstad", "to": "Evenes Airport", "duration": "45–60 min", "minibusPrice": "3,900–4,900", "busPrice": "5,900–7,500", "comment": "Short transfer" },
+      { "from": "Harstad", "to": "Tromsø", "duration": "2–2.5 hrs", "minibusPrice": "9,500–12,500", "busPrice": "14,000–18,000", "comment": "Popular route, 1–2 stops possible" },
+      { "from": "Harstad", "to": "Andenes / Andøy", "duration": "4–5 hrs", "minibusPrice": "14,500–19,000", "busPrice": "20,000–26,000", "comment": "Ferry cost included" },
+      { "from": "Harstad", "to": "Svolvær / Lofoten", "duration": "4–5 hrs", "minibusPrice": "16,000–22,000", "busPrice": "23,000–32,000", "comment": "Sightseeing stop included" },
+      { "from": "Harstad", "to": "Alta", "duration": "6–8 hrs", "minibusPrice": "22,000–28,000", "busPrice": "30,000–40,000", "comment": "Long trip, extra break possible" }
+    ]
+  }
+}

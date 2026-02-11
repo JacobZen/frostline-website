@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import Hero from '@/components/Hero';
-import ServiceCard from '@/components/ServiceCard';
+import Hero from '@/components/home/Hero';
+import ServiceCard from '@/components/home/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
 import transferIcon from '@assets/generated_images/transfer_service_icon.png';

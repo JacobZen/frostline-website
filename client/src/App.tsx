@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -5,35 +6,40 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/language-context";
 import { ThemeProvider } from "@/contexts/theme-context";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import PremiumCookiePopup from "@/components/PremiumCookiePopup";
-import PWAInstallPrompt from "@/components/PWAInstallPrompt";
-import Home from "@/pages/Home";
-import Services from "@/pages/Services";
-import About from "@/pages/About";
-import Partners from "@/pages/Partners";
-import Contact from "@/pages/Contact";
-import Terms from "@/pages/Terms";
-import Privacy from "@/pages/Privacy";
-import Routes from "@/pages/Routes";
-import Install from "@/pages/Install";
-import NotFound from "@/pages/not-found";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import CookieConsent from "@/components/common/CookieConsent";
+import PWAInstallPrompt from "@/components/common/PWAInstallPrompt";
+import ErrorBoundary from "@/components/common/ErrorBoundary";
+import LoadingSpinner from "@/components/common/LoadingSpinner";
+
+const Home = lazy(() => import("@/pages/Home"));
+const Services = lazy(() => import("@/pages/Services"));
+const About = lazy(() => import("@/pages/About"));
+const Partners = lazy(() => import("@/pages/Partners"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const Terms = lazy(() => import("@/pages/Terms"));
+const Privacy = lazy(() => import("@/pages/Privacy"));
+const Routes = lazy(() => import("@/pages/Routes"));
+const Install = lazy(() => import("@/pages/Install"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/services" component={Services} />
-      <Route path="/about" component={About} />
-      <Route path="/partners" component={Partners} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/terms" component={Terms} />
-      <Route path="/privacy" component={Privacy} />
-      <Route path="/routes" component={Routes} />
-      <Route path="/install" component={Install} />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<LoadingSpinner />}>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/services" component={Services} />
+        <Route path="/about" component={About} />
+        <Route path="/partners" component={Partners} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/terms" component={Terms} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/routes" component={Routes} />
+        <Route path="/install" component={Install} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 
@@ -43,16 +49,18 @@ function App() {
       <TooltipProvider>
         <ThemeProvider defaultTheme="system">
           <LanguageProvider>
-            <div className="flex flex-col min-h-screen">
-              <Navbar />
-              <main id="main-content" className="flex-1" role="main">
-                <Router />
-              </main>
-              <Footer />
-            </div>
-            <Toaster />
-            <PremiumCookiePopup />
-            <PWAInstallPrompt />
+            <ErrorBoundary>
+              <div className="flex flex-col min-h-screen">
+                <Navbar />
+                <main id="main-content" className="flex-1" role="main">
+                  <Router />
+                </main>
+                <Footer />
+              </div>
+              <Toaster />
+              <CookieConsent />
+              <PWAInstallPrompt />
+            </ErrorBoundary>
           </LanguageProvider>
         </ThemeProvider>
       </TooltipProvider>

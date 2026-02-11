@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { X } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 
-export default function PremiumCookiePopup() {
+export default function CookieConsent() {
   const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
@@ -51,7 +51,6 @@ export default function PremiumCookiePopup() {
       data-testid="popup-cookie-consent"
     >
       <div className="relative bg-black/50 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl p-6">
-        {/* Close button */}
         <button
           onClick={handleClose}
           className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
@@ -61,13 +60,11 @@ export default function PremiumCookiePopup() {
           <X className="w-4 h-4" />
         </button>
 
-        {/* Content */}
         <div className="space-y-4 pr-6">
           <p className="text-white/90 text-sm leading-relaxed">
             {t.cookie.message}
           </p>
 
-          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={handleAccept}
