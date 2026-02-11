@@ -40,7 +40,7 @@ export default function PremiumCookiePopup() {
 
   return (
     <div
-      className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 max-w-xs sm:max-w-sm transition-all duration-500 ease-out ${
+      className={`fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 max-w-xs sm:max-w-sm transition-all duration-500 ease-out ${
         isAnimatingOut
           ? 'opacity-0 translate-y-8'
           : 'opacity-100 translate-y-0'

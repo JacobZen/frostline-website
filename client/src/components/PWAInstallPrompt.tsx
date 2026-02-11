@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { X, Download, Smartphone } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
+import { useLocation } from 'wouter';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -10,6 +11,7 @@ interface BeforeInstallPromptEvent extends Event {
 
 export default function PWAInstallPrompt() {
   const { language } = useLanguage();
+  const [, setLoc] = useLocation();
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -20,16 +22,18 @@ export default function PWAInstallPrompt() {
     en: {
       title: 'Install Frostline',
       description: 'Add to your home screen for quick access to Arctic transfers.',
-      iosDescription: 'Tap the share button and select "Add to Home Screen"',
+      iosDescription: 'Tap here for installation instructions',
       install: 'Install App',
       dismiss: 'Not Now',
+      learnMore: 'Tap Share \u2192 Add to Home Screen',
     },
     no: {
       title: 'Installer Frostline',
-      description: 'Legg til på startskjermen for rask tilgang til arktiske transporter.',
-      iosDescription: 'Trykk på del-knappen og velg "Legg til på Hjem-skjerm"',
+      description: 'Legg til p\u00e5 startskjermen for rask tilgang til arktiske transporter.',
+      iosDescription: 'Trykk her for installasjonsveiledning',
       install: 'Installer App',
-      dismiss: 'Ikke nå',
+      dismiss: 'Ikke n\u00e5',
+      learnMore: 'Trykk Del \u2192 Legg til Hjem-skjerm',
     },
   };
 
@@ -104,13 +108,20 @@ export default function PWAInstallPrompt() {
     }, 300);
   };
 
+  const handleNavigateToInstall = () => {
+    handleClose();
+    setTimeout(() => {
+      setLoc('/install');
+    }, 100);
+  };
+
   if (!showPrompt || isStandalone) {
     return null;
   }
 
   return (
     <div 
-      className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-[380px] z-50 transition-all duration-300 ease-out ${
+      className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-[380px] z-40 transition-all duration-300 ease-out ${
         isClosing 
           ? 'opacity-0 translate-y-4' 
           : 'opacity-100 translate-y-0 animate-in slide-in-from-bottom-4'
@@ -131,7 +142,11 @@ export default function PWAInstallPrompt() {
           <X className="w-4 h-4 text-muted-foreground" />
         </button>
 
-        <div className="relative flex items-start gap-4">
+        <div
+          className="relative flex items-start gap-4 cursor-pointer"
+          onClick={isIOS ? handleNavigateToInstall : undefined}
+          data-testid="pwa-prompt-content"
+        >
           <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
             <Smartphone className="w-7 h-7 text-primary" />
           </div>
@@ -168,13 +183,18 @@ export default function PWAInstallPrompt() {
         )}
 
         {isIOS && (
-          <div className="relative mt-4 flex justify-center">
-            <div className="inline-flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 rounded-lg px-3 py-2">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <div className="relative mt-4">
+            <Button
+              onClick={handleNavigateToInstall}
+              variant="outline"
+              className="w-full rounded-xl"
+              data-testid="button-install-instructions"
+            >
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L8 6h3v8h2V6h3L12 2zM4 14v6a2 2 0 002 2h12a2 2 0 002-2v-6h-2v6H6v-6H4z"/>
               </svg>
-              <span>{language === 'en' ? 'Tap Share → Add to Home Screen' : 'Trykk Del → Legg til Hjem-skjerm'}</span>
-            </div>
+              {t.learnMore}
+            </Button>
           </div>
         )}
       </div>
