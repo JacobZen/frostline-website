@@ -1,0 +1,60 @@
+KONTEKST: Dette er Frostline AS sin bedriftsside — et transportfirma i Nord-Norge.
+Tech stack: React 18 + TypeScript + Vite + Express + Tailwind CSS v3 + Drizzle ORM + Neon DB.
+Prosjektet er laget i Replit og deployes derfra.
+
+OPPGAVE: Utfør følgende opprydding uten å endre funksjonalitet:
+
+1. PACKAGE.JSON:
+   - Endre "name" fra "rest-express" til "frostline-website"
+   - Fjern disse UBRUKTE dependencies (verifiser med grep først at de ikke importeres noe sted):
+     * @octokit/rest (GitHub API — ikke relevant for en transportside)
+     * passport, passport-local (auth aldri implementert)
+     * connect-pg-simple (session store — ikke brukt)
+     * express-session (sessions — ikke brukt)
+     * memorystore (session store — ikke brukt)
+     * react-icons (bruk kun lucide-react som allerede brukes via shadcn)
+     * tw-animate-css (duplikat av tailwindcss-animate)
+     * input-otp (OTP-input — ikke relevant)
+     * cmdk (command palette — ikke relevant for bedriftsside)
+     * react-resizable-panels (ikke brukt)
+     * vaul (drawer — sjekk om brukt)
+     * embla-carousel-react (carousel — sjekk om brukt)
+     * recharts (grafer — sjekk om brukt)
+     * react-day-picker (datovelger — sjekk om brukt i booking)
+   - Flytt @jridgewell/trace-mapping fra dependencies til devDependencies
+   - Fjern @tailwindcss/vite fra devDependencies (v4-plugin som ikke brukes i vite.config.ts)
+   - Fjern @types/connect-pg-simple, @types/passport, @types/passport-local (følger med pakkene over)
+
+   VIKTIG: Bruk grep/søk for å sjekke at hver pakke FAKTISK ikke importeres før du fjerner den.
+   Pakker som brukes skal beholdes. List opp hva du fjernet og hva du beholdt med begrunnelse.
+
+2. VITE.CONFIG.TS:
+   - Gjør runtimeErrorOverlay betinget (den kjører i dag ubetinget i produksjon):
+
+   Endre fra:
+     import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+     plugins: [react(), runtimeErrorOverlay(), ...]
+
+   Til:
+     plugins: [
+       react(),
+       ...(process.env.REPL_ID !== undefined ? [
+         (await import("@replit/vite-plugin-runtime-error-modal")).runtimeErrorOverlay(),
+         ...(process.env.NODE_ENV !== "production" ? [
+           (await import("@replit/vite-plugin-cartographer")).cartographer(),
+           (await import("@replit/vite-plugin-dev-banner")).devBanner(),
+         ] : []),
+       ] : []),
+     ]
+
+3. ROTFILER:
+   - Legg .replit og replit.md til .gitignore (de skal ikke spores i Git)
+   - Lag .env.example med alle nødvendige miljøvariabler (uten faktiske verdier):
+     DATABASE_URL=postgresql://user:pass@host/db
+     NODE_ENV=development
+     SESSION_SECRET=minimum-32-characters-here
+
+4. Kjør appen og verifiser at alt fortsatt fungerer etter oppryddingen.
+```
+
+---
