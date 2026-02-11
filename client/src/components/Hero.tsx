@@ -1,22 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@assets/IMG_9188_1763628868230.jpeg';
+import heroImage from '@assets/IMG_9188_1763628868230_optimized.jpeg';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
-
-function usePreloadImage(src: string) {
-  useEffect(() => {
-    const existingPreload = document.head.querySelector(`link[rel="preload"][href="${src}"]`);
-    if (!existingPreload) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = src;
-      link.type = 'image/jpeg';
-      document.head.appendChild(link);
-    }
-  }, [src]);
-}
 
 function useSubtleParallax(intensity: number = 0.15) {
   const [offset, setOffset] = useState(0);
@@ -53,8 +39,27 @@ export default function Hero() {
   const { t } = useLanguage();
   const [, setLocation] = useLocation();
   const { ref: parallaxRef, offset } = useSubtleParallax(0.12);
-  
-  usePreloadImage(heroImage);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = heroImage;
+    if (img.complete) {
+      setImageLoaded(true);
+    } else {
+      img.onload = () => setImageLoaded(true);
+    }
+
+    const existingPreload = document.head.querySelector(`link[rel="preload"][href="${heroImage}"]`);
+    if (!existingPreload) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = heroImage;
+      link.type = 'image/jpeg';
+      document.head.appendChild(link);
+    }
+  }, []);
 
   return (
     <section 
@@ -62,9 +67,8 @@ export default function Hero() {
       className="relative h-[85vh] min-h-[540px] sm:h-[90vh] sm:min-h-[600px] flex items-center justify-center overflow-hidden bg-[#0e2a47]"
       aria-label="Welcome to Frostline AS"
     >
-      {/* Hero Image with Premium Fade Animation and Subtle Parallax */}
       <div 
-        className="absolute inset-0 animate-hero-image"
+        className={`absolute inset-0 transition-opacity duration-700 ease-out ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
         style={{ transform: `translate3d(0, ${offset}px, 0)` }}
       >
         <img
@@ -74,23 +78,28 @@ export default function Hero() {
           width="1920"
           height="1080"
           loading="eager"
-          decoding="async"
-          fetchPriority="high"
+          decoding="sync"
+          onLoad={() => setImageLoaded(true)}
           style={{ aspectRatio: '16/9' }}
         />
-        {/* Premium Arctic hero gradient overlay - multi-stop for depth */}
         <div 
           className="absolute inset-0 arctic-hero-gradient" 
           aria-hidden="true" 
         />
-        {/* Subtle blue Arctic tint overlay - northern lights softness */}
         <div 
           className="absolute inset-0 bg-gradient-to-br from-blue-900/8 via-transparent to-blue-950/15 mix-blend-overlay" 
           aria-hidden="true" 
         />
       </div>
 
-      {/* Hero Content with Staggered Text Animations */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e2a47] via-[#0e2a47] to-[#071525]">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-8 h-8 border-2 border-white/20 border-t-white/60 rounded-full animate-spin" />
+          </div>
+        </div>
+      )}
+
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 
           className="text-[clamp(1.875rem,5vw+0.5rem,4.5rem)] font-semibold text-white mb-3 sm:mb-5 leading-[1.08] tracking-[-0.03em] animate-hero-text drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
@@ -128,7 +137,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Subtle scroll indicator */}
       <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animate-delay-600" aria-hidden="true">
         <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
           <div className="w-1 h-2 bg-white/60 rounded-full animate-bounce" />
