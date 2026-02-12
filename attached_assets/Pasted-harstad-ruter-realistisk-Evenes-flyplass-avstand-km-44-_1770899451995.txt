@@ -1,0 +1,51 @@
+harstad_ruter_realistisk = {
+    "Evenes flyplass": {
+        "avstand_km": 44,
+        "typisk_kjøretid": "40-60 min",
+        "realistisk_tid_med_pause_ferge": "45-70 min",
+        "ekstra_kostnader": "Ingen bompenger / ingen ferge. Drivstoff ca. 100-150 NOK tur/retur for minibuss.",
+        "notater": "Kort og rett vei – sjelden problemer."
+    },
+    "Tromsø": {
+        "avstand_km": 290-300,
+        "typisk_kjøretid": "4-5 timer",
+        "realistisk_tid_med_pause_ferge": "4-6 timer (inkl. venting/ferge)",
+        "ekstra_kostnader": "Mulig bom i Tromsø (Tenk Tromsø-ring: 20-50 NOK per passering med AutoPASS, avhenger av rute). Ferge avhengig av vei (ofte via Finnsnes eller andre). Drivstoff ca. 800-1200 NOK tur/retur.",
+        "notater": "Annonsen undervurderer massivt (2-2.5 t er urealistisk uten hurtigbåt). Vær/ferge kan legge til 1-2 timer ekstra."
+    },
+    "Andenes / Andøya": {
+        "avstand_km": 170-220 (inkl. ferge),
+        "typisk_kjøretid": "3-4 timer",
+        "realistisk_tid_med_pause_ferge": "3.5-5 timer (med ferge-venting)",
+        "ekstra_kostnader": "Ferge (Risøyrenna eller lign.): ca. 400-800 NOK for minibuss tur/retur. Ingen store bom. Drivstoff ca. 500-800 NOK.",
+        "notater": "Ferge er ofte inkludert i prisen i annonsen – sjekk sesong (sommerferge Gryllefjord-Andenes)."
+    },
+    "Svolvær / Lofoten": {
+        "avstand_km": 170-200,
+        "typisk_kjøretid": "2.5-3.5 timer",
+        "realistisk_tid_med_pause_ferge": "3-5 timer (med sightseeing-stopp)",
+        "ekstra_kostnader": "Mulig små ferger (f.eks. via Melbu). Drivstoff ca. 500-900 NOK tur/retur. Ingen store bom.",
+        "notater": "Med sightseeing blir det fort 4-5 timer – perfekt for turisttur."
+    },
+    "Alta": {
+        "avstand_km": 530-560,
+        "typisk_kjøretid": "7-8.5 timer",
+        "realistisk_tid_med_pause_ferge": "8-10 timer (med pauser/ferger)",
+        "ekstra_kostnader": "Mulig bom i Tromsø-området + drivstoff ca. 1500-2200 NOK tur/retur. Ferge avhengig av rute (ofte via ferger nordover).",
+        "notater": "Langtur – ta ekstra pauser, vær kan forlenge mye."
+    }
+}
+
+# Eksempel på bruk i agenten din:
+def vis_rute(dest):
+    if dest in harstad_ruter_realistisk:
+        info = harstad_ruter_realistisk[dest]
+        return (
+            f"**{dest} fra Harstad**\n"
+            f"- Avstand: {info['avstand_km']} km\n"
+            f"- Typisk tid: {info['typisk_kjøretid']}\n"
+            f"- Realistisk (med ferge/pause): {info['realistisk_tid_med_pause_ferge']}\n"
+            f"- Ekstra kost (ca.): {info['ekstra_kostnader']}\n"
+            f"- Notat: {info['notater']}"
+        )
+    return "Fant ikke ruta – prøv en annen dest!"

@@ -107,6 +107,12 @@ export default function Routes() {
                             <Clock className="w-3.5 h-3.5" aria-hidden="true" />
                             {route.duration}
                           </span>
+                          {route.distance && (
+                            <span className="flex items-center gap-1">
+                              <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                              {route.distance}
+                            </span>
+                          )}
                           <span className="text-xs bg-muted/60 dark:bg-muted/30 px-2 py-0.5 rounded-full">
                             {route.comment}
                           </span>

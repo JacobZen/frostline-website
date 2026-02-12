@@ -350,11 +350,11 @@
     "hours": "hrs",
     "km": "km",
     "routesList": [
-      { "from": "Harstad", "to": "Evenes Airport", "duration": "45–60 min", "minibusPrice": "3,900–4,900", "busPrice": "5,900–7,500", "comment": "Short transfer" },
-      { "from": "Harstad", "to": "Tromsø", "duration": "2–2.5 hrs", "minibusPrice": "9,500–12,500", "busPrice": "14,000–18,000", "comment": "Popular route, 1–2 stops possible" },
-      { "from": "Harstad", "to": "Andenes / Andøy", "duration": "4–5 hrs", "minibusPrice": "14,500–19,000", "busPrice": "20,000–26,000", "comment": "Ferry cost included" },
-      { "from": "Harstad", "to": "Svolvær / Lofoten", "duration": "4–5 hrs", "minibusPrice": "16,000–22,000", "busPrice": "23,000–32,000", "comment": "Sightseeing stop included" },
-      { "from": "Harstad", "to": "Alta", "duration": "6–8 hrs", "minibusPrice": "22,000–28,000", "busPrice": "30,000–40,000", "comment": "Long trip, extra break possible" }
+      { "from": "Harstad", "to": "Evenes Airport", "duration": "40–70 min", "distance": "44 km", "minibusPrice": "3,900–4,900", "busPrice": "5,900–7,500", "comment": "Short, straightforward route" },
+      { "from": "Harstad", "to": "Tromsø", "duration": "4–6 hrs", "distance": "290–300 km", "minibusPrice": "9,500–12,500", "busPrice": "14,000–18,000", "comment": "Incl. ferry/breaks, weather may extend" },
+      { "from": "Harstad", "to": "Andenes / Andøy", "duration": "3.5–5 hrs", "distance": "170–220 km", "minibusPrice": "14,500–19,000", "busPrice": "20,000–26,000", "comment": "Ferry cost included" },
+      { "from": "Harstad", "to": "Svolvær / Lofoten", "duration": "3–5 hrs", "distance": "170–200 km", "minibusPrice": "16,000–22,000", "busPrice": "23,000–32,000", "comment": "With sightseeing stops" },
+      { "from": "Harstad", "to": "Alta", "duration": "8–10 hrs", "distance": "530–560 km", "minibusPrice": "22,000–28,000", "busPrice": "30,000–40,000", "comment": "Long trip with breaks, ferries possible" }
     ]
   }
 }
