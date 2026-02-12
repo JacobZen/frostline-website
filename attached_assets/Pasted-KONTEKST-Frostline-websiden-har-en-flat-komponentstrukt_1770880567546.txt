@@ -1,0 +1,64 @@
+KONTEKST: Frostline-websiden har en flat komponentstruktur i client/src/components/.
+Alle komponenter ligger i samme mappe uten organisering.
+Språkoversettelser er inline i language-context.tsx.
+Det finnes ingen Error Boundary.
+
+OPPGAVE: Restrukturerer frontend for bedre vedlikeholdbarhet:
+
+1. FEATURE-BASERT MAPPESTRUKTUR:
+   Reorganiser client/src/components/:
+
+   components/
+     layout/
+       Navbar.tsx        (flytt fra components/)
+       Footer.tsx        (flytt fra components/)
+     common/
+       ThemeToggle.tsx    (flytt fra components/)
+       LanguageSwitcher.tsx (flytt fra components/)
+       PWAInstallPrompt.tsx (flytt fra components/)
+       CookieConsent.tsx  (omdøp fra PremiumCookiePopup.tsx)
+       ErrorBoundary.tsx  (NY — se punkt 2)
+       PageMeta.tsx       (allerede laget i sprint 2)
+     home/
+       Hero.tsx           (flytt fra components/)
+       ServiceCard.tsx    (flytt fra components/)
+     ui/                  (uendret — shadcn-komponenter)
+
+   VIKTIG: Oppdater ALLE import-stier i App.tsx og andre filer som refererer disse komponentene.
+   Bruk @ alias (f.eks. @/components/layout/Navbar).
+
+2. ERROR BOUNDARY:
+   Lag components/common/ErrorBoundary.tsx:
+   - React class component som fanger uventede feil
+   - Vis en brukervennlig norsk feilmelding (ikke hvit side)
+   - Inkluder en "Prøv igjen"-knapp som reloader siden
+   - Wrap <Router /> i App.tsx med ErrorBoundary
+
+3. LAZY LOADING:
+   I App.tsx, endre alle sideimporter til React.lazy():
+
+   const Home = React.lazy(() => import("@/pages/Home"));
+   const About = React.lazy(() => import("@/pages/About"));
+   // ... alle sider
+
+   Wrap Router-innholdet med <Suspense fallback={<LoadingSpinner />}>
+   Lag en enkel LoadingSpinner-komponent i common/.
+
+4. I18N-SYSTEM:
+   Flytt oversettelser fra language-context.tsx til separate JSON-filer:
+
+   client/src/i18n/
+     locales/
+       nb.json    (norsk bokmål)
+       en.json    (engelsk)
+     useTranslation.ts  (custom hook som leser fra JSON basert på valgt språk)
+
+   Eksporter en useTranslation() hook som returnerer t('key') funksjon.
+   Oppdater alle komponenter som bruker oversettelser til å bruke den nye hooken.
+
+5. FILNAVN-KONSISTENS:
+   Omdøp client/src/pages/not-found.tsx til NotFound.tsx (PascalCase som resten).
+   Oppdater importen i App.tsx.
+
+6. Test at alt fungerer: navigasjon, språkbytte, tema, og at lazy loading faktisk virker
+   (sjekk Network-fanen i DevTools for chunk-filer).
