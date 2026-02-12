@@ -1,0 +1,79 @@
+KONTEKST: Frostline AS transportside. React 18 + Vite + Express + Tailwind v3.
+Domene: frostline.as (IKKE .no). Forrige optimalisering la inn SEO i index.html,
+reorganiserte komponenter og backend, og fjernet mange ubrukte pakker.
+
+OPPGAVE: Fullfør disse gjenstående tingene:
+
+1. VITE.CONFIG.TS — Gjør runtimeErrorOverlay betinget:
+
+   Endre fra (linje 1-21 ca):
+     import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+     plugins: [react(), runtimeErrorOverlay(), ...(condition ? [...] : [])]
+
+   Til:
+     plugins: [
+       react(),
+       ...(process.env.REPL_ID !== undefined ? [
+         (await import("@replit/vite-plugin-runtime-error-modal")).runtimeErrorOverlay(),
+         ...(process.env.NODE_ENV !== "production" ? [
+           (await import("@replit/vite-plugin-cartographer")).cartographer(),
+           (await import("@replit/vite-plugin-dev-banner")).devBanner(),
+         ] : []),
+       ] : []),
+     ]
+
+   Fjern den statiske importen av runtimeErrorOverlay øverst i filen.
+
+2. PACKAGE.JSON — Fjern @octokit/rest:
+   Kjør: npm uninstall @octokit/rest
+   Verifiser med grep at den ikke importeres noe sted.
+
+3. PACKAGE.JSON — Flytt dev-pakker til devDependencies:
+   Flytt disse fra dependencies til devDependencies:
+   - eslint
+   - prettier
+   - @typescript-eslint/eslint-plugin
+   - @typescript-eslint/parser
+   - eslint-config-prettier
+
+   Gjør det manuelt i package.json (flytt linjene), deretter kjør npm install.
+
+4. SITEMAP.XML — Lag public/sitemap.xml:
+   <?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     <url><loc>https://frostline.as/</loc><priority>1.0</priority></url>
+     <url><loc>https://frostline.as/services</loc><priority>0.9</priority></url>
+     <url><loc>https://frostline.as/about</loc><priority>0.7</priority></url>
+     <url><loc>https://frostline.as/routes</loc><priority>0.8</priority></url>
+     <url><loc>https://frostline.as/contact</loc><priority>0.8</priority></url>
+     <url><loc>https://frostline.as/partners</loc><priority>0.6</priority></url>
+     <url><loc>https://frostline.as/terms</loc><priority>0.3</priority></url>
+     <url><loc>https://frostline.as/privacy</loc><priority>0.3</priority></url>
+   </urlset>
+
+5. ROBOTS.TXT — Lag public/robots.txt:
+   User-agent: *
+   Allow: /
+   Sitemap: https://frostline.as/sitemap.xml
+
+6. FRAMER-MOTION — Sjekk om noen komponent importerer framer-motion:
+   grep -r "framer-motion" client/src/
+   Hvis ja, reinstaller: npm install framer-motion
+
+7. Kjør appen og verifiser at alt fungerer.
+```
+
+---
+
+## Totalvurdering
+
+Optimaliseringen har gjort stor fremgang. Av de 6 sprintene i planen er ca. 70-80% ferdig:
+
+| Sprint | Status | Kommentar |
+|--------|--------|-----------|
+| 1: Kritisk opprydding | 85% | Mangler vite.config.ts-fiks og @octokit/rest |
+| 2: SEO | 90% | Mangler sitemap.xml og robots.txt |
+| 3: Frontend-arkitektur | 100% | Fullt implementert |
+| 4: Backend-arkitektur | 100% | Fullt implementert |
+| 5: Performance/a11y | 70% | Noe gjort (skip-link, role, font-opt), men bilde-opt og reduced motion uvisst |
+| 6: DevOps | 60% | Prettier ja, ESLint delvis, testing mangler |
