@@ -1,4 +1,4 @@
-const CACHE_NAME = 'frostline-v1';
+const CACHE_NAME = 'frostline-v2';
 const OFFLINE_URL = '/offline.html';
 const METADATA_CACHE = 'frostline-metadata-v1';
 
