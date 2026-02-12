@@ -75,7 +75,7 @@ export function ThemeProvider({
     // Update meta theme-color for mobile browsers
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', resolved === 'dark' ? '#0e1a27' : '#ffffff');
+      metaThemeColor.setAttribute('content', resolved === 'dark' ? '#091e1b' : '#ffffff');
     }
 
     // Remove transition class after animation

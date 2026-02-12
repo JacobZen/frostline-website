@@ -22,7 +22,7 @@ export const colors = {
     700: '#0057a1',
     800: '#044a85',
     900: '#0a3d6e',
-    950: '#0e2a47', // Brand primary
+    950: '#0d2925', // Brand primary (deep teal)
   },
 
   // Aurora Green — Accent for CTAs and highlights
@@ -52,7 +52,7 @@ export const colors = {
     700: '#30476f',
     800: '#2b3d5d',
     900: '#28354f',
-    950: '#0e1a27', // Deep dark mode background
+    950: '#091e1b', // Deep dark mode background (deep teal)
   },
 
   // Ice Grey — Neutral tones for text and borders

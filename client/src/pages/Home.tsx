@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-12 sm:py-14 lg:py-16 bg-[#f7f9fc] dark:bg-[#0c1c2c] relative">
+      <section className="py-12 sm:py-14 lg:py-16 bg-[#f7f9fc] dark:bg-[#0c2421] relative">
         {/* Ultra-subtle top divider */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" aria-hidden="true" />
         
@@ -83,8 +83,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section — dark navy */}
-      <section className="section-padding bg-gradient-to-br from-[#0e2a47] via-[#132f4f] to-[#0e2a47] relative overflow-hidden">
+      {/* Why Choose Us Section — deep teal aurora */}
+      <section className="section-padding bg-gradient-to-br from-[#0d2925] via-[#10342f] to-[#0b2723] relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.06)_0%,_transparent_50%)]" aria-hidden="true" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,255,255,0.04)_0%,_transparent_50%)]" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -116,7 +116,7 @@ export default function Home() {
                 </p>
                 <Button
                   size="lg"
-                  className="min-h-[44px] sm:min-h-[48px] rounded-xl bg-white text-[#0e2a47] font-semibold hover:bg-white/90 no-default-hover-elevate shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985] border border-white/80"
+                  className="min-h-[44px] sm:min-h-[48px] rounded-xl bg-white text-[#0d2925] font-semibold hover:bg-white/90 no-default-hover-elevate shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985] border border-white/80"
                   onClick={() => setLocation('/routes')}
                   data-testid="button-book-now"
                   aria-label="Book your transfer now"
@@ -204,7 +204,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center px-2 sm:px-0 scroll-reveal scroll-reveal-delay-2">
             <Button
               size="lg"
-              className="w-full sm:w-auto min-h-[48px] sm:min-h-[52px] min-w-[180px] sm:min-w-[200px] rounded-xl bg-white text-[#0e2a47] font-semibold hover:bg-white/90 no-default-hover-elevate shadow-[0_4px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985] border-2 border-white/80"
+              className="w-full sm:w-auto min-h-[48px] sm:min-h-[52px] min-w-[180px] sm:min-w-[200px] rounded-xl bg-white text-[#0d2925] font-semibold hover:bg-white/90 no-default-hover-elevate shadow-[0_4px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985] border-2 border-white/80"
               onClick={() => setLocation('/contact')}
               data-testid="button-contact-us"
               aria-label="Contact us for inquiries"

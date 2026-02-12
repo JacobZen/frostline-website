@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="sticky top-0 z-50 h-16 bg-white dark:bg-[#0e1a27] border-b border-gray-200 dark:border-gray-800 shadow-[0_4px_20px_rgba(14,42,71,0.08)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
+      className="sticky top-0 z-50 h-16 bg-white dark:bg-[#091e1b] border-b border-gray-200 dark:border-gray-800 shadow-[0_4px_20px_rgba(13,41,37,0.08)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
       role="navigation"
       aria-label="Main navigation"
     >
@@ -67,8 +67,8 @@ export default function Navbar() {
                   <div
                     className={`flex-shrink-0 px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-150 ease-out cursor-pointer ${
                       isActive(link.path)
-                        ? 'bg-[#0e2a47]/10 text-[#0e2a47] dark:bg-[#00e892]/15 dark:text-[#00e892]'
-                        : 'text-gray-900 dark:text-gray-100 hover:text-[#0e2a47] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 hover:scale-[1.03]'
+                        ? 'bg-[#0d2925]/10 text-[#0d2925] dark:bg-[#00e892]/15 dark:text-[#00e892]'
+                        : 'text-gray-900 dark:text-gray-100 hover:text-[#0d2925] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 hover:scale-[1.03]'
                     }`}
                     aria-current={isActive(link.path) ? 'page' : undefined}
                   >
@@ -118,7 +118,7 @@ export default function Navbar() {
       >
         {/* 100% Solid background - NO transparency */}
         <div 
-          className={`absolute inset-0 bg-white dark:bg-[#0e1a27] transition-opacity duration-150 ease-out ${
+          className={`absolute inset-0 bg-white dark:bg-[#091e1b] transition-opacity duration-150 ease-out ${
             mobileMenuOpen ? 'opacity-100' : 'opacity-0'
           }`}
           onClick={() => setMobileMenuOpen(false)}
@@ -135,7 +135,7 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-150 ease-out cursor-pointer ${
                     isActive(link.path)
-                      ? 'bg-[#0e2a47]/10 text-[#0e2a47] dark:bg-[#00e892]/15 dark:text-[#00e892]'
+                      ? 'bg-[#0d2925]/10 text-[#0d2925] dark:bg-[#00e892]/15 dark:text-[#00e892]'
                       : 'text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-white/10 hover:scale-[1.01]'
                   }`}
                   style={{ transitionDelay: `${index * 20}ms` }}

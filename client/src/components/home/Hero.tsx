@@ -64,7 +64,7 @@ export default function Hero() {
   return (
     <section 
       ref={parallaxRef}
-      className="relative h-[85vh] min-h-[540px] sm:h-[90vh] sm:min-h-[600px] flex items-center justify-center overflow-hidden bg-[#0e2a47]"
+      className="relative h-[85vh] min-h-[540px] sm:h-[90vh] sm:min-h-[600px] flex items-center justify-center overflow-hidden bg-[#0d2925]"
       aria-label="Welcome to Frostline AS"
     >
       <div 
@@ -91,7 +91,7 @@ export default function Hero() {
       </div>
 
       {!imageLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e2a47] via-[#0e2a47] to-[#071525]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d2925] via-[#0d2925] to-[#051815]">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-8 h-8 border-2 border-white/20 border-t-white/60 rounded-full animate-spin" />
           </div>
