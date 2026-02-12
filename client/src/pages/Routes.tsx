@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card';
 import { MapPin, Clock, Bus, ArrowRight, Send, Info, ChevronDown, Sparkles, CreditCard, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import PageMeta from '@/components/common/PageMeta';
-import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 
 export default function Routes() {
   const { t } = useLanguage();

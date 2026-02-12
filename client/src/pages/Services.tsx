@@ -8,7 +8,7 @@ import arcticCoastalRoute from '@assets/generated_images/arctic_coastal_transpor
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import PageMeta from '@/components/common/PageMeta';
-import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 
 export default function Services() {
   const { t } = useLanguage();

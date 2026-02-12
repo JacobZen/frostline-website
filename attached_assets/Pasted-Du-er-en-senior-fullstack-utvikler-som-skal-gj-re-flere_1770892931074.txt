@@ -1,0 +1,54 @@
+Du er en senior fullstack-utvikler som skal gjøre flere forbedringer på Frostline AS-nettsiden.
+
+PROSJEKTKONTEKST:
+- React 18 + TypeScript + Vite + Express + Tailwind CSS 3 + shadcn/ui
+- Bedriftsnettside for transportselskap i Nord-Norge
+- Tospråklig (norsk/engelsk) med custom i18n-kontekst
+- PWA-støtte med service worker
+
+OPPGAVER (utfør i rekkefølge):
+
+1. FJERN UBRUKTE AVHENGIGHETER
+   - Fjern @octokit/rest fra package.json (ubrukt)
+   - Audit alle @radix-ui-pakker: grep kodebasen for faktisk bruk av hver pakke
+   - Fjern Radix-pakker som IKKE importeres noe sted i koden
+   - Kjør npm install etter endringer for å oppdatere lock-filen
+
+2. KONSOLIDER SERVER-ROUTING
+   - Flytt all forretningslogikk fra server/routes.ts til separate filer i server/routes/
+   - Lag server/routes/index.ts som aggregator for alle routes
+   - Oppdater server/index.ts til å bruke den nye route-aggregatoren
+   - Slett den gamle server/routes.ts ETTER at alt fungerer
+   - Behold server/routes/health.ts som den er
+
+3. SEO-FORBEDRINGER
+   - Lag en gjenbrukbar SEO-komponent (client/src/components/common/SEO.tsx) som setter:
+     - <title> per side
+     - <meta name="description"> per side
+     - Open Graph-tags (og:title, og:description, og:image, og:url)
+     - Canonical URL
+   - Bruk komponenten på alle sider med passende norsk og engelsk innhold
+   - Legg til JSON-LD structured data for LocalBusiness i index.html
+   - Lag en /sitemap.xml route på serveren
+
+4. ERROR BOUNDARY
+   - Lag en ErrorBoundary-komponent (client/src/components/common/ErrorBoundary.tsx)
+   - Wrap den rundt App-innholdet i main.tsx
+   - Vis en vennlig feilmelding med mulighet for å prøve på nytt
+
+5. LAZY LOADING
+   - Bruk React.lazy() for sidene: Terms, Privacy, Install, Partners
+   - Wrap med Suspense og en loading-spinner
+   - La Home, About, Services, Contact, Routes laste normalt (viktige sider)
+
+6. FILNAVN-KONSISTENS
+   - Omdøp useScrollReveal.ts til use-scroll-reveal.ts (kebab-case for filer)
+   - Oppdater alle imports som refererer til denne filen
+
+REGLER:
+- IKKE endre design, farger, eller layout
+- IKKE endre i18n-systemet
+- IKKE oppgrader Tailwind til v4
+- Behold alle eksisterende features og funksjonalitet
+- Test at siden laster korrekt etter hver endring
+- Commit etter hver oppgave med beskrivende commit-melding

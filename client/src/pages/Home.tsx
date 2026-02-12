@@ -10,7 +10,7 @@ import arcticTundra from '@assets/generated_images/arctic_tundra_autumn_colors.w
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import PageMeta from '@/components/common/PageMeta';
-import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 
 export default function Home() {
   const { t } = useLanguage();

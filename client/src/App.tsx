@@ -12,15 +12,15 @@ import CookieConsent from "@/components/common/CookieConsent";
 import PWAInstallPrompt from "@/components/common/PWAInstallPrompt";
 import ErrorBoundary from "@/components/common/ErrorBoundary";
 import LoadingSpinner from "@/components/common/LoadingSpinner";
+import Home from "@/pages/Home";
+import Services from "@/pages/Services";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import Routes from "@/pages/Routes";
 
-const Home = lazy(() => import("@/pages/Home"));
-const Services = lazy(() => import("@/pages/Services"));
-const About = lazy(() => import("@/pages/About"));
 const Partners = lazy(() => import("@/pages/Partners"));
-const Contact = lazy(() => import("@/pages/Contact"));
 const Terms = lazy(() => import("@/pages/Terms"));
 const Privacy = lazy(() => import("@/pages/Privacy"));
-const Routes = lazy(() => import("@/pages/Routes"));
 const Install = lazy(() => import("@/pages/Install"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
