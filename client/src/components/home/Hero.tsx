@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@assets/IMG_9188_1763628868230_optimized.webp';
+import heroImage from '@assets/hero-arctic-aurora.webp';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
