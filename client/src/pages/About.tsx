@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Card } from '@/components/ui/card';
 import { Award, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import arcticMountains from '@assets/generated_images/norwegian_arctic_mountain_peaks.png';
+import arcticMountains from '@assets/generated_images/norwegian_arctic_mountain_peaks.webp';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import PageMeta from '@/components/common/PageMeta';

@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { MapPin, Mail, Building2, ArrowRight, Users, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
-import heroImage from '@assets/IMG_9188_1763628868230.jpeg';
+import heroImage from '@assets/IMG_9188_1763628868230.webp';
 import PageMeta from '@/components/common/PageMeta';
 
 export default function Contact() {
@@ -120,15 +120,16 @@ export default function Contact() {
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </a>
             
-            <button
+            <Button
+              variant="outline"
               onClick={() => setLocation('/partners')}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-primary/40 text-foreground px-6 py-3 min-h-[48px] rounded-xl font-medium hover:bg-primary/10 transition-all hover-elevate active-elevate-2"
+              className="w-full sm:w-auto gap-2 border-2 border-primary/40 rounded-xl"
               data-testid="button-partnership-info"
               aria-label="View partnership information"
             >
               <Users className="w-5 h-5" aria-hidden="true" />
               {t.contact.partnershipButton || "Partner Inquiries"}
-            </button>
+            </Button>
           </div>
         </div>
       </section>

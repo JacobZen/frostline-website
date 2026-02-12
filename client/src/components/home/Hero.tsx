@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@assets/IMG_9188_1763628868230_optimized.jpeg';
+import heroImage from '@assets/IMG_9188_1763628868230_optimized.webp';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 
@@ -56,7 +56,7 @@ export default function Hero() {
       link.rel = 'preload';
       link.as = 'image';
       link.href = heroImage;
-      link.type = 'image/jpeg';
+      link.type = 'image/webp';
       document.head.appendChild(link);
     }
   }, []);

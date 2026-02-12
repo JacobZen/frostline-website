@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Clock, MessageCircle, ShieldCheck, Users, Calendar, Car } from 'lucide-react';
-import arcticFjord from '@assets/generated_images/arctic_fjord_northern_norway.png';
+import arcticFjord from '@assets/generated_images/arctic_fjord_northern_norway.webp';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import PageMeta from '@/components/common/PageMeta';

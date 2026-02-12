@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 import ServiceCard from '@/components/home/ServiceCard';
 import { Button } from '@/components/ui/button';
-import transferIcon from '@assets/generated_images/transfer_service_icon.png';
-import partnerIcon from '@assets/generated_images/partner_logistics_icon.png';
-import toursIcon from '@assets/generated_images/northern_lights_tours_icon.png';
-import rentalIcon from '@assets/generated_images/minibus_rental_icon.png';
-import arcticCoastalRoute from '@assets/generated_images/arctic_coastal_transport_route.png';
+import transferIcon from '@assets/generated_images/transfer_service_icon.webp';
+import partnerIcon from '@assets/generated_images/partner_logistics_icon.webp';
+import toursIcon from '@assets/generated_images/northern_lights_tours_icon.webp';
+import rentalIcon from '@assets/generated_images/minibus_rental_icon.webp';
+import arcticCoastalRoute from '@assets/generated_images/arctic_coastal_transport_route.webp';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import PageMeta from '@/components/common/PageMeta';
