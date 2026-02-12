@@ -27,7 +27,7 @@ export default function Routes() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const route = selectedRoute || t.routes.selectRoutePlaceholder;
-    const vehicle = vehicleType === 'minibus' ? t.routes.vehicleMinibus : t.routes.vehicleBus;
+    const vehicle = vehicleType === 'minibus' ? t.routes.vehicleMinibus : vehicleType === 'van' ? t.routes.vehicleVan : t.routes.vehicleBus;
     const subject = encodeURIComponent(`Booking Request: ${route}`);
     const body = encodeURIComponent(
       `Route: ${route}\n` +
@@ -258,6 +258,7 @@ export default function Routes() {
                       data-testid="select-vehicle"
                     >
                       <option value="minibus">{t.routes.vehicleMinibus}</option>
+                      <option value="van">{t.routes.vehicleVan}</option>
                       <option value="bus">{t.routes.vehicleBus}</option>
                     </select>
                     <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" aria-hidden="true" />
@@ -292,8 +293,8 @@ export default function Routes() {
                     value={formData.passengers}
                     onChange={handleInputChange}
                     min="1"
-                    max="30"
-                    placeholder="1-30"
+                    max="50"
+                    placeholder="1-50"
                     className="w-full h-10 px-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                     required
                     data-testid="input-passengers"
