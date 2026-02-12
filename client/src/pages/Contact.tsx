@@ -39,7 +39,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1 — Email */}
             <div 
-              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(13,41,37,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(13,41,37,0.12)]"
+              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(12,30,40,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(12,30,40,0.12)]"
               data-testid="card-quick-email"
             >
               <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
@@ -62,7 +62,7 @@ export default function Contact() {
 
             {/* Card 2 — Location */}
             <div 
-              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(13,41,37,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(13,41,37,0.12)]"
+              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(12,30,40,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(12,30,40,0.12)]"
               data-testid="card-quick-location"
             >
               <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
@@ -80,7 +80,7 @@ export default function Contact() {
 
             {/* Card 3 — Organization */}
             <div 
-              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(13,41,37,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(13,41,37,0.12)]"
+              className="bg-card/80 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_8px_30px_-4px_rgba(12,30,40,0.08)] p-6 text-center transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_12px_40px_-4px_rgba(12,30,40,0.12)]"
               data-testid="card-company-details"
             >
               <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">

@@ -53,7 +53,7 @@ export function ThemeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent 
         align="end" 
-        className="w-28 bg-white dark:bg-[#091e1b] border border-gray-200 dark:border-gray-700 shadow-[0_8px_24px_rgba(13,41,37,0.12)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
+        className="w-28 bg-white dark:bg-[#081620] border border-gray-200 dark:border-gray-700 shadow-[0_8px_24px_rgba(12,30,40,0.12)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
         sideOffset={6}
       >
         <DropdownMenuItem 
@@ -64,7 +64,7 @@ export function ThemeToggle() {
           <Sun className="h-4 w-4" />
           <span>{t.light}</span>
           {theme === 'light' && (
-            <span className="ml-auto text-[#0d2925] dark:text-[#00e892] text-xs font-medium">✓</span>
+            <span className="ml-auto text-[#0c1e28] dark:text-[#00e892] text-xs font-medium">✓</span>
           )}
         </DropdownMenuItem>
         <DropdownMenuItem 
@@ -75,7 +75,7 @@ export function ThemeToggle() {
           <Moon className="h-4 w-4" />
           <span>{t.dark}</span>
           {theme === 'dark' && (
-            <span className="ml-auto text-[#0d2925] dark:text-[#00e892] text-xs font-medium">✓</span>
+            <span className="ml-auto text-[#0c1e28] dark:text-[#00e892] text-xs font-medium">✓</span>
           )}
         </DropdownMenuItem>
         <DropdownMenuItem 
@@ -86,7 +86,7 @@ export function ThemeToggle() {
           <Monitor className="h-4 w-4" />
           <span>{t.system}</span>
           {theme === 'system' && (
-            <span className="ml-auto text-[#0d2925] dark:text-[#00e892] text-xs font-medium">✓</span>
+            <span className="ml-auto text-[#0c1e28] dark:text-[#00e892] text-xs font-medium">✓</span>
           )}
         </DropdownMenuItem>
       </DropdownMenuContent>

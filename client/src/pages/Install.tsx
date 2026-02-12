@@ -93,8 +93,8 @@ export default function Install() {
         descriptionNo="Legg Frostline AS til startskjermen din for rask tilgang til arktisk transportbooking og ruteinformasjon."
         path="/install"
       />
-      <section className="relative py-16 sm:py-24 bg-[#091e1b] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d2925]/80 to-[#091e1b]" />
+      <section className="relative py-16 sm:py-24 bg-[#081620] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c1e28]/80 to-[#081620]" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <Smartphone className="w-12 h-12 mx-auto mb-6 text-white/80" />
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-white" data-testid="text-install-title">

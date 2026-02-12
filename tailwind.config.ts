@@ -21,7 +21,7 @@ export default {
           700: "#0057a1",
           800: "#044a85",
           900: "#0a3d6e",
-          950: "#0d2925",
+          950: "#0c1e28",
         },
         // Aurora Green — Accent color
         "aurora-green": {
@@ -49,7 +49,7 @@ export default {
           700: "#30476f",
           800: "#2b3d5d",
           900: "#28354f",
-          950: "#091e1b",
+          950: "#081620",
         },
         // Ice Grey — Neutral tones
         "ice-grey": {

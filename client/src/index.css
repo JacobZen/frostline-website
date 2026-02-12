@@ -18,46 +18,46 @@
   --sidebar: 210 4% 96%;
   --sidebar-foreground: 210 15% 15%;
   --sidebar-border: 210 6% 90%;
-  --sidebar-primary: 172 55% 22%;
-  --sidebar-primary-foreground: 170 20% 98%;
-  --sidebar-accent: 170 8% 90%;
-  --sidebar-accent-foreground: 170 15% 15%;
-  --sidebar-ring: 172 55% 22%;
+  --sidebar-primary: 195 50% 20%;
+  --sidebar-primary-foreground: 195 20% 98%;
+  --sidebar-accent: 195 8% 90%;
+  --sidebar-accent-foreground: 195 15% 15%;
+  --sidebar-ring: 195 50% 20%;
   --popover: 0 0% 96%;
   --popover-foreground: 210 15% 15%;
   --popover-border: 210 6% 92%;
-  --primary: 172 55% 22%;
-  --primary-foreground: 170 20% 98%;
-  --secondary: 170 8% 92%;
-  --secondary-foreground: 170 15% 15%;
-  --muted: 170 10% 94%;
-  --muted-foreground: 170 12% 35%;
-  --accent: 170 12% 94%;
-  --accent-foreground: 170 15% 15%;
+  --primary: 195 50% 20%;
+  --primary-foreground: 195 20% 98%;
+  --secondary: 195 8% 92%;
+  --secondary-foreground: 195 15% 15%;
+  --muted: 195 10% 94%;
+  --muted-foreground: 195 12% 35%;
+  --accent: 195 12% 94%;
+  --accent-foreground: 195 15% 15%;
   --destructive: 0 75% 35%;
   --destructive-foreground: 0 10% 98%;
-  --input: 170 15% 75%;
-  --ring: 172 55% 22%;
-  --chart-1: 172 85% 30%;
-  --chart-2: 160 75% 35%;
-  --chart-3: 185 70% 40%;
-  --chart-4: 155 65% 35%;
-  --chart-5: 175 80% 32%;
+  --input: 195 15% 75%;
+  --ring: 195 50% 20%;
+  --chart-1: 195 85% 30%;
+  --chart-2: 180 75% 35%;
+  --chart-3: 200 70% 40%;
+  --chart-4: 170 65% 35%;
+  --chart-5: 190 80% 32%;
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
-  --shadow-2xs: 0 1px 2px 0 rgba(13, 41, 37, 0.03);
-  --shadow-xs: 0 1px 3px 0 rgba(13, 41, 37, 0.04);
-  --shadow-sm: 0 2px 4px -1px rgba(13, 41, 37, 0.06), 0 1px 2px -1px rgba(13, 41, 37, 0.04);
-  --shadow: 0 4px 6px -1px rgba(13, 41, 37, 0.07), 0 2px 4px -2px rgba(13, 41, 37, 0.05);
-  --shadow-md: 0 6px 12px -2px rgba(13, 41, 37, 0.08), 0 3px 6px -3px rgba(13, 41, 37, 0.06);
-  --shadow-lg: 0 10px 20px -3px rgba(13, 41, 37, 0.10), 0 4px 8px -4px rgba(13, 41, 37, 0.06);
-  --shadow-xl: 0 16px 32px -4px rgba(13, 41, 37, 0.12), 0 8px 16px -6px rgba(13, 41, 37, 0.08);
-  --shadow-2xl: 0 24px 48px -8px rgba(13, 41, 37, 0.15);
-  --shadow-arctic: 0 8px 30px -4px rgba(13, 41, 37, 0.12), 0 4px 12px -2px rgba(13, 41, 37, 0.06);
-  --shadow-frost: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 24px -4px rgba(13, 41, 37, 0.1);
+  --shadow-2xs: 0 1px 2px 0 rgba(12, 30, 40, 0.03);
+  --shadow-xs: 0 1px 3px 0 rgba(12, 30, 40, 0.04);
+  --shadow-sm: 0 2px 4px -1px rgba(12, 30, 40, 0.06), 0 1px 2px -1px rgba(12, 30, 40, 0.04);
+  --shadow: 0 4px 6px -1px rgba(12, 30, 40, 0.07), 0 2px 4px -2px rgba(12, 30, 40, 0.05);
+  --shadow-md: 0 6px 12px -2px rgba(12, 30, 40, 0.08), 0 3px 6px -3px rgba(12, 30, 40, 0.06);
+  --shadow-lg: 0 10px 20px -3px rgba(12, 30, 40, 0.10), 0 4px 8px -4px rgba(12, 30, 40, 0.06);
+  --shadow-xl: 0 16px 32px -4px rgba(12, 30, 40, 0.12), 0 8px 16px -6px rgba(12, 30, 40, 0.08);
+  --shadow-2xl: 0 24px 48px -8px rgba(12, 30, 40, 0.15);
+  --shadow-arctic: 0 8px 30px -4px rgba(12, 30, 40, 0.12), 0 4px 12px -2px rgba(12, 30, 40, 0.06);
+  --shadow-frost: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 24px -4px rgba(12, 30, 40, 0.1);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -97,37 +97,37 @@
   --opaque-button-border-intensity: 9;
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
-  /* Deep Teal Aurora backgrounds */
-  --background: 174 40% 7%;
-  --foreground: 170 15% 96%;
-  --border: 174 25% 16%;
-  --card: 174 35% 10%;
-  --card-foreground: 170 15% 96%;
-  --card-border: 174 28% 14%;
-  --sidebar: 174 35% 9%;
-  --sidebar-foreground: 170 15% 96%;
-  --sidebar-border: 174 28% 13%;
+  /* Arctic Night Sky backgrounds - balanced blue-teal from hero image */
+  --background: 200 45% 8%;
+  --foreground: 195 15% 96%;
+  --border: 198 28% 16%;
+  --card: 198 38% 11%;
+  --card-foreground: 195 15% 96%;
+  --card-border: 198 30% 15%;
+  --sidebar: 200 38% 9%;
+  --sidebar-foreground: 195 15% 96%;
+  --sidebar-border: 198 28% 14%;
   /* Aurora Green as primary in dark mode */
   --sidebar-primary: 160 100% 45%;
-  --sidebar-primary-foreground: 174 40% 7%;
-  --sidebar-accent: 174 25% 16%;
-  --sidebar-accent-foreground: 170 15% 96%;
+  --sidebar-primary-foreground: 200 45% 8%;
+  --sidebar-accent: 198 25% 16%;
+  --sidebar-accent-foreground: 195 15% 96%;
   --sidebar-ring: 160 100% 45%;
-  --popover: 174 35% 10%;
-  --popover-foreground: 170 15% 96%;
-  --popover-border: 174 28% 16%;
+  --popover: 198 38% 11%;
+  --popover-foreground: 195 15% 96%;
+  --popover-border: 198 28% 16%;
   /* Aurora Green primary for dark mode */
   --primary: 160 100% 45%;
-  --primary-foreground: 174 40% 7%;
-  --secondary: 174 25% 16%;
-  --secondary-foreground: 170 15% 96%;
-  --muted: 174 22% 14%;
-  --muted-foreground: 170 15% 65%;
+  --primary-foreground: 200 45% 8%;
+  --secondary: 198 25% 16%;
+  --secondary-foreground: 195 15% 96%;
+  --muted: 198 22% 14%;
+  --muted-foreground: 195 15% 65%;
   --accent: 160 80% 40%;
-  --accent-foreground: 174 40% 7%;
+  --accent-foreground: 200 45% 8%;
   --destructive: 0 70% 45%;
   --destructive-foreground: 0 10% 98%;
-  --input: 174 25% 22%;
+  --input: 198 25% 22%;
   --ring: 160 100% 45%;
   /* Aurora glow for dark mode shadows */
   --shadow-2xs: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
@@ -479,10 +479,10 @@
   /* Subtle glow pulse for CTAs */
   @keyframes glow-pulse {
     0%, 100% {
-      box-shadow: 0 0 0 0 rgba(13, 41, 37, 0);
+      box-shadow: 0 0 0 0 rgba(12, 30, 40, 0);
     }
     50% {
-      box-shadow: 0 0 20px 2px rgba(13, 41, 37, 0.08);
+      box-shadow: 0 0 20px 2px rgba(12, 30, 40, 0.08);
     }
   }
 
@@ -532,13 +532,13 @@
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 1px 3px rgba(13, 41, 37, 0.04), 
-                0 4px 12px rgba(13, 41, 37, 0.06),
+    box-shadow: 0 1px 3px rgba(12, 30, 40, 0.04), 
+                0 4px 12px rgba(12, 30, 40, 0.06),
                 inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   .dark .arctic-glass {
-    background: rgba(13, 41, 37, 0.65);
+    background: rgba(12, 30, 40, 0.65);
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 
                 0 4px 12px rgba(0, 0, 0, 0.2),
@@ -573,8 +573,8 @@
 
   .arctic-hover-card:hover {
     transform: translateY(-2px) scale(1.008);
-    box-shadow: 0 8px 24px -6px rgba(13, 41, 37, 0.12),
-                0 12px 40px -8px rgba(13, 41, 37, 0.08);
+    box-shadow: 0 8px 24px -6px rgba(12, 30, 40, 0.12),
+                0 12px 40px -8px rgba(12, 30, 40, 0.08);
   }
 
   .dark .arctic-hover-card:hover {
@@ -599,8 +599,8 @@
     inset: -3px;
     border-radius: inherit;
     background: linear-gradient(135deg, 
-      rgba(13, 41, 37, 0.08), 
-      rgba(13, 41, 37, 0.03));
+      rgba(12, 30, 40, 0.08), 
+      rgba(12, 30, 40, 0.03));
     opacity: 0;
     transition: opacity var(--duration-normal) var(--ease-apple);
     z-index: -1;
@@ -613,7 +613,7 @@
 
   .arctic-button-glow:hover {
     transform: scale(1.015);
-    box-shadow: 0 6px 20px -4px rgba(13, 41, 37, 0.15);
+    box-shadow: 0 6px 20px -4px rgba(12, 30, 40, 0.15);
   }
 
   .dark .arctic-button-glow:hover {
@@ -636,7 +636,7 @@
   }
 
   .arctic-image-hover:hover {
-    box-shadow: 0 12px 40px -8px rgba(13, 41, 37, 0.18);
+    box-shadow: 0 12px 40px -8px rgba(12, 30, 40, 0.18);
   }
 
   .arctic-image-hover:hover img {
@@ -763,13 +763,13 @@
     );
   }
 
-  /* Northern lights-inspired accent gradient — deep teal aurora */
+  /* Northern lights-inspired accent gradient — balanced blue-teal from hero sky */
   .arctic-accent-gradient {
     background: linear-gradient(
       135deg,
-      hsl(174 50% 10%) 0%,
-      hsl(170 45% 15%) 50%,
-      hsl(168 40% 12%) 100%
+      hsl(200 48% 10%) 0%,
+      hsl(195 42% 14%) 50%,
+      hsl(198 40% 12%) 100%
     );
   }
 
@@ -883,26 +883,26 @@
      ======================================================================== */
 
   .arctic-shadow-sm {
-    box-shadow: 0 1px 2px rgba(13, 41, 37, 0.03),
-                0 2px 6px rgba(13, 41, 37, 0.04);
+    box-shadow: 0 1px 2px rgba(12, 30, 40, 0.03),
+                0 2px 6px rgba(12, 30, 40, 0.04);
   }
 
   .arctic-shadow {
-    box-shadow: 0 2px 4px rgba(13, 41, 37, 0.04),
-                0 4px 12px rgba(13, 41, 37, 0.06),
-                0 8px 20px rgba(13, 41, 37, 0.04);
+    box-shadow: 0 2px 4px rgba(12, 30, 40, 0.04),
+                0 4px 12px rgba(12, 30, 40, 0.06),
+                0 8px 20px rgba(12, 30, 40, 0.04);
   }
 
   .arctic-shadow-lg {
-    box-shadow: 0 4px 8px rgba(13, 41, 37, 0.05),
-                0 8px 24px rgba(13, 41, 37, 0.08),
-                0 16px 40px rgba(13, 41, 37, 0.06);
+    box-shadow: 0 4px 8px rgba(12, 30, 40, 0.05),
+                0 8px 24px rgba(12, 30, 40, 0.08),
+                0 16px 40px rgba(12, 30, 40, 0.06);
   }
 
   .arctic-shadow-xl {
-    box-shadow: 0 6px 12px rgba(13, 41, 37, 0.06),
-                0 12px 32px rgba(13, 41, 37, 0.10),
-                0 24px 56px rgba(13, 41, 37, 0.08);
+    box-shadow: 0 6px 12px rgba(12, 30, 40, 0.06),
+                0 12px 32px rgba(12, 30, 40, 0.10),
+                0 24px 56px rgba(12, 30, 40, 0.08);
   }
 
   .dark .arctic-shadow-sm {

@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer 
-      className="bg-[#091e1b] border-t border-white/10 mt-auto relative"
+      className="bg-[#081620] border-t border-white/10 mt-auto relative"
       role="contentinfo"
       aria-label="Site footer"
     >

@@ -55,8 +55,8 @@ export default function Routes() {
         descriptionNo="Faste priser for minibuss- og busstransport i Nord-Norge. Book din gruppetransport fra Harstad med Frostline AS."
         path="/routes"
       />
-      <section className="relative bg-[#0d2925] py-16 sm:py-20 lg:py-24 overflow-hidden" aria-label="Routes header">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0d2925] via-[#14403a] to-[#0d2925]" />
+      <section className="relative bg-[#0c1e28] py-16 sm:py-20 lg:py-24 overflow-hidden" aria-label="Routes header">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0c1e28] via-[#14403a] to-[#0c1e28]" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#00e892] rounded-full blur-[128px] translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#4a9eff] rounded-full blur-[96px] -translate-x-1/2 translate-y-1/2" />

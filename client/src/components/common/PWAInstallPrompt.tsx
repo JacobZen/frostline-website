@@ -130,7 +130,7 @@ export default function PWAInstallPrompt() {
       aria-label={t.title}
       data-testid="pwa-install-prompt"
     >
-      <div className="relative bg-card/95 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_12px_40px_-4px_rgba(13,41,37,0.15)] p-5 overflow-hidden">
+      <div className="relative bg-card/95 backdrop-blur-xl backdrop-saturate-150 border border-border/40 rounded-2xl shadow-[0_12px_40px_-4px_rgba(12,30,40,0.15)] p-5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
         
         <button
