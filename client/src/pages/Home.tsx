@@ -188,24 +188,21 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding arctic-accent-gradient text-primary-foreground relative overflow-hidden">
-        {/* Premium Arctic pattern overlay - northern lights softness */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.06)_0%,_transparent_45%)]" aria-hidden="true" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,255,255,0.04)_0%,_transparent_45%)]" aria-hidden="true" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.02)_0%,_transparent_60%)]" aria-hidden="true" />
+      <section className="section-padding arctic-accent-gradient relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08)_0%,_transparent_50%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,255,255,0.05)_0%,_transparent_50%)]" aria-hidden="true" />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-semibold mb-5 sm:mb-7 scroll-reveal tracking-[-0.025em] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+          <h2 className="font-semibold text-white mb-5 sm:mb-7 scroll-reveal tracking-[-0.025em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
             {t.home.ctaTitle}
           </h2>
-          <p className="text-base sm:text-lg mb-8 sm:mb-10 text-primary-foreground/92 scroll-reveal scroll-reveal-delay-1 leading-[1.65] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg mb-8 sm:mb-10 text-white/85 scroll-reveal scroll-reveal-delay-1 leading-[1.65] max-w-2xl mx-auto">
             {t.home.ctaSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center px-2 sm:px-0 scroll-reveal scroll-reveal-delay-2">
             <Button
               size="lg"
-              variant="outline"
-              className="w-full sm:w-auto min-h-[46px] sm:min-h-[50px] min-w-[170px] sm:min-w-[190px] rounded-xl bg-white/8 backdrop-blur-xl border-white/22 border-2 text-white hover:bg-white/14 hover:border-white/45 no-default-hover-elevate shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_28px_rgba(0,0,0,0.28)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985]"
+              className="w-full sm:w-auto min-h-[48px] sm:min-h-[52px] min-w-[180px] sm:min-w-[200px] rounded-xl bg-white text-[#0e2a47] font-semibold hover:bg-white/90 no-default-hover-elevate shadow-[0_4px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985] border-2 border-white/80"
               onClick={() => setLocation('/contact')}
               data-testid="button-contact-us"
               aria-label="Contact us for inquiries"
@@ -215,7 +212,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto min-h-[46px] sm:min-h-[50px] min-w-[170px] sm:min-w-[190px] rounded-xl bg-white/8 backdrop-blur-xl border-white/22 border-2 text-white hover:bg-white/14 hover:border-white/45 no-default-hover-elevate shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_28px_rgba(0,0,0,0.28)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985]"
+              className="w-full sm:w-auto min-h-[48px] sm:min-h-[52px] min-w-[180px] sm:min-w-[200px] rounded-xl bg-white/10 backdrop-blur-xl border-2 border-white/40 text-white font-semibold hover:bg-white/18 hover:border-white/60 no-default-hover-elevate shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985]"
               onClick={() => setLocation('/partners')}
               data-testid="button-become-partner-cta"
               aria-label="Become a partner"
