@@ -83,38 +83,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="section-padding arctic-section-gradient-dark arctic-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Why Choose Us Section — dark navy */}
+      <section className="section-padding bg-gradient-to-br from-[#0e2a47] via-[#132f4f] to-[#0e2a47] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.06)_0%,_transparent_50%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,255,255,0.04)_0%,_transparent_50%)]" aria-hidden="true" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-start lg:items-center">
             <div className="scroll-reveal">
-              <h2 className="font-semibold text-foreground mb-5 sm:mb-7 tracking-[-0.025em]">
+              <h2 className="font-semibold text-white mb-5 sm:mb-7 tracking-[-0.025em]">
                 {t.home.whyChooseTitle}
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-7 sm:mb-9 leading-[1.7]">
+              <p className="text-base sm:text-lg text-white/70 mb-7 sm:mb-9 leading-[1.7]">
                 {t.home.whyChooseText}
               </p>
               <div className="space-y-3.5 sm:space-y-4">
                 {t.home.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3.5 group">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 transition-transform duration-[180ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110" aria-hidden="true" />
-                    <span className="text-foreground text-sm sm:text-base leading-[1.6]">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-[#00e892] flex-shrink-0 mt-0.5 transition-transform duration-[180ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110" aria-hidden="true" />
+                    <span className="text-white/90 text-sm sm:text-base leading-[1.6]">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="space-y-5 sm:space-y-6">
-              <div className="bg-card p-5 sm:p-7 rounded-xl border border-border/30 arctic-shadow-sm arctic-hover-card scroll-reveal scroll-reveal-delay-1">
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2.5 sm:mb-3 tracking-[-0.015em]">
+              <div className="bg-white/8 backdrop-blur-sm p-5 sm:p-7 rounded-xl border border-white/12 shadow-[0_4px_24px_rgba(0,0,0,0.2)] scroll-reveal scroll-reveal-delay-1">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2.5 sm:mb-3 tracking-[-0.015em]">
                   {t.home.privateTravelers}
                 </h3>
-                <p className="text-sm sm:text-base text-muted-foreground mb-5 leading-[1.65]">
+                <p className="text-sm sm:text-base text-white/65 mb-5 leading-[1.65]">
                   {t.home.privateTravelersText}
                 </p>
                 <Button
-                  variant="outline"
-                  className="min-h-[42px] sm:min-h-[46px] rounded-xl border hover:border-primary/40 transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985]"
+                  size="lg"
+                  className="min-h-[44px] sm:min-h-[48px] rounded-xl bg-white text-[#0e2a47] font-semibold hover:bg-white/90 no-default-hover-elevate shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-all duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] active:scale-[0.985] border border-white/80"
                   onClick={() => setLocation('/routes')}
                   data-testid="button-book-now"
                   aria-label="Book your transfer now"
