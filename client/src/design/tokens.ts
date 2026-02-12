@@ -221,13 +221,13 @@ export const shadows = {
   // Arctic cold shadows — subtle blue undertones
   light: {
     none: 'none',
-    sm: '0 1px 2px rgba(14, 42, 71, 0.04)',
-    md: '0 2px 4px rgba(14, 42, 71, 0.04), 0 4px 8px rgba(14, 42, 71, 0.04)',
-    lg: '0 4px 6px rgba(14, 42, 71, 0.05), 0 8px 16px rgba(14, 42, 71, 0.06)',
-    xl: '0 8px 12px rgba(14, 42, 71, 0.06), 0 16px 32px rgba(14, 42, 71, 0.08)',
-    '2xl': '0 12px 24px rgba(14, 42, 71, 0.08), 0 24px 48px rgba(14, 42, 71, 0.10)',
-    inner: 'inset 0 2px 4px rgba(14, 42, 71, 0.04)',
-    glow: '0 0 20px rgba(14, 42, 71, 0.08)',
+    sm: '0 1px 2px rgba(13, 41, 37, 0.04)',
+    md: '0 2px 4px rgba(13, 41, 37, 0.04), 0 4px 8px rgba(13, 41, 37, 0.04)',
+    lg: '0 4px 6px rgba(13, 41, 37, 0.05), 0 8px 16px rgba(13, 41, 37, 0.06)',
+    xl: '0 8px 12px rgba(13, 41, 37, 0.06), 0 16px 32px rgba(13, 41, 37, 0.08)',
+    '2xl': '0 12px 24px rgba(13, 41, 37, 0.08), 0 24px 48px rgba(13, 41, 37, 0.10)',
+    inner: 'inset 0 2px 4px rgba(13, 41, 37, 0.04)',
+    glow: '0 0 20px rgba(13, 41, 37, 0.08)',
   },
   dark: {
     none: 'none',
@@ -243,9 +243,9 @@ export const shadows = {
   // Button shadows
   button: {
     light: {
-      default: '0 1px 2px rgba(14, 42, 71, 0.06), 0 2px 4px rgba(14, 42, 71, 0.04)',
-      hover: '0 4px 8px rgba(14, 42, 71, 0.08), 0 8px 16px rgba(14, 42, 71, 0.06)',
-      active: '0 1px 2px rgba(14, 42, 71, 0.08)',
+      default: '0 1px 2px rgba(13, 41, 37, 0.06), 0 2px 4px rgba(13, 41, 37, 0.04)',
+      hover: '0 4px 8px rgba(13, 41, 37, 0.08), 0 8px 16px rgba(13, 41, 37, 0.06)',
+      active: '0 1px 2px rgba(13, 41, 37, 0.08)',
     },
     dark: {
       default: '0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)',
@@ -257,8 +257,8 @@ export const shadows = {
   // Card shadows
   card: {
     light: {
-      default: '0 1px 3px rgba(14, 42, 71, 0.04), 0 4px 12px rgba(14, 42, 71, 0.04)',
-      hover: '0 4px 8px rgba(14, 42, 71, 0.06), 0 12px 24px rgba(14, 42, 71, 0.08)',
+      default: '0 1px 3px rgba(13, 41, 37, 0.04), 0 4px 12px rgba(13, 41, 37, 0.04)',
+      hover: '0 4px 8px rgba(13, 41, 37, 0.06), 0 12px 24px rgba(13, 41, 37, 0.08)',
     },
     dark: {
       default: '0 1px 3px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.2)',
@@ -589,9 +589,9 @@ export const frost = {
 export const gradients = {
   // Aurora gradients
   aurora: {
-    subtle: 'linear-gradient(135deg, rgba(0, 232, 146, 0.05) 0%, rgba(14, 42, 71, 0.05) 100%)',
-    medium: 'linear-gradient(135deg, rgba(0, 232, 146, 0.1) 0%, rgba(14, 42, 71, 0.1) 100%)',
-    strong: 'linear-gradient(135deg, rgba(0, 232, 146, 0.2) 0%, rgba(14, 42, 71, 0.2) 100%)',
+    subtle: 'linear-gradient(135deg, rgba(0, 232, 146, 0.05) 0%, rgba(13, 41, 37, 0.05) 100%)',
+    medium: 'linear-gradient(135deg, rgba(0, 232, 146, 0.1) 0%, rgba(13, 41, 37, 0.1) 100%)',
+    strong: 'linear-gradient(135deg, rgba(0, 232, 146, 0.2) 0%, rgba(13, 41, 37, 0.2) 100%)',
   },
   // Section backgrounds
   section: {
