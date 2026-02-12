@@ -90,16 +90,23 @@ Preferred communication style: Simple, everyday language.
 - **Node.js** runtime environment
 
 **Server Structure:**
-- Minimalist backend with route registration pattern
+- Modular backend with route registration pattern
+- `server/config/env.ts` — Zod-validated environment configuration
+- `server/middleware/error-handler.ts` — Centralized error handling middleware
+- `server/routes/health.ts` — Health check endpoint (`GET /api/health`)
 - Middleware for JSON parsing and request logging
 - Development/production environment detection
 - Custom request logging with timestamps and response capture
+
+**API Endpoints:**
+- `GET /api/health` — Returns `{ status, timestamp, uptime }`
 
 **Development Features:**
 - Vite integration in development mode with HMR
 - Custom error overlay via Replit plugins
 - Static file serving in production
 - Request/response logging with truncation for readability
+- ESLint + Prettier configured for code quality
 
 **Storage Interface:**
 - Abstract `IStorage` interface for flexible data persistence
@@ -132,7 +139,6 @@ Preferred communication style: Simple, everyday language.
 
 **State Management:**
 - `@tanstack/react-query` for server state and caching
-- `react-hook-form` with `@hookform/resolvers` for form management
 - `zod` for schema validation (via `drizzle-zod`)
 
 **Database (Configured but not actively used):**
@@ -152,13 +158,7 @@ Preferred communication style: Simple, everyday language.
 - `esbuild` for server bundling
 
 **Utilities:**
-- `date-fns` for date manipulation
 - `nanoid` for ID generation
-- `cmdk` for command palette functionality
-
-**Session Management (Available):**
-- `express-session` configured
-- `connect-pg-simple` for PostgreSQL session storage
 
 ### Asset Management
 
