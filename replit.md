@@ -25,7 +25,7 @@ Preferred communication style: Simple, everyday language.
 - **shadcn/ui** component library (New York style) for consistent UI elements
 
 **Design System:**
-- Custom color palette based on Nordic minimalism: Arctic Blue (#0e2a47), White (#ffffff), Dark Grey (#111111), Light Grey (#f4f4f4)
+- Custom color palette derived from hero image (Northern Lights): balanced blue-teal (#0c1e28), White (#ffffff), Dark Grey (#111111), Light Grey (#f4f4f4)
 - Typography: Montserrat for headings (weights 300-700), Inter for body text and buttons (weights 300-600)
 - Responsive mobile-first approach with Tailwind breakpoints
 - Consistent spacing units (4, 6, 8, 12, 16, 20, 24) for rhythm
@@ -43,7 +43,7 @@ Preferred communication style: Simple, everyday language.
 **Theme System (Arctic Day/Night):**
 - Light/Dark/System theme support via ThemeProvider (`theme-context.tsx`)
 - **Arctic Day (Light)**: Clean whites and soft blues, subtle Arctic shadows
-- **Arctic Night (Dark)**: Deep midnight navy (#0e1a27), Aurora Green accents (#00e892)
+- **Arctic Night (Dark)**: Deep blue-teal night sky (#081620), Aurora Green accents (#00e892) used sparingly
 - Theme toggle with dropdown menu (Light/Dark/System options) in both desktop and mobile navbar
 - localStorage persistence with key "frostline-theme"
 - System preference detection via `prefers-color-scheme` media query
