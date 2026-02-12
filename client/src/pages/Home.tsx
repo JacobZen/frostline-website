@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import Hero from '@/components/home/Hero';
 import ServiceCard from '@/components/home/ServiceCard';
 import { Button } from '@/components/ui/button';
@@ -11,30 +10,7 @@ import arcticTundra from '@assets/generated_images/arctic_tundra_autumn_colors.w
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import PageMeta from '@/components/common/PageMeta';
-
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const elements = ref.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-}
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 export default function Home() {
   const { t } = useLanguage();

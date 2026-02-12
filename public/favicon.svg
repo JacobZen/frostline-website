@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect width="512" height="512" rx="80" fill="#0e1a27"/>
-  <g transform="translate(256, 220)" fill="none" stroke="white" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="-120,60 -60,-40 -20,10 0,-60 40,0 60,-80 120,60" fill="none"/>
-    <path d="M-140,80 Q-60,40 0,75 Q60,110 140,80" stroke-width="16"/>
-  </g>
-</svg>

@@ -1,18 +1,14 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+export const bookingRequestSchema = z.object({
+  route: z.string().min(1),
+  vehicle: z.string().min(1),
+  date: z.string().min(1),
+  passengers: z.coerce.number().min(1).max(30),
+  name: z.string().min(1),
+  email: z.string().email(),
+  phone: z.string().optional(),
+  message: z.string().optional(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
-});
-
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export type BookingRequest = z.infer<typeof bookingRequestSchema>;

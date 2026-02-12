@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Card } from '@/components/ui/card';
 import { Award, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,30 +5,7 @@ import arcticMountains from '@assets/generated_images/norwegian_arctic_mountain_
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
 import PageMeta from '@/components/common/PageMeta';
-
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const elements = ref.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-}
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 export default function About() {
   const { t } = useLanguage();

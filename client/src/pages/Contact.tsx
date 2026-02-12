@@ -73,7 +73,7 @@ export default function Contact() {
               </h3>
               <div className="text-sm text-muted-foreground space-y-1">
                 <p>Kompaniveien 4</p>
-                <p>Balsjord</p>
+                <p>1639 Gamle Fredrikstad</p>
                 <p>Norway</p>
               </div>
             </div>
@@ -133,25 +133,26 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      {/* SECTION 4 — OPTIONAL MAP BLOCK */}
+      {/* SECTION 4 — MAP */}
       <section className="py-16 bg-muted/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold text-foreground mb-6 text-center">
             {t.contact.location}
           </h2>
           <div 
-            className="w-full h-64 bg-muted/40 dark:bg-gray-800/40 border border-border dark:border-white/20 rounded-2xl backdrop-blur-xl shadow-inner flex items-center justify-center"
-            data-testid="card-map-placeholder"
+            className="w-full h-80 rounded-2xl overflow-hidden border border-border shadow-sm"
+            data-testid="map-embed"
           >
-            <div className="text-center px-4">
-              <MapPin className="w-12 h-12 text-muted-foreground/70 mx-auto mb-3" aria-hidden="true" />
-              <p className="text-muted-foreground/70 text-sm">
-                {t.contact.locationText2 || "Kompaniveien 4, 1639 Gamle Fredrikstad, Norway"}
-              </p>
-              <p className="text-muted-foreground/50 text-xs mt-2">
-                Google Maps preview will be added here
-              </p>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5!2d10.9385!3d59.2775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464038d1c2b9d9b7%3A0x0!2sKompaniveien+4%2C+1639+Gamle+Fredrikstad!5e0!3m2!1sen!2sno!4v1700000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Frostline AS location - Kompaniveien 4, 1639 Gamle Fredrikstad"
+            />
           </div>
         </div>
       </section>

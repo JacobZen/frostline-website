@@ -1,33 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { MapPin, Clock, Bus, ArrowRight, Send, Info, ChevronDown, Sparkles, CreditCard, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import PageMeta from '@/components/common/PageMeta';
-
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const elements = ref.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-}
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 export default function Routes() {
   const { t } = useLanguage();
