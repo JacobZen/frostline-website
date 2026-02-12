@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-12 sm:py-14 lg:py-16 bg-[#f7f9fc] dark:bg-[#0c2421] relative">
+      <section className="py-12 sm:py-14 lg:py-16 bg-[#f7f9fc] dark:bg-[#0c1e28] relative">
         {/* Ultra-subtle top divider */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" aria-hidden="true" />
         

@@ -131,36 +131,6 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  if (url.origin === 'https://fonts.googleapis.com' || 
-      url.origin === 'https://fonts.gstatic.com') {
-    event.respondWith(
-      (async () => {
-        const cache = await caches.open('fonts-cache');
-        const cachedResponse = await cache.match(request);
-        
-        if (cachedResponse) {
-          const isExpired = await isCacheExpired('fonts-cache', request.url, FONTS_CACHE_MAX_AGE);
-          if (!isExpired) {
-            return cachedResponse;
-          }
-        }
-        
-        try {
-          const networkResponse = await fetch(request);
-          cache.put(request, networkResponse.clone());
-          await setMetadata('fonts-cache', request.url, { timestamp: Date.now() });
-          return networkResponse;
-        } catch (error) {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          throw error;
-        }
-      })()
-    );
-    return;
-  }
-
   if (request.destination === 'image') {
     event.respondWith(
       (async () => {

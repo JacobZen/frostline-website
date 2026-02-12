@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { MapPin, Mail, Building2, ArrowRight, Users, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 import { useLocation } from 'wouter';
-import heroImage from '@assets/IMG_9188_1763628868230.webp';
+import heroImage from '@assets/hero-arctic-vivid.webp';
 import PageMeta from '@/components/common/PageMeta';
 
 export default function Contact() {
@@ -92,7 +92,7 @@ export default function Contact() {
               <div className="text-sm text-muted-foreground space-y-1">
                 <p className="font-medium text-foreground" data-testid="text-org-number">Org.nr: 936 520 553</p>
                 <p className="text-xs mt-2">Frostline AS</p>
-                <p className="text-xs">Passasjertransport på forespørsel</p>
+                <p className="text-xs">{t.contact.companyDescription}</p>
               </div>
             </div>
           </div>

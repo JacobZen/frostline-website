@@ -1,0 +1,15 @@
+Jeg har gjort en full gjennomgang av frostline.as i produksjon og funnet flere bugs som må fikses. Gå gjennom disse punktene og fiks alt:
+
+1. BROKEN IMAGE (404): Filen "IMG_9188_1763628868230" (.webp) gir 404-feil. Den er referert i koden men finnes ikke i build-output. Finn referansen i koden og enten fjern den eller legg til riktig bilde. Søk i alle komponenter etter "IMG_9188".
+
+2. HERO-BILDER PÅ UNDERSIDER: Hero-bildene på /services, /about og /partners vises noen ganger ikke (gir 404 intermittent). Sjekk at disse bildene faktisk finnes i client/public eller assets-mappen: arctic_coastal_transport_route (services-siden), norwegian_arctic_mountain_peaks (about-siden), arctic_fjord_northern_norway (partners-siden). Sørg for at alle bildene er inkludert i builden og at filnavnene matcher referansene i koden. Hvis bildene mangler, legg til passende placeholder-bilder eller bruk gradient-bakgrunn som fallback.
+
+3. LIGHT MODE KONTRAST-PROBLEM (VIKTIG): I light mode er teksten i "About Frostline AS"-seksjonen på forsiden nesten usynlig - lys grå tekst mot hvit bakgrunn. Fade-in animasjonen gjør at teksten har for lav opacity. Fiks dette ved å sikre at tekst i light mode har mørk farge (f.eks. slate-800 eller gray-900) og at animasjonene ender med full opacity. Sjekk også "View All Services"-knappen som er vasket ut i light mode. Gå gjennom ALLE seksjoner i light mode og sørg for at alt er leselig med god kontrast.
+
+4. SPRÅKBLANDING PÅ CONTACT-SIDEN: Under "Company Details" på /contact står det "Passasjertransport på forespørsel" på norsk selv når EN (engelsk) er valgt. Denne teksten må oversettes til "Passenger transport on demand" når språket er satt til engelsk. Sjekk om dette kommer fra en hardkodet string som mangler i oversettelsen.
+
+5. SELF-HOST GOOGLE FONTS: Fontene Inter og Montserrat lastes fra Google Fonts CDN som periodevis gir 503-feil. Last ned fontene og server dem lokalt fra assets-mappen for bedre pålitelighet. Bruk @font-face i CSS istedenfor Google Fonts link.
+
+6. FADE-IN ANIMASJON FALLBACK: Seksjonene som bruker scroll-triggered fade-in animasjoner starter med opacity: 0. Hvis IntersectionObserver ikke trigger (f.eks. ved rask scrolling), forblir innholdet usynlig. Legg til en CSS fallback som setter opacity: 1 etter en kort forsinkelse (f.eks. 2-3 sekunder) med en CSS animation som backup, slik at innhold alltid blir synlig til slutt.
+
+Etter at alle fikser er gjort, kjør build og deploy til produksjon. Push endringene til GitHub etterpå med git push origin main.

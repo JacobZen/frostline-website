@@ -83,7 +83,7 @@ export default function About() {
                 <div>
                   <div className="text-sm text-muted-foreground mb-1">{t.about.naceIndustry}</div>
                   <div className="text-foreground font-medium">
-                    Passasjertransport på forespørsel (49.330)
+                    {t.about.naceText} (49.330)
                   </div>
                 </div>
               </div>
