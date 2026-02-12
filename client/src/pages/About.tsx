@@ -27,10 +27,9 @@ export default function About() {
             src={arcticMountains}
             alt="Norwegian Arctic mountain peaks in Northern Norway"
             className="w-full h-full object-cover"
-            width="1920"
-            height="800"
             loading="eager"
-            style={{ aspectRatio: '16/9' }}
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-blue-950/15 mix-blend-overlay" aria-hidden="true" />

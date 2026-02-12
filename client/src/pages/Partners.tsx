@@ -27,10 +27,9 @@ export default function Partners() {
             src={arcticFjord}
             alt="Arctic fjord in Northern Norway"
             className="w-full h-full object-cover"
-            width="1920"
-            height="800"
             loading="eager"
-            style={{ aspectRatio: '16/9' }}
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" aria-hidden="true" />
         </div>

@@ -75,12 +75,10 @@ export default function Hero() {
           src={heroImage}
           alt="Northern Lights over Norwegian fjord with snow-covered mountains"
           className="w-full h-full object-cover will-change-transform scale-[1.05]"
-          width="1920"
-          height="1080"
           loading="eager"
           decoding="sync"
+          fetchPriority="high"
           onLoad={() => setImageLoaded(true)}
-          style={{ aspectRatio: '16/9' }}
         />
         <div 
           className="absolute inset-0 arctic-hero-gradient" 
